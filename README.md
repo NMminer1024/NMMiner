@@ -88,7 +88,41 @@ ESP32 implementing Stratum protocol to mine on solo pool. Pool can be changed bu
 |nmminer1024@gmail.com    |
 
 
+##  Useful documentation:
+
+- [Solominer](https://github.com/iceland2k14/solominer/blob/main/solo_miner.py)
+- [pyminer.py](https://github.com/jgarzik/pyminer/blob/master/pyminer.py)
+- [Stratum Protocol](https://reference.cash/mining/stratum-protocol)
+- [Stratum Protocol Diagram](https://github.com/aeternity/protocol/blob/master/STRATUM.md)
+- [NBits](https://learnmeabitcoin.com/technical/bits)
+- [Bitcoin Mining](https://www.righto.com/2014/02/bitcoin-mining-hard-way-algorithms.html)
+- [How To Mine](https://gist.github.com/Ending2015a/70373b2f6f665a765b4d0b0c427f052b)
+- [Image Converter 565](http://www.rinkydinkelectronics.com/t_imageconverter565.php)
+- [Lilygo-T-Display-S3](https://github.com/Xinyuan-LilyGO/T-Display-S3/tree/main)
+- [HAN](https://github.com/valerio-vaccaro/HAN)
+- [NerdMinerv2](https://github.com/BitMaker-hub/NerdMiner_v2)
+- [Jade](https://github.com/Blockstream/Jade/tree/miner_all_0.1.47/components/miner)
+- [LeafMiner](https://github.com/matteocrippa/leafminer)
+
 ## Release Log
+
+### (2024.08.01) - v0.1.53
+- Features:
+  - BTC solo miner base on esp32s3 series 
+  - Up to **117kH/s** 
+  - ssl connection support
+  - Screen auto off in 60s
+  - Real time clock
+  - Configuration on websever, it's easy enough to build your first BTC Miner.
+  - WiFi Signal Strength add.
+- Fixed:
+  - Fixed default WiFi parameters issues.
+  - Fixed parameter of 'screen off time out'.
+- Modify:
+  - Some nvs handles, not compatible with v0.1.52.
+- Baord support
+  - heltec-vision-master-t190 
+
 ### (2024.07.31) - v0.1.52
 - Features:
   - BTC solo miner base on esp32s3 series 
