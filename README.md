@@ -5,10 +5,14 @@
 ## Requirements
 
 - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
-- Putty
+- [Putty](https://www.putty.org/)
 - 3D BOX (not supported now, coming soon)
 
 ## Features
+
+<div align="center">
+  <img src="fig/hashrate.png" alt="hashrate">
+</div>
 
 - SHA256d deeply Optimazation for ESP32-S3, max hashrate: 117 KH/s
 
@@ -105,6 +109,23 @@ ESP32 implementing Stratum protocol to mine on solo pool. Pool can be changed bu
 - [LeafMiner](https://github.com/matteocrippa/leafminer)
 
 ## Release Log
+
+### (2024.08.02) - v0.1.54
+- Features:
+  - BTC solo miner base on esp32s3 series 
+  - Up to **117kH/s** 
+  - ssl connection support
+  - Screen auto off in 60s
+  - Real time clock
+  - Configuration on websever, it's easy enough to build your first BTC Miner.
+  - WiFi Signal Strength add.
+- Fixed:
+  - Some issues after full chip erase.
+- Modify:
+  - None
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+
 
 ### (2024.08.01) - v0.1.53
 - Features:
