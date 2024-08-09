@@ -1,6 +1,6 @@
 # NMMiner - New ESP32 Solo Miner
 
-- Deeply Optimazion for ESP32-S3: Achieves high performance of 117kH/s with a single chip in solo miner mode, while maintaining low power consumption.
+- Deeply optimazion for ESP32-S3: Achieves high performance of 117kH/s with a single chip in solo miner mode, while maintaining low power consumption.
 
 ## Requirements
 
@@ -14,7 +14,7 @@
   <img src="fig/hashrate.png" alt="hashrate">
 </div>
 
-- SHA256d deeply Optimazation for ESP32-S3, max hashrate: 117 KH/s
+- SHA256d deeply optimazation for ESP32-S3, max hashrate: 117 KH/s
 
 <div align="center">
   <img src="fig/share.png" alt="share">
@@ -110,6 +110,23 @@ ESP32 implementing Stratum protocol to mine on solo pool. Pool can be changed bu
 
 ## Release Log
 
+### (2024.08.09) - v0.1.55
+- Features:
+  - BTC solo miner base on esp32s3 series 
+  - Up to **118kH/s** 
+  - ssl connection support
+  - Screen auto off in 60s
+  - Real time clock
+  - Configuration on websever, it's easy enough to build your first BTC Miner.
+  - WiFi signal strength on screen.
+- Fixed:
+  - Some ssl issues.
+- Modify:
+  - Add some log on loading screen.
+  - Hashrate upto 118K when screen off.
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+
 ### (2024.08.02) - v0.1.54
 - Features:
   - BTC solo miner base on esp32s3 series 
@@ -142,7 +159,7 @@ ESP32 implementing Stratum protocol to mine on solo pool. Pool can be changed bu
 - Modify:
   - Some nvs handles, not compatible with v0.1.52.
 - Baord support
-  - heltec-vision-master-t190 
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
 
 ### (2024.07.31) - v0.1.52
 - Features:
