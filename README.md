@@ -17,32 +17,14 @@
 - SHA256d deeply optimazation for ESP32-S3, max hashrate: 117 KH/s
 
 <div align="center">
-  <img src="fig/share.png" alt="share">
+  <img src="fig/share.jpg" alt="share">
 </div>
 
-The testing Hashrate from the public-pool:
-
-![pool](fig/pool.png)
-
-## Install and Start
-
-### Flash Binary
-
-- Download the binary file, just click **tool/download.bat** if you have got a correct board.
-
-  Following items should be adjust to fit your environment first before execute **download.bat**：
+- The testing Hashrate from the public-pool:
 
 <div align="center">
-  <img src="fig/download.jpg" alt="download">
+  <img src="fig/pool.png" alt="pool">
 </div>
-
-
-- Please wait patiently for the download to be completed.
-
-- If it's the first time you download the firmware, you may got a configuration request on screen to remind you config the miner. just config it as [NMMiner Configuration](#nmminer-configuration)
-
-- Open a tool something like **putty**, the machine log will rolling in putty.
-
 
 ### Buttons
 
@@ -50,12 +32,14 @@ The testing Hashrate from the public-pool:
 | :---------------  | :-----------------:|:-----------------:      |
 |user               | Single click       |      Screen wake up     |
 |user               | Double click       |  Switch to next screen    |
-|user               | Hold on when power on       |      Miner Configuration      |
-|boot               | Long press after boot       |  Clear all status in nvs(if enabled this feature)  |
+|user               | Hold on before reset       |      Miner Configuration      |
+|boot               | Long press after startup   |  Clear all status in nvs(if enabled this feature)  |
 
 ### NMMiner Configuration
+***
+#### Normal configuration
 
-1. Hold on the **user** button, then reset, wait until a QR code appeared.
+1. Hold on the **user** button don't release, then click **reset** button, wait until a QR code appeared, release the **user** button.
 
 <div align="center">
   <img src="fig/nmap.png" alt="AP Config">
@@ -65,31 +49,77 @@ The testing Hashrate from the public-pool:
 
 3. Connect the AP via your phone, if everything goes well, it will jump to the configuration page directly.
 
-4. Connect the AP via a PC, just login to: 192.168.4.1
-
-5. Keep all parameters default except BTC address and wifi.
-
 <div align="center">
-  <img src="fig/config.jpg" alt="config">
+  <img src="fig/config-1.png" alt="config-1">
 </div>
 
-6. You can back to the configuration page anytime via a action hold on the user button when power on.
+4. Connect the AP via a PC, just login to: 192.168.4.1
+
+5. You can see a page as below, config your Miner follow the step, the large the UI refresh value is, the higher hashrate will, and also hashrate will be improved when screen off.
+
+<div align="center">
+  <img src="fig/config-2.png" alt="config-2">
+</div>
+
+6. You can back to the configuration page anytime, reference [button actions](#buttons).
 
 7. Enabled the SSL option if you know what you did.
+
+8. It will take a little bit long(10-15s) when you click the **SAVE**, don't reset the Miner manually, just let it auto reboot.
+***
+#### firmware update
+
+- Open the dir **'firmware/heltec-vision-master-t190'**, connect your Miner to your computer, then try to click **fw_update.exe**.
+
+<div align="center">
+  <img src="fig/fw.png" alt="fw">
+</div>
+
+- It would be better that there is only one COM port on your computer, **fw_update.exe** search the COM list on your computer and select the largest COM port index as the target port. So if there are more than one COMx, make sure the T190 COM port index is the largest one on your computer, just as below：
+
+<div align="center">
+  <img src="fig/comx.jpg" alt="comx">
+</div>
+
+- If some error occur when you update the firmware as below, one of the solutions as follow: 
+
+##### Error:
+<div align="center">
+  <img src="fig/fwup-failed.png" alt="fw failed">
+</div>
+
+##### solutions:
+
+  a). Hold on **boot** button;
+
+  b). Wait 1s;
+
+  c). Then click **reset** button;
+
+  d). Wait 1s;
+
+  e). Release **reset** button;
+
+  f). Wait 1s;
+
+  g). Release **boot** button;
+
+  h). Click **fw_update.exe**.
 
 
 ## How to Usage
 
-ESP32 implementing Stratum protocol to mine on solo pool. Pool can be changed but originally works with [public-pool.io](https://web.public-pool.io/)
+- ESP32 implementing stratum protocol to mine on solo pool. Pool can be changed but originally works with a low difficulty pool [public-pool.io](https://web.public-pool.io/).
+
 
 
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
-- Anything not work as your expectation, just let us know.
+- Anything do not work as your expectation, just let us know.
 
-| Email                   |
-| :-----------------:     |
-|nmminer1024@gmail.com    |
+| Email                   |  Telegram                       |
+| :-----------------:     |  :-----------------:            |
+|nmminer1024@gmail.com    |  https://t.me/+IYFC1D0al1E5Yjdl |
 
 
 ##  Useful documentation:
@@ -109,6 +139,23 @@ ESP32 implementing Stratum protocol to mine on solo pool. Pool can be changed bu
 - [LeafMiner](https://github.com/matteocrippa/leafminer)
 
 ## Release Log
+
+### (2024.08.10) - v0.2.01
+- Features:
+  - BTC solo miner base on esp32s3 series 
+  - Up to **118kH/s** 
+  - ssl connection support
+  - Screen auto off in 60s
+  - Real time clock
+  - Configuration on websever, it's easy enough to build your first BTC Miner.
+  - WiFi signal strength on screen.
+- Fixed:
+  - **Configuration of user BTC address not effective issue.**
+- Modify:
+  - Contact us, telegram group add.
+  - Modify firmware update tools, make it easy to update firmware.
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
 
 ### (2024.08.09) - v0.1.55
 - Features:
