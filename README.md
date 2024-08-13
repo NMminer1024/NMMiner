@@ -30,42 +30,42 @@
 
 | Buttons           | Action             | Description             |
 | :---------------  | :-----------------:|:-----------------:      |
-|user               | Single click       |      Screen wake up     |
-|user               | Double click       |  Switch to next screen    |
-|user               | Hold on before reset       |      Miner Configuration      |
-|boot               | Long press after startup   |  Clear all status in nvs(if enabled this feature)  |
+|user               | Single click       |  Screen wake up         |
+|user               | Double click       |  Switch to next screen  |
+|user               | [Press and hold before reset](#normal-configuration)  |  Miner Configuration    |
+|boot               | Long press         |  Clear all status from nvs(if enabled this feature)  |
+|boot               | Single click       |  Screen wake up         |
+
 
 ### NMMiner Configuration
 ***
 #### Normal configuration
 
-1. Hold on the **user** button don't release, then click **reset** button, wait until a QR code appeared, release the **user** button.
+1. Press and hold the **User** button, then click the **Reset** button, wait until the QR code appears, then release the **User** button.
 
 <div align="center">
   <img src="fig/nmap.png" alt="AP Config">
 </div>
 
-2. Seach a AP named: nmap-2.4g, pwd: 12345678
+2. Search for AP named: nmap-2.4g, enter password: 12345678
 
-3. Connect the AP via your phone, if everything goes well, it will jump to the configuration page directly.
+3.  If connect to AP via mobile phone and everything goes well, you will be redirected to the configuration page; if connect to AP via PC, just log in: 192.168.4.1.
 
 <div align="center">
   <img src="fig/config-1.png" alt="config-1">
 </div>
 
-4. Connect the AP via a PC, just login to: 192.168.4.1
-
-5. You can see a page as below, config your Miner follow the step, the large the UI refresh value is, the higher hashrate will, and also hashrate will be improved when screen off.
+4. You will see the following page. Follow the steps to configure your mining machine. The larger the UI refresh value, the higher the hash rate, and the hash rate will also increase when the screen is turned off.
 
 <div align="center">
   <img src="fig/config-2.png" alt="config-2">
 </div>
 
-6. You can back to the configuration page anytime, reference [button actions](#buttons).
+5. You can return to the configuration page at any time and refer to the [button](#buttons) operations.
 
-7. Enabled the SSL option if you know what you did.
+6. In some areas, the pool is blocked by the local firewall. If you have an SSL encrypted channel, you can enable this option.
 
-8. It will take a little bit long(10-15s) when you click the **SAVE**, don't reset the Miner manually, just let it auto reboot.
+7. When you click **Save** it will take a while (10-15 seconds), do not reset the miner manually, just let it restart automatically.
 ***
 #### firmware update
 
@@ -139,6 +139,23 @@
 - [LeafMiner](https://github.com/matteocrippa/leafminer)
 
 ## Release Log
+
+### (2024.08.13) - v0.2.02
+- Features:
+  - BTC solo miner base on esp32s3 series 
+  - Up to **118kH/s** 
+  - ssl connection support
+  - Screen auto off in 60s
+  - Real time clock
+  - Configuration on websever, it's easy enough to build your first BTC Miner.
+  - WiFi signal strength on screen.
+- Fixed:
+  - Mining status clean issues.
+- Modify:
+  - None
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+
 
 ### (2024.08.10) - v0.2.01
 - Features:
