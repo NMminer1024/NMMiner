@@ -140,6 +140,23 @@
 
 ## Release Log
 
+### (2024.08.15) - v0.2.10
+- Features:
+  - BTC solo miner base on esp32s3 series 
+  - Up to **118kH/s** 
+  - ssl connection support
+  - Screen auto off in 60s
+  - Real time clock
+  - Configuration on websever, it's easy enough to build your first BTC Miner.
+  - WiFi signal strength on screen.
+- Fixed:
+  - Memory leak issues.
+  - Stratum nBits sector parse issues. 
+- Modify:
+  - None
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+
 ### (2024.08.13) - v0.2.02
 - Features:
   - BTC solo miner base on esp32s3 series 
