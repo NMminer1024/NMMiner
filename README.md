@@ -1,26 +1,24 @@
 # NMMiner - New ESP32 Solo Miner
 
-- Deeply optimazion for ESP32-S3: Achieves high performance of 117kH/s with a single chip in solo miner mode, while maintaining low power consumption.
+- Deeply optimazion for ESP32-S3: Achieves high performance of 120kH/s with a single chip in solo miner mode, while maintaining low power consumption.
 
 ## Requirements
-
-- [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
-- [Putty](https://www.putty.org/)
-- 3D BOX (not supported now, coming soon)
+- ESP32s3 boards from [heltec](https://heltec.org/project/vision-master-t190/) as so far.
+- [Putty](https://www.putty.org/) (optional, web monitor instead since [v0.2.11](#20240827---v0211))
+- 3D BOX (in progress, coming soon)
 
 ## Features
+- SHA256d deeply optimazation for ESP32-S3, max hashrate: 119 KH/s
 
 <div align="center">
   <img src="fig/hashrate.png" alt="hashrate">
 </div>
 
-- SHA256d deeply optimazation for ESP32-S3, max hashrate: 117 KH/s
-
 <div align="center">
-  <img src="fig/share.jpg" alt="share">
+  <img src="fig/lora32 v3.jpg" alt="lora32 v3.jpg">
 </div>
 
-- The testing Hashrate from the public-pool:
+- The testing hashrate from the public-pool:
 
 <div align="center">
   <img src="fig/pool.png" alt="pool">
@@ -68,8 +66,8 @@
 7. When you click **Save** it will take a while (10-15 seconds), do not reset the miner manually, just let it restart automatically.
 ***
 #### firmware update
-
-- Open the dir **'firmware/heltec-vision-master-t190'**, connect your Miner to your computer, then try to click **fw_update.exe**.
+- Please confirm that the firmware folder contains support for the ESP32 board you have.
+- Here, we use the T190 hardware as an example, Open the folder **'firmware/heltec-vision-master-t190'**, connect your Miner to your computer, then try to click **fw_update.exe**.
 
 <div align="center">
   <img src="fig/fw.png" alt="fw">
@@ -90,7 +88,7 @@
 
 ##### solutions:
 
-  a). Hold on **boot** button;
+  a). Hold **boot** button;
 
   b). Wait 1s;
 
@@ -98,20 +96,25 @@
 
   d). Wait 1s;
 
-  e). Release **reset** button;
+  e). Release **boot** button;
 
-  f). Wait 1s;
+  f). Click **fw_update.exe**.
 
-  g). Release **boot** button;
+## Pool
+- Due to the very limited on-chip resources of the ESP32, some high-difficulty mining pools currently reject our connections. [public-pool.io](https://web.public-pool.io/) is a mining pool that accepts low-difficulty miners. We appreciate their efforts.
 
-  h). Click **fw_update.exe**.
+## How to monitor
+- In your browser, log in to your machine's IP address to see the machine's status. The machine's IP address will be displayed on the machine's screen.
 
+<div align="center">
+  <img src="fig/web monitor.jpg" alt="monitor">
+</div>
 
-## How to Usage
+- If your machine is a screenless version, you can use PuTTY to capture the boot log and check the machine's IP address, or you can check the machine's IP address in your local network manager.
 
-- ESP32 implementing stratum protocol to mine on solo pool. Pool can be changed but originally works with a low difficulty pool [public-pool.io](https://web.public-pool.io/).
-
-
+<div align="center">
+  <img src="fig/ip.jpg" alt="ip">
+</div>
 
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
@@ -140,6 +143,21 @@
 
 ## Release Log
 
+### (2024.08.27) - v0.2.11
+- Add:
+  - Web Monitor, makes it easy to monitor your machine without any special client tools. You only need a phone or computer's browser.
+  - Heltec WiFi lora 32 v3 firmware
+- Fixed:
+  - Some issues from WiFi.
+- Improved:
+  - Memory management.
+  - Almost reaching 120KH/s when USB CDC disable.
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+- Next
+  - Some screenless board support.
+
 ### (2024.08.15) - v0.2.10
 - Features:
   - BTC solo miner base on esp32s3 series 
@@ -151,7 +169,7 @@
   - WiFi signal strength on screen.
 - Fixed:
   - Memory leak issues.
-  - Stratum nBits sector parse issues. 
+  - Stratum nBits sector parse issues.
 - Modify:
   - None
 - Baord support
