@@ -143,6 +143,18 @@
 
 ## Release Log
 
+### (2024.08.31) - v0.2.12
+- Add:
+  - None
+- Fixed:
+  - Device would occasionally restart frequently when connecting to WiFi at startup.
+- Improved:
+  - None
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+
+
 ### (2024.08.27) - v0.2.11
 - Add:
   - Web Monitor, makes it easy to monitor your machine without any special client tools. You only need a phone or computer's browser.
