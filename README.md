@@ -143,6 +143,18 @@
 
 ## Release Log
 
+### (2024.09.02) - v0.2.13
+- Add:
+  - None
+- Fixed:
+  - License disappear issue when return to configuration page.
+- Improved:
+  - None
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+
+
 ### (2024.08.31) - v0.2.12
 - Add:
   - None
