@@ -9,6 +9,7 @@
 
 ## Features
 - SHA256d deeply optimazation for ESP32-S3, max hashrate: 119 KH/s
+- NMController, [source code](https://github.com/NMminer1024/NMController), we put the *_x64.msi and *_x86.msi in tool folder already, just install. 
 
 <div align="center">
   <img src="fig/hashrate.png" alt="hashrate">
@@ -104,17 +105,22 @@
 - Due to the very limited on-chip resources of the ESP32, some high-difficulty mining pools currently reject our connections. [public-pool.io](https://web.public-pool.io/) is a mining pool that accepts low-difficulty miners. We appreciate their efforts.
 
 ## How to monitor
-- In your browser, log in to your machine's IP address to see the machine's status. The machine's IP address will be displayed on the machine's screen.
+- ***NMController***, scan the machine in your LAN, just as below.
 
 <div align="center">
-  <img src="fig/web monitor.jpg" alt="monitor">
+  <img src="fig/nmcontroller-home.jpg" alt="nmcontroller-home">
 </div>
 
-- If your machine is a screenless version, you can use PuTTY to capture the boot log and check the machine's IP address, or you can check the machine's IP address in your local network manager.
+- Redirect to the web monitor for more details. 
 
 <div align="center">
-  <img src="fig/ip.jpg" alt="ip">
+  <img src="fig/nmcontroller-details.jpg" alt="nmcontroller-details">
 </div>
+
+<div align="center">
+  <img src="fig/web monitor.jpg" alt="web monitor">
+</div>
+
 
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
@@ -142,6 +148,18 @@
 - [LeafMiner](https://github.com/matteocrippa/leafminer)
 
 ## Release Log
+
+### (2024.09.02) - v0.3.01
+- Add:
+  - Tool, [***NMController***](https://github.com/NMminer1024/NMController), Something like a LAN centralized monitoring client, Windows 10 or higher require.
+  - Firmware, mining status broadcast to LAN. 
+- Fixed:
+  - None
+- Improved:
+  - None
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
 
 ### (2024.09.02) - v0.2.13
 - Add:
