@@ -9,7 +9,10 @@
 
 ## Features
 - SHA256d deeply optimazation for ESP32-S3, max hashrate: 119 KH/s
-- NMController, [source code](https://github.com/NMminer1024/NMController), we put the *_x64.msi and *_x86.msi in tool folder already, just install. 
+- NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows
+- NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
+
+
 
 <div align="center">
   <img src="fig/hashrate.png" alt="hashrate">
@@ -105,6 +108,9 @@
 - Due to the very limited on-chip resources of the ESP32, some high-difficulty mining pools currently reject our connections. [public-pool.io](https://web.public-pool.io/) is a mining pool that accepts low-difficulty miners. We appreciate their efforts.
 
 ## How to monitor
+
+- We make an example by NMController_client
+
 - ***NMController***, scan the machine in your LAN, just as below.
 
 <div align="center">
@@ -148,6 +154,17 @@
 - [LeafMiner](https://github.com/matteocrippa/leafminer)
 
 ## Release Log
+
+### (2024.09.08) - v0.3.01
+- Add:
+  - None
+- Fixed:
+  - Readme.md
+- Improved:
+  - None
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
 
 ### (2024.09.02) - v0.3.01
 - Add:
