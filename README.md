@@ -1,5 +1,5 @@
 # NMMiner - New ESP32 Solo Miner
-
+- BTC solo miner.
 - Deeply optimazion for ESP32-S3: Achieves high performance of 120kH/s with a single chip in solo miner mode, while maintaining low power consumption.
 
 ## Requirements
@@ -8,7 +8,7 @@
 - 3D BOX (in progress, coming soon)
 
 ## Features
-- SHA256d deeply optimazation for ESP32-S3, max hashrate: 119 KH/s
+- Deeply optimazation for ESP32-S3, max hashrate: 119 KH/s
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
@@ -41,13 +41,9 @@
 
 ### NMMiner Configuration
 ***
-#### Normal configuration
+#### Initiation configuration
 
-1. Press and hold the **User** button, then click the **Reset** button, wait until the QR code appears, then release the **User** button.
-
-<div align="center">
-  <img src="fig/nmap.png" alt="AP Config">
-</div>
+1. When the device is powered on, it will connect to the last WiFi connected by default. If it fails to connect to this WiFi after trying for 10s, it will automatically enter the configuration mode.
 
 2. Search for AP named: nmap-2.4g, enter password: 12345678
 
@@ -68,10 +64,22 @@
 6. In some areas, the pool is blocked by the local firewall. If you have an SSL encrypted channel, you can enable this option.
 
 7. When you click **Save** it will take a while (10-15 seconds), do not reset the miner manually, just let it restart automatically.
+
+#### Force configuration
+
+1. Press and hold the **User** button, then click the **Reset** button, wait until the QR code appears(screen board required), then release the **User** button.
+
+2. Then follow [Initiation configuration](#Initiation-configuration)
+
+<div align="center">
+  <img src="fig/nmap.png" alt="AP Config">
+</div>
+
+
 ***
 #### firmware update
 - Please confirm that the firmware folder contains support for the ESP32 board you have.
-- Here, we use the T190 hardware as an example, Open the folder **'firmware/heltec-vision-master-t190'**, connect your Miner to your computer, then try to click **fw_update.exe**.
+- We use the T190 hardware as an example here, Open the folder **'firmware/heltec-vision-master-t190'**, connect your Miner to your computer, then try to click **fw_update.exe**.
 
 <div align="center">
   <img src="fig/fw.png" alt="fw">
@@ -109,9 +117,9 @@
 
 ## How to monitor
 
-- We make an example by NMController_client
+- In fact, both ***NMController_client*** and ***NMController_web*** have the same feature, ***NMController_client*** for Windows, ***NMController_web*** for Windows and MACOS, We make an example by ***NMController_client*** here.
 
-- ***NMController***, scan the machine in your LAN, just as below.
+- ***NMController_client***, scan the machine in your LAN, just as below.
 
 <div align="center">
   <img src="fig/nmcontroller-home.jpg" alt="nmcontroller-home">
@@ -127,6 +135,16 @@
   <img src="fig/web monitor.jpg" alt="web monitor">
 </div>
 
+
+##  Board support:
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
+
+##  Get a License :
+  - We provide a license to make our firmware running on other board, it would be better that it's a screenless one and esp32s3FN8 or esp32s3R8 on board. 
+  - [License](http://license.nmminer.shop)
 
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
@@ -154,6 +172,19 @@
 - [LeafMiner](https://github.com/matteocrippa/leafminer)
 
 ## Release Log
+
+### (2024.09.14) - v0.3.02
+- Add:
+  - License.
+- Fixed:
+  - None
+- Improved:
+  - Automatically enter configuration mode.
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
 
 ### (2024.09.08) - v0.3.01
 - Add:
