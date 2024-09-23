@@ -79,38 +79,43 @@
 ***
 #### firmware update
 - Please confirm that the firmware folder contains support for the ESP32 board you have.
-- We use the T190 hardware as an example here, Open the folder **'firmware/heltec-vision-master-t190'**, connect your Miner to your computer, then try to click **fw_update.exe**.
+- We use the T190 hardware as an example here:
+
+ **Step 1**: open online **'[ESP Tool](https://espressif.github.io/esptool-js/)'**, connect your Miner to your computer, then click **Connect**.
 
 <div align="center">
-  <img src="fig/fw.png" alt="fw">
+  <img src="fig/esp-tool-1.jpg" alt="esp-tool-1">
 </div>
 
-- It would be better that there is only one COM port on your computer, **fw_update.exe** search the COM list on your computer and select the largest COM port index as the target port. So if there are more than one COMx, make sure the T190 COM port index is the largest one on your computer, just as below：
+**Step 2**: Then will pop up a window to choose your ESP32-S3 device, and Connect it.
 
 <div align="center">
-  <img src="fig/comx.jpg" alt="comx">
+  <img src="fig/esp-tool-2.jpg" alt="esp-tool-2">
 </div>
 
-- If some error occur when you update the firmware as below, one of the solutions as follow: 
-
-##### Error:
+**Step 3**: Add the NMMiner firmware file from your device Model Path, flash Address at 0x10000.
 <div align="center">
-  <img src="fig/fwup-failed.png" alt="fw failed">
+  <img src="fig/esp-tool-3.jpg" alt="esp-tool-3">
 </div>
 
-##### solutions:
+**Step 4**: Update the firmware
+<div align="center">
+  <img src="fig/esp-tool-3.jpg" alt="esp-tool-3">
+</div>
 
-  a). Hold **boot** button;
+- **Q&A:** If some errors occur when you update the firmware, one of the solutions as follow: 
 
-  b). Wait 1s;
+    a). Hold **boot** button;
 
-  c). Then click **reset** button;
+    b). Wait 1s;
 
-  d). Wait 1s;
+    c). Then click **reset** button;
 
-  e). Release **boot** button;
+    d). Wait 1s;
 
-  f). Click **fw_update.exe**.
+    e). Release **boot** button;
+
+    f). Click **Program** button on **'[ESP Tool](https://espressif.github.io/esptool-js/)'** page.
 
 ## Pool
 - Due to the very limited on-chip resources of the ESP32, some high-difficulty mining pools currently reject our connections. [public-pool.io](https://web.public-pool.io/) is a mining pool that accepts low-difficulty miners. We appreciate their efforts.
@@ -141,6 +146,7 @@
   - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
   - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
   - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - [all_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
 
 ##  Get a License :
   - We provide a license to make our firmware running on other board, it would be better that it's a screenless one and esp32s3FN8 or esp32s3R8 on board. 
@@ -172,6 +178,21 @@
 - [LeafMiner](https://github.com/matteocrippa/leafminer)
 
 ## Release Log
+
+### (2024.09.23) - v0.3.02
+- Add:
+  - Web ESP-Tool.
+  - Support chip, esp32fn8.
+- Fixed:
+  - None
+- Improved:
+  - None.
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - [all_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
 
 ### (2024.09.14) - v0.3.02
 - Add:
