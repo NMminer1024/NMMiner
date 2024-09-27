@@ -1,11 +1,9 @@
 # NMMiner - New ESP32 Solo Miner
 - BTC solo miner.
-- Deeply optimazion for ESP32-S3: Achieves high performance of 120kH/s with a single chip in solo miner mode, while maintaining low power consumption.
+- 120kH/s with a single chip and maintaining low power consumption.
 
 ## Requirements
-- ESP32s3 boards from [heltec](https://heltec.org/project/vision-master-t190/) as so far.
-- [Putty](https://www.putty.org/) (optional, web monitor instead since [v0.2.11](#20240827---v0211))
-- 3D BOX (in progress, coming soon)
+- Boards with ESP32S3FN8 or ESP32S3R8 as so far.
 
 ## Features
 - Deeply optimazation for ESP32-S3, max hashrate: 119 KH/s
@@ -22,7 +20,9 @@
   <img src="fig/lora32 v3.jpg" alt="lora32 v3.jpg">
 </div>
 
-- The testing hashrate from the public-pool:
+<div align="center">
+  <img src="fig/lilygo-t-display-s3.jpg" alt="lilygo-t-display-s3.jpg">
+</div>
 
 <div align="center">
   <img src="fig/pool.png" alt="pool">
@@ -100,7 +100,7 @@
 
 **Step 4**: Update the firmware
 <div align="center">
-  <img src="fig/esp-tool-3.jpg" alt="esp-tool-3">
+  <img src="fig/esp-tool-4.jpg" alt="esp-tool-4">
 </div>
 
 - **Q&A:** If some errors occur when you update the firmware, one of the solutions as follow: 
@@ -141,15 +141,16 @@
 </div>
 
 
-##  Board support:
+##  Board support from latest version:
   - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
   - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
   - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
   - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
-  - [all_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
+  - [All_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
+  - Lilygo-T-Display-s3
 
 ##  Get a License :
-  - We provide a license to make our firmware running on other board, it would be better that it's a screenless one and esp32s3FN8 or esp32s3R8 on board. 
+  - We provide a license to make our firmware running on other board, it would be better that it's a screenless one and esp32s3FN8 or esp32s3R8 on board.
   - [License](http://license.nmminer.shop)
 
 ## Contact
@@ -161,23 +162,22 @@
 |nmminer1024@gmail.com    |  https://t.me/+IYFC1D0al1E5Yjdl |
 
 
-##  Useful documentation:
-
-- [Solominer](https://github.com/iceland2k14/solominer/blob/main/solo_miner.py)
-- [pyminer.py](https://github.com/jgarzik/pyminer/blob/master/pyminer.py)
-- [Stratum Protocol](https://reference.cash/mining/stratum-protocol)
-- [Stratum Protocol Diagram](https://github.com/aeternity/protocol/blob/master/STRATUM.md)
-- [NBits](https://learnmeabitcoin.com/technical/bits)
-- [Bitcoin Mining](https://www.righto.com/2014/02/bitcoin-mining-hard-way-algorithms.html)
-- [How To Mine](https://gist.github.com/Ending2015a/70373b2f6f665a765b4d0b0c427f052b)
-- [Image Converter 565](http://www.rinkydinkelectronics.com/t_imageconverter565.php)
-- [Lilygo-T-Display-S3](https://github.com/Xinyuan-LilyGO/T-Display-S3/tree/main)
-- [HAN](https://github.com/valerio-vaccaro/HAN)
-- [NerdMinerv2](https://github.com/BitMaker-hub/NerdMiner_v2)
-- [Jade](https://github.com/Blockstream/Jade/tree/miner_all_0.1.47/components/miner)
-- [LeafMiner](https://github.com/matteocrippa/leafminer)
-
 ## Release Log
+
+### (2024.09.27) - v0.3.03
+- Add:
+  - Board support Lilygo-T-Display s3.
+- Fixed:
+  - Readme and structure of tool folder.
+- Improved:
+  - loading screen.
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - [All_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
+  - Lilygo-T-Display-s3
 
 ### (2024.09.23) - v0.3.02
 - Add:

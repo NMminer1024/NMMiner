@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="2">
+  <style>
+    body {
+      background-color: #2E2E2E;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    h1 {
+      margin-top: 50px;
+    }
+    
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 100%;
+    }
+    
+    th, td {
+      border: 1px solid white;
+      padding: 10px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    
+    #header {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    
+    #timeMining {
+      text-align: left;
+    }
+    
+    #version {
+      text-align: right;
+    }
+    
+    #container {
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      position: relative;
+    }
+    
+    #footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      background-color: #2E2E2E;
+    }
+    
+    #footer a {
+      color: #00FF00;
+      text-decoration: none;
+    }
+    
+    #footer p {
+      color: white;
+      margin: 0;
+    }
+    
+    td {
+      color: green;
+    }
+    
+    @media (max-width: 600px) {
+      th, td {
+        font-size: 12px;
+        padding: 5px;
+      }
+      
+      #header {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      #timeMining, #version {
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>NMController Web Monitor</h1>
+    <div id="header">
+      <div id="timeMining"></div>
+   <!--  <div id="version">Version: CURRENT_VERSION</div> --> 
+    </div>
+    <table>
+      <tr>
+        <th>IP</th>
+        <th>BoardType</th>
+        <th>Hash Rate</th>
+        <th>Share(R/A)</th>
+        <th>Net Diff</th>
+        <th>Best Diff</th>
+        <th>Valid</th>
+        <th>Temp(℃)</th>
+        <th>RSSI(dBm)</th>
+        <th>Free Heap(KB)</th>
+        <th>Version</th>
+        <th>Uptime</th>
+        <th>Last Seen</th>
+      </tr>
+      {% for row in result %}
+      <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+        <td>{{ row[6] }}</td>
+        <td>{{ row[7] }}</td>
+        <td>{{ row[8] }}</td>
+        <td>{{ row[9] }}</td>
+        <td>{{ row[10] }}</td>
+        <td>{{ row[11] }}</td>
+        <td>{{ row[12] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <div id="footer">
+      <p>&copy; 2024 NMTech Copyright Reserved | <a href="https://github.com/NMminer1024/NMMiner" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </div>
+</body>
+</html>
