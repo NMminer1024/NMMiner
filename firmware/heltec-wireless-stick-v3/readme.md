@@ -1,3 +1,3 @@
-For heltec wifi lora32 v3:
+For heltec-wireless_stick_v3:
 
 User button binding to GPIO34 

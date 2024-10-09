@@ -75,47 +75,35 @@
   <img src="fig/nmap.png" alt="AP Config">
 </div>
 
-
 ***
-#### firmware update
-- Please confirm that the firmware folder contains support for the ESP32 board you have.
-- We use the T190 hardware as an example here:
+#### Firmware update
+ **Step 1**: Open [NMMiner Flash Tool](https://flash.nmminer.com/) in Chrome or Edge browser.
 
- **Step 1**: open online **'[ESP Tool](https://espressif.github.io/esptool-js/)'**, connect your Miner to your computer, then click **Connect**.
-
-<div align="center">
-  <img src="fig/esp-tool-1.jpg" alt="esp-tool-1">
+ **Step 2**: Choose the board and start the firmware update, **NMMiner Flash Tool** will pull the latest version from github, and configure the flash parameters automatically.
+ <div align="center">
+  <img src="fig/NMMiner flash tool.jpg" alt="NMMiner flash tool">
 </div>
 
-**Step 2**: Then will pop up a window to choose your ESP32-S3 device, and Connect it.
 
-<div align="center">
-  <img src="fig/esp-tool-2.jpg" alt="esp-tool-2">
+***Notice:*** If you just update the latest firmware, that's all. if you are the first time flash the miner, [firmware activation](#Firmware-activation) is required. 
+
+#### Firmware activation 
+
+ **Step 1**: After you flash the firmware, get the licence follow the guide.
+ 
+ <div align="center">
+  <img src="fig/Licence.jpg" alt="Licence">
 </div>
 
-**Step 3**: Add the NMMiner firmware file from your device Model Path, flash Address at 0x10000.
-<div align="center">
-  <img src="fig/esp-tool-3.jpg" alt="esp-tool-3">
+ **Step 2**: Copy the the licence string back to licence code box, then click the button, you will something exciting if everything goes well.
+ 
+ <div align="center">
+  <img src="fig/active.jpg" alt="active">
 </div>
 
-**Step 4**: Update the firmware
-<div align="center">
-  <img src="fig/esp-tool-4.jpg" alt="esp-tool-4">
-</div>
+ **Step 3**: Enjoy it!
 
-- **Q&A:** If some errors occur when you update the firmware, one of the solutions as follow: 
 
-    a). Hold **boot** button;
-
-    b). Wait 1s;
-
-    c). Then click **reset** button;
-
-    d). Wait 1s;
-
-    e). Release **boot** button;
-
-    f). Click **Program** button on **'[ESP Tool](https://espressif.github.io/esptool-js/)'** page.
 
 ## Pool
 - Due to the very limited on-chip resources of the ESP32, some high-difficulty mining pools currently reject our connections. [public-pool.io](https://web.public-pool.io/) is a mining pool that accepts low-difficulty miners. We appreciate their efforts.
@@ -144,14 +132,11 @@
 ##  Board support from latest version:
   - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
   - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec wireless stick v3](https://heltec.org/project/wireless-stick-v3/)
   - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
   - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
   - [All_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
   - Lilygo-T-Display-s3
-
-##  Get a License :
-  - We provide a license to make our firmware running on other board, it would be better that it's a screenless one and esp32s3FN8 or esp32s3R8 on board.
-  - [License](http://license.nmminer.shop)
 
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
@@ -164,13 +149,29 @@
 
 ## Release Log
 
+### (2024.10.08) - v0.3.04
+- Add:
+  - Board support Heltec Wireless Stick V3.
+- Fixed:
+  - None.
+- Improved:
+  - The initiation order.
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec wireless stick v3](https://heltec.org/project/wireless-stick-v3/)
+  - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - [All_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
+  - Lilygo-T-Display-s3
+
 ### (2024.09.27) - v0.3.03
 - Add:
   - Board support Lilygo-T-Display s3.
 - Fixed:
   - Readme and structure of tool folder.
 - Improved:
-  - loading screen.
+  - Loading screen.
 - Baord support
   - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
   - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
