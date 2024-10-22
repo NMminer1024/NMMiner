@@ -29,14 +29,23 @@
 </div>
 
 ### Buttons
+**Board with only one button**
 
 | Buttons           | Action             | Description             |
 | :---------------  | :-----------------:|:-----------------:      |
-|user               | Single click       |  Screen wake up         |
-|user               | Double click       |  Switch to next screen  |
-|user               | [Press and hold before reset](#normal-configuration)  |  Miner Configuration    |
+|boot               | Long press         |  Miner Configuration  |
+|boot               | Double click       |  switch to nexe screen page(if a screen in board)        |
+
+**Board with two buttons**
+
+| Buttons           | Action             | Description             |
+| :---------------  | :-----------------:|:-----------------:      |
 |boot               | Long press         |  Clear all status from nvs(if enabled this feature)  |
-|boot               | Single click       |  Screen wake up         |
+|boot               | Single click       |  Screen wake up(if a screen in board)         |
+|boot               | Double click       |  Screen wake up(if a screen in board)         |
+|user               | Single click       |  Screen wake up(if a screen in board)         |
+|user               | Double click       |  Switch to next screen(if a screen in board)  |
+|user               | [Press and hold before reset](#normal-configuration)  |  Miner Configuration    |
 
 
 ### NMMiner Configuration
@@ -84,8 +93,9 @@
   <img src="fig/NMMiner flash tool.jpg" alt="NMMiner flash tool">
 </div>
 
+***Notice1:*** If you just update the latest firmware, that's all you need to do. if you are the first time flash the miner, [firmware activation](#Firmware-activation) is required. 
 
-***Notice:*** If you just update the latest firmware, that's all. if you are the first time flash the miner, [firmware activation](#Firmware-activation) is required. 
+***Notice2:*** If you lost your licence, just use the [NMMiner Flash Tool](https://flash.nmminer.com/) flash your miner agin, the tool will send you a new one. 
 
 #### Firmware activation 
 
@@ -101,7 +111,13 @@
   <img src="fig/active.jpg" alt="active">
 </div>
 
- **Step 3**: Enjoy it!
+ **Step 3**:  If this is the first time you are flashing the miner, some basic and necessary configurations need to be set, just as below, certainly, you can config them via [Buttons](#Buttons).
+
+ <div align="center">
+  <img src="fig/web_cfg.jpg" alt="web_cfg">
+</div>
+
+ **Step 4**: Enjoy it!
 
 
 
@@ -137,7 +153,8 @@
   - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
   - [All_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
   - Lilygo-T-Display-s3
-
+  - NM-Bot-Chain-V1
+  - NM-USB-Chain-V1
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
 - Anything do not work as your expectation, just let us know.
@@ -148,6 +165,26 @@
 
 
 ## Release Log
+
+### (2024.10.21) - v0.4.01
+- Add:
+  - Board support NM Bot Chain V1
+  - Board support NM USB Chain V1
+  - Screen orientation option in configuration page.
+- Fixed:
+  - Valid block worng display, hashrate fall in worng state occasionally.
+- Improved:
+  - UI
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec wireless stick v3](https://heltec.org/project/wireless-stick-v3/)
+  - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - [All_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
+  - Lilygo-T-Display-s3
+  - NM-Bot-Chain-V1(Coming soon to sale)
+  - NM-USB-Chain-V1(Coming soon to sale)
 
 ### (2024.10.08) - v0.3.04
 - Add:
