@@ -1,6 +1,7 @@
 # NMMiner - New ESP32 Solo Miner
 - BTC solo miner.
 - 120kH/s with a single chip and maintaining low power consumption.
+- Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
 
 ## Requirements
 - Boards with ESP32S3FN8 or ESP32S3R8 as so far.
@@ -13,15 +14,21 @@
 
 
 <div align="center">
-  <img src="fig/hashrate.png" alt="hashrate">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/hashrate.png" alt="hashrate"></td>
+      <td width="50%" align="center"><img src="fig/lora32 v3.jpg" alt="lora32 v3.jpg"></td>
+    </tr>
+  </table>
 </div>
 
 <div align="center">
-  <img src="fig/lora32 v3.jpg" alt="lora32 v3.jpg">
-</div>
-
-<div align="center">
-  <img src="fig/lilygo-t-display-s3.jpg" alt="lilygo-t-display-s3.jpg">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3.png" alt="lilygo-t-display-s3.png"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-t-dongle-s3.png" alt="lilygo-t-dongle-s3.png"></td>
+    </tr>
+  </table>
 </div>
 
 <div align="center">
@@ -105,7 +112,7 @@
   <img src="fig/Licence.jpg" alt="Licence">
 </div>
 
- **Step 2**: Copy the the licence string back to licence code box, then click the button, you will something exciting if everything goes well.
+ **Step 2**: Copy the the licence string back to licence code box, then click the button, you will see something exciting if everything goes well.
  
  <div align="center">
   <img src="fig/active.jpg" alt="active">
@@ -151,8 +158,8 @@
   - [Heltec wireless stick v3](https://heltec.org/project/wireless-stick-v3/)
   - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
   - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
-  - [All_usbcdc_screenless_esp32s3fn8](https://heltec.org/project/wifi-kit32-v3/)
   - Lilygo-T-Display-s3
+  - Lilygo-T-Dongle-s3
   - NM-Bot-Chain-V1
   - NM-USB-Chain-V1
 ## Contact
@@ -165,6 +172,25 @@
 
 
 ## Release Log
+
+### (2024.10.29) - v0.4.02
+- Add:
+  - Board support Lilygo T Dongle s3
+  - BTC market price(Disable default, enable this feature on config page)
+- Fixed:
+  - Miner reboot constantly.
+- Improved:
+  - UI
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec wireless stick v3](https://heltec.org/project/wireless-stick-v3/)
+  - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - Lilygo-T-Display-s3
+  - Lilygo-T-Dongle-s3
+  - NM-Bot-Chain-V1(Coming soon to sale)
+  - NM-USB-Chain-V1(Coming soon to sale)
 
 ### (2024.10.21) - v0.4.01
 - Add:
