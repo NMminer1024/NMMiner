@@ -4,10 +4,11 @@
 - Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
 
 ## Requirements
-- Boards with ESP32S3FN8 or ESP32S3R8 as so far.
+- Boards with ESP32S3FN8 , ESP32S3R8 , ESP-WROOM-32 as so far.
 
 ## Features
 - Deeply optimazation for ESP32-S3, max hashrate: 119 KH/s
+- Deeply optimazation for ESP-WROOM-32, max hashrate: 92 KH/s
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
@@ -31,19 +32,25 @@
   </table>
 </div>
 
+
 <div align="center">
-  <img src="fig/pool.png" alt="pool">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/cyd.jpg" alt="cyd.jpg"></td>
+      <td width="50%" align="center"><img src="fig/pool.png" alt="fig/pool.png"></td>
+    </tr>
+  </table>
 </div>
 
 ### Buttons
-**Board with only one button**
+**Board with only one button**(binding to boot pin)
 
 | Buttons           | Action             | Description             |
 | :---------------  | :-----------------:|:-----------------:      |
 |boot               | Long press         |  Miner Configuration  |
 |boot               | Double click       |  switch to nexe screen page(if a screen in board)        |
 
-**Board with two buttons**
+**Board with two buttons**(binding to boot pin and a gpio pin)
 
 | Buttons           | Action             | Description             |
 | :---------------  | :-----------------:|:-----------------:      |
@@ -59,7 +66,7 @@
 ***
 #### Initiation configuration
 
-1. When the device is powered on, it will connect to the last WiFi connected by default. If it fails to connect to this WiFi after trying for 10s, it will automatically enter the configuration mode.
+1. When the device is powered on, it will connect to the last WiFi connected by default. If it fails to connect to this WiFi after trying for 15s, it will automatically enter the configuration mode.
 
 2. Search for AP named: nmap-2.4g, enter password: 12345678
 
@@ -162,6 +169,7 @@
   - Lilygo-T-Dongle-s3
   - NM-Bot-Chain-V1
   - NM-USB-Chain-V1
+  - CYD(ESP32-2432S028R) with ILI9341 and ST7789 TFT driver.
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
 - Anything do not work as your expectation, just let us know.
@@ -172,6 +180,30 @@
 
 
 ## Release Log
+
+### (2024.11.07) - v0.4.03
+- Add:
+  - Board support CYD(ESP32-2432S028R) with ILI9341 and ST7789 TFT driver, upto 92kH/s.
+- Fixed:
+  - Restart issues.
+  - Shortage of lvgl heap.
+- Improved:
+  - None.
+- Modify:
+  - Remove firmware version in stratum protocol.
+  - Update NMControler, Added column sorting.
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec wireless stick v3](https://heltec.org/project/wireless-stick-v3/)
+  - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - CYD(ESP32-2432S028R) with ILI9341 and ST7789 TFT driver.
+  - Lilygo-T-Display-s3
+  - Lilygo-T-Dongle-s3
+  - NM-Bot-Chain-V1(Coming soon to sale)
+  - NM-USB-Chain-V1(Coming soon to sale)
+
 
 ### (2024.10.29) - v0.4.02
 - Add:
