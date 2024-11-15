@@ -1,3 +1,7 @@
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/NMminer1024/NMMiner/total)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NMminer1024/NMMiner)
+
+
 # NMMiner - New ESP32 Solo Miner
 - BTC solo miner.
 - 120kH/s with a single chip and maintaining low power consumption.
@@ -48,17 +52,17 @@
 | Buttons           | Action             | Description             |
 | :---------------  | :-----------------:|:-----------------:      |
 |boot               | Long press         |  Miner Configuration  |
-|boot               | Double click       |  switch to nexe screen page(if a screen in board)        |
+|boot               | Double click       |  switch to nexe screen page(if a screen on board)        |
 
 **Board with two buttons**(binding to boot pin and a gpio pin)
 
 | Buttons           | Action             | Description             |
 | :---------------  | :-----------------:|:-----------------:      |
 |boot               | Long press         |  Clear all status from nvs(if enabled this feature)  |
-|boot               | Single click       |  Screen wake up(if a screen in board)         |
-|boot               | Double click       |  Screen wake up(if a screen in board)         |
-|user               | Single click       |  Screen wake up(if a screen in board)         |
-|user               | Double click       |  Switch to next screen(if a screen in board)  |
+|boot               | Single click       |  Screen wake up(if a screen on board)         |
+|boot               | Double click       |  Screen wake up(if a screen on board)         |
+|user               | Single click       |  Screen wake up(if a screen on board)         |
+|user               | Double click       |  Switch to next screen(if a screen on board)  |
 |user               | [Press and hold before reset](#normal-configuration)  |  Miner Configuration    |
 
 
@@ -161,25 +165,51 @@
 
 ##  Board support from latest version:
   - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
-  - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
-  - [Heltec wireless stick v3](https://heltec.org/project/wireless-stick-v3/)
-  - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
-  - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
-  - Lilygo-T-Display-s3
-  - Lilygo-T-Dongle-s3
-  - NM-Bot-Chain-V1
-  - NM-USB-Chain-V1
+  - [Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)
+  - [Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)
+  - [Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - [NM Bot Chain v1](https://www.aliexpress.com/item/1005008052731503.html)
+  - NM USB Chain v1(Coming soon to sale)
   - CYD(ESP32-2432S028R) with ILI9341 and ST7789 TFT driver.
+  - Lilygo T Display-s3
+  - Lilygo T Dongle-s3
+
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
 - Anything do not work as your expectation, just let us know.
 
-| Email                   |  Telegram                       |
-| :-----------------:     |  :-----------------:            |
-|nmminer1024@gmail.com    |  https://t.me/+IYFC1D0al1E5Yjdl |
+| Email                   |  Telegram                       | Home Page                         |
+| :-----------------:     |  :-----------------:            |  :----------------------------:   |
+|nmminer1024@gmail.com    |  https://t.me/NMMiner           | [NMTech](https://www.nmminer.com/)|
 
 
 ## Release Log
+
+### (2024.11.14) - v0.4.04
+- Add:
+  - Board support heltec-wifi-lora32-v2, upto 92kH/s.
+- Fixed:
+  - Nm-usb-chain gauge calibration.
+  - Remove tempurature from CYD board, No tempurature sensor.
+- Improved:
+  - Breath led on Lilygo T dongle s3.
+- Modify:
+  - None.
+- Baord support
+  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)
+  - [Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)
+  - [Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)
+  - [Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
+  - [Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - [NM Bot Chain v1](https://www.aliexpress.com/item/1005008052731503.html)
+  - NM USB Chain v1(Coming soon to sale)
+  - CYD(ESP32-2432S028R) with ILI9341 and ST7789 TFT driver.
+  - Lilygo T Display-s3
+  - Lilygo T Dongle-s3
+
 
 ### (2024.11.07) - v0.4.03
 - Add:
@@ -194,16 +224,16 @@
   - Update NMControler, Added column sorting.
 - Baord support
   - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
+  - [Heltec WiFi lora 32 v2](https://heltec.org/project/wifi-lora-32v2/)
   - [Heltec WiFi lora 32 v3](https://www.aliexpress.com/item/1005005443005152.html)
   - [Heltec wireless stick v3](https://heltec.org/project/wireless-stick-v3/)
   - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
   - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
+  - [NM-Bot-Chain-V1](https://www.aliexpress.com/item/1005008052731503.html)
+  - NM-USB-Chain-V1(Coming soon to sale)
   - CYD(ESP32-2432S028R) with ILI9341 and ST7789 TFT driver.
   - Lilygo-T-Display-s3
   - Lilygo-T-Dongle-s3
-  - NM-Bot-Chain-V1(Coming soon to sale)
-  - NM-USB-Chain-V1(Coming soon to sale)
-
 
 ### (2024.10.29) - v0.4.02
 - Add:
