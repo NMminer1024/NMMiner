@@ -2,20 +2,35 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NMminer1024/NMMiner)
 
 
-# NMMiner - New ESP32 Solo Miner
-- BTC solo miner.
-- 120kH/s with a single chip and maintaining low power consumption.
+# NMMiner
+- 120kH/s with ESP32S3.
+- 92kH/s with ESP32-D0.
 - Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
 
 ## Requirements
-- Boards with ESP32S3FN8 , ESP32S3R8 , ESP-WROOM-32 as so far.
+- Boards with ESP32S3FN8 , ESP32S3R8 , ESP32-D0WDQ6 as so far.
 
 ## Features
-- Deeply optimazation for ESP32-S3, max hashrate: 119 KH/s
-- Deeply optimazation for ESP-WROOM-32, max hashrate: 92 KH/s
-- NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows
+- Deeply optimization for ESP32-S3, max hashrate: 119 KH/s.
+- Deeply optimization for ESP32-D0, max hashrate: 92 KH/s.
+- NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
+##  Board support from latest version:
+| Boards                                                                                  | Performance                | Description          |
+| :-------------------------------------------------------------------------------------  | :----------------------:|:-----------------:      |
+|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***119.9KH/s***       |          |
+|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***119.7KH/s***       |          |
+|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***119.3KH/s***       |          |
+|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***119.2KH/s***       |         |
+|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***117.8KH/s***       |         |
+|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***116.5KH/s***       |      |
+|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***115.7KH/s***       |      |
+|Lilygo T Display s3                                                                      | ***115.7KH/s***       |     |
+|Lilygo T Dongle s3                                                                       | ***112.3KH/s***       |     |
+|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***94.5KH/s***        | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
+|ESP32-2432S028R                                                                          | ***92.5KH/s***        | Both ILI9341 and ST7789 screen driver|
+|TTGO T Display                                                                           | ***90.5KH/s***        | Both official and clone|
 
 
 <div align="center">
@@ -31,19 +46,31 @@
   <table width="100%">
     <tr>
       <td width="50%" align="center"><img src="fig/lilygo-t-display-s3.png" alt="lilygo-t-display-s3.png"></td>
-      <td width="50%" align="center"><img src="fig/lilygo-t-dongle-s3.png" alt="lilygo-t-dongle-s3.png"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-t-dongle-s3.jpg" alt="lilygo-t-dongle-s3.jpg"></td>
     </tr>
   </table>
 </div>
-
 
 <div align="center">
   <table width="100%">
     <tr>
       <td width="50%" align="center"><img src="fig/cyd.jpg" alt="cyd.jpg"></td>
-      <td width="50%" align="center"><img src="fig/pool.png" alt="fig/pool.png"></td>
+      <td width="50%" align="center"><img src="fig/gauge.jpg" alt="fig/gauge.jpg"></td>
     </tr>
   </table>
+</div>
+
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/bot-chain.jpg" alt="bot-chain.jpg"></td>
+      <td width="50%" align="center"><img src="fig/bot-chain-hand.jpg" alt="fig/bot-chain-hand.jpg"></td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <img src="fig/pool.png" alt="pool">
 </div>
 
 ### Buttons
@@ -63,10 +90,10 @@
 |boot               | Double click       |  Screen wake up(if a screen on board)         |
 |user               | Single click       |  Screen wake up(if a screen on board)         |
 |user               | Double click       |  Switch to next screen(if a screen on board)  |
-|user               | [Press and hold before reset](#normal-configuration)  |  Miner Configuration    |
+|user               | Long press         |  Miner Configuration    |
 
 
-### NMMiner Configuration
+### Configuration
 ***
 #### Initiation configuration
 
@@ -94,9 +121,11 @@
 
 #### Force configuration
 
-1. Press and hold the **User** button, then click the **Reset** button, wait until the QR code appears(screen board required), then release the **User** button.
+1. Long press ***boot*** button for one button board.
 
-2. Then follow [Initiation configuration](#Initiation-configuration)
+2. Long press ***user*** button for two buttons board.
+
+3. Then follow [Initiation configuration](#Initiation-configuration).
 
 <div align="center">
   <img src="fig/nmap.png" alt="AP Config">
@@ -163,29 +192,33 @@
 </div>
 
 
-##  Board support from latest version:
-  - [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)
-  - [Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)
-  - [Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)
-  - [Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)
-  - [Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
-  - [Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)
-  - [NM Bot Chain v1](https://www.aliexpress.com/item/1005008052731503.html)
-  - NM USB Chain v1(Coming soon to sale)
-  - CYD(ESP32-2432S028R) with ILI9341 and ST7789 TFT driver.
-  - Lilygo T Display-s3
-  - Lilygo T Dongle-s3
 
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
 - Anything do not work as your expectation, just let us know.
 
-| Email                   |  Telegram                       | Home Page                         |
-| :-----------------:     |  :-----------------:            |  :----------------------------:   |
-|nmminer1024@gmail.com    |  https://t.me/NMMiner           | [NMTech](https://www.nmminer.com/)|
+| Email                   |  Telegram             | Home Page                         |
+| :-----------------:     |  :-----------------:  |  :----------------------------:   |
+|nmminer1024@gmail.com    |  https://t.me/NMMiner | [NMTech](https://www.nmminer.com/)|
 
 
 ## Release Log
+
+### (2024.11.22) - v0.5.01
+- Add:
+  - support: TTGO T display, upto 90~92kH/s.
+  - Feature: Led indicator for nm-bot-chain.
+  - Feature: Screen brightness adjustment from config page.
+- Fixed:
+  - UTC issues.
+  - Lilygo T Display s3 and TTGO T Display power supply issues.
+  - Chip ESP32-D0WDQ6-v1 crashed issues, firmware compatible with ESP32-D0WDQ6-v3.
+- Improved:
+  - None.
+- Modify:
+  - User button long pressed to enter miner configuration for 2 buttons boards.
+  - Logo 'lottery' to 'miner'.
+  - Uptime 999 days maximum.
 
 ### (2024.11.14) - v0.4.04
 - Add:
@@ -204,8 +237,8 @@
   - [Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)
   - [Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
   - [Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)
-  - [NM Bot Chain v1](https://www.aliexpress.com/item/1005008052731503.html)
-  - NM USB Chain v1(Coming soon to sale)
+  - [NM Bot Chain v1](https://www.nmminer.com/product/nm-botchain/)
+  - [NM USB Chain v1](https://www.nmminer.com/product/nm-usb-chian/)
   - CYD(ESP32-2432S028R) with ILI9341 and ST7789 TFT driver.
   - Lilygo T Display-s3
   - Lilygo T Dongle-s3
@@ -229,7 +262,7 @@
   - [Heltec wireless stick v3](https://heltec.org/project/wireless-stick-v3/)
   - [Heltec wireless stick lite v3](https://heltec.org/project/wireless-stick-lite-v2/)
   - [Heltec Wifi kit 32 v3](https://heltec.org/project/wifi-kit32-v3/)
-  - [NM-Bot-Chain-V1](https://www.aliexpress.com/item/1005008052731503.html)
+  - [NM-Bot-Chain-V1](https://www.nmminer.com/product/nm-botchain/)
   - NM-USB-Chain-V1(Coming soon to sale)
   - CYD(ESP32-2432S028R) with ILI9341 and ST7789 TFT driver.
   - Lilygo-T-Display-s3
