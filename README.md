@@ -1,14 +1,17 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/NMminer1024/NMMiner/total)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NMminer1024/NMMiner)
 
+<div align="center">
+  <h1>Join a global block game!</h1>
+</div>
 
-# NMMiner
+## NMMiner
 - 120kH/s with ESP32S3.
 - 92kH/s with ESP32-D0.
 - Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
 
 ## Requirements
-- Boards with ESP32S3FN8 , ESP32S3R8 , ESP32-D0WDQ6 as so far.
+- Boards with ESP32S3FN8 , ESP32S3R8 , ESP32-D0 as so far.
 
 ## Features
 - Deeply optimization for ESP32-S3, max hashrate: 119 KH/s.
@@ -16,7 +19,7 @@
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
-##  Board support from latest version:
+##  Board support from the latest version:
 | Boards                                                                                  | Performance                | Description          |
 | :-------------------------------------------------------------------------------------  | :----------------------:|:-----------------:      |
 |[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***119.9KH/s***       |          |
@@ -73,7 +76,7 @@
   <img src="fig/pool.png" alt="pool">
 </div>
 
-### Buttons
+## Buttons
 **Board with only one button**(binding to boot pin)
 
 | Buttons           | Action             | Description             |
@@ -93,9 +96,8 @@
 |user               | Long press         |  Miner Configuration    |
 
 
-### Configuration
-***
-#### Initiation configuration
+## Configuration
+### Initiation configuration
 
 1. When the device is powered on, it will connect to the last WiFi connected by default. If it fails to connect to this WiFi after trying for 15s, it will automatically enter the configuration mode.
 
@@ -119,7 +121,7 @@
 
 7. When you click **Save** it will take a while (10-15 seconds), do not reset the miner manually, just let it restart automatically.
 
-#### Force configuration
+### Force configuration
 
 1. Long press ***boot*** button for one button board.
 
@@ -131,8 +133,7 @@
   <img src="fig/nmap.png" alt="AP Config">
 </div>
 
-***
-#### Firmware update
+## Firmware update
  **Step 1**: Open [NMMiner Flash Tool](https://flash.nmminer.com/) in Chrome or Edge browser.
 
  **Step 2**: Choose the board and start the firmware update, **NMMiner Flash Tool** will pull the latest version from github, and configure the flash parameters automatically.
@@ -203,6 +204,20 @@
 
 
 ## Release Log
+
+### (2024.12.19) - v0.5.02
+- Add:
+  - support: holo-cubic-25mm, upto 117kH/s.
+- Fixed:
+  - UTC issues.
+  - Block counter flase count.
+  - QR code issue.
+  - Restart constantly.
+- Improved:
+  - Sahre accept rate.
+- Modify:
+  - Default Wifi change to 'NMMtech-2.4G'.
+  - Default DNS get from LAN.
 
 ### (2024.11.22) - v0.5.01
 - Add:
