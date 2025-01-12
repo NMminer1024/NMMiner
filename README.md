@@ -7,15 +7,15 @@
 
 ## NMMiner
 - 120kH/s with ESP32S3.
-- 92kH/s with ESP32-D0.
+- 92kH/s with ESP32D0.
 - Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
 
 ## Requirements
-- Boards with ESP32S3FN8 , ESP32S3R8 , ESP32-D0 as so far.
+- Boards with ESP32S3FN8 , ESP32S3R8 , ESP32D0 as so far.
 
 ## Features
-- Deeply optimization for ESP32-S3, max hashrate: 119 KH/s.
-- Deeply optimization for ESP32-D0, max hashrate: 92 KH/s.
+- Deeply optimization for ESP32S3, max hashrate: 119 KH/s.
+- Deeply optimization for ESP32D0, max hashrate: 92 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
@@ -30,6 +30,7 @@
 |[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***116.5KH/s***       |      |
 |[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***115.7KH/s***       |      |
 |Lilygo T Display s3                                                                      | ***115.7KH/s***       |     |
+|Lilygo T Display s3 amoled                                                               | ***115.1KH/s***       |     |
 |Lilygo T Dongle s3                                                                       | ***112.3KH/s***       |     |
 |[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***94.5KH/s***        | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
 |ESP32-2432S028R                                                                          | ***92.5KH/s***        | Both ILI9341 and ST7789 screen driver|
@@ -204,6 +205,16 @@
 
 
 ## Release Log
+
+### (2025.01.12) - v0.5.03
+- Add:
+  - support: lilygo-t-display-s3 amoled
+- Fixed:
+  - None.
+- Improved:
+  - UDP broadcast protocol format.
+- Modify:
+  - Configuration mode time out logic.
 
 ### (2024.12.19) - v0.5.02
 - Add:
