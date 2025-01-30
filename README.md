@@ -2,19 +2,21 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NMminer1024/NMMiner)
 
 <div align="center">
-  <h1>Join a global block game!</h1>
+  <h1>Join a global game of block!</h1>
 </div>
 
 ## NMMiner
 - 120kH/s with ESP32S3.
 - 92kH/s with ESP32D0.
+- 54kH/s with ESP32C3.
 - Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
 
 ## Requirements
-- Boards with ESP32S3FN8 , ESP32S3R8 , ESP32D0 as so far.
+- Boards with ESP32S3FN8 , ESP32S3R8 , ESP32D0 , ESP32C3 as so far.
 
 ## Features
 - Deeply optimization for ESP32S3, max hashrate: 119 KH/s.
+- Deeply optimization for ESP32C3, max hashrate: 54 KH/s.
 - Deeply optimization for ESP32D0, max hashrate: 92 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
@@ -30,12 +32,13 @@
 |[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***116.5KH/s***       |      |
 |[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***115.7KH/s***       |      |
 |Lilygo T Display s3                                                                      | ***115.7KH/s***       |     |
-|Lilygo T Display s3 amoled                                                               | ***115.1KH/s***       |     |
+|Lilygo T Display s3 amoled                                                               | ***115.5KH/s***       |     |
+|Seeed xiao esp32 s3                                                                      | ***115.2KH/s***       |     |
 |Lilygo T Dongle s3                                                                       | ***112.3KH/s***       |     |
 |[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***94.5KH/s***        | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
 |ESP32-2432S028R                                                                          | ***92.5KH/s***        | Both ILI9341 and ST7789 screen driver|
 |TTGO T Display                                                                           | ***90.5KH/s***        | Both official and clone|
-
+|Seeed xiao esp32 c3                                                                      | ***54.6KH/s***      |     |
 
 <div align="center">
   <table width="100%">
@@ -84,6 +87,7 @@
 | :---------------  | :-----------------:|:-----------------:      |
 |boot               | Long press         |  Miner Configuration  |
 |boot               | Double click       |  switch to nexe screen page(if a screen on board)        |
+|boot               |  click             |  Screen wake up(if a screen on board)        |
 
 **Board with two buttons**(binding to boot pin and a gpio pin)
 
@@ -205,6 +209,17 @@
 
 
 ## Release Log
+
+### (2025.01.30) - v0.6.01
+- Add:
+  - support: seeed xiao esp32 c3 ,seeed xiao esp32 s3
+- Fixed:
+  - Pool connection time out.
+  - Block counter issue.
+- Improved:
+  - None.
+- Modify:
+  - None.
 
 ### (2025.01.12) - v0.5.03
 - Add:
