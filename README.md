@@ -210,6 +210,16 @@
 
 ## Release Log
 
+### (2025.01.31) - v0.6.02
+- Add:
+  - None.
+- Fixed:
+  - seeed xiao esp32 c3 configuration mode issue.
+- Improved:
+  - None.
+- Modify:
+  - None.
+
 ### (2025.01.30) - v0.6.01
 - Add:
   - support: seeed xiao esp32 c3 ,seeed xiao esp32 s3
