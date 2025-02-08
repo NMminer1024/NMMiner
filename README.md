@@ -6,48 +6,49 @@
 </div>
 
 ## NMMiner
-- 120kH/s with ESP32S3.
+- 250kH/s with ESP32S3.
 - 92kH/s with ESP32D0.
-- 54kH/s with ESP32C3.
+- 240kH/s with ESP32C3.
 - Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
 
 ## Requirements
 - Boards with ESP32S3FN8 , ESP32S3R8 , ESP32D0 , ESP32C3 as so far.
 
 ## Features
-- Deeply optimization for ESP32S3, max hashrate: 119 KH/s.
-- Deeply optimization for ESP32C3, max hashrate: 54 KH/s.
+- Deeply optimization for ESP32S3, max hashrate: 250 KH/s.
 - Deeply optimization for ESP32D0, max hashrate: 92 KH/s.
+- Deeply optimization for ESP32C3, max hashrate: 240 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
 ##  Board support from the latest version:
 | Boards                                                                                  | Performance                | Description          |
 | :-------------------------------------------------------------------------------------  | :----------------------:|:-----------------:      |
-|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***119.9KH/s***       |          |
-|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***119.7KH/s***       |          |
-|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***119.3KH/s***       |          |
-|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***119.2KH/s***       |         |
-|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***117.8KH/s***       |         |
-|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***116.5KH/s***       |      |
-|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***115.7KH/s***       |      |
-|Lilygo T Display s3                                                                      | ***115.7KH/s***       |     |
-|Lilygo T Display s3 amoled                                                               | ***115.5KH/s***       |     |
-|Seeed xiao esp32 s3                                                                      | ***115.2KH/s***       |     |
-|Lilygo T Dongle s3                                                                       | ***112.3KH/s***       |     |
+|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***254.9KH/s***       |     |
+|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***254.7KH/s***       |     |
+|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***254.3KH/s***       |     |
+|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***254.2KH/s***       |     |
+|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***252.8KH/s***       |     |
+|Seeed xiao esp32 s3                                                                      | ***252.1KH/s***       |     |
+|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***244.5KH/s***       |     |
+|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***243.7KH/s***       |     |
+|Lilygo T Display s3                                                                      | ***241.5KH/s***       |     |
+|Lilygo T Display s3 amoled                                                               | ***241.1KH/s***       |     |
+|Lilygo T Dongle s3                                                                       | ***240.3KH/s***       |     |
+|Seeed xiao esp32 c3                                                                      | ***240.6KH/s***       |     |
 |[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***94.5KH/s***        | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
 |ESP32-2432S028R                                                                          | ***92.5KH/s***        | Both ILI9341 and ST7789 screen driver|
 |TTGO T Display                                                                           | ***90.5KH/s***        | Both official and clone|
-|Seeed xiao esp32 c3                                                                      | ***54.6KH/s***      |     |
 
-<div align="center">
+
+<!-- <div align="center">
   <table width="100%">
     <tr>
       <td width="50%" align="center"><img src="fig/hashrate.png" alt="hashrate"></td>
       <td width="50%" align="center"><img src="fig/lora32 v3.jpg" alt="lora32 v3.jpg"></td>
     </tr>
   </table>
-</div>
+</div> -->
 
 <div align="center">
   <table width="100%">
@@ -70,8 +71,8 @@
 <div align="center">
   <table width="100%">
     <tr>
+      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3-amoled.png" alt="fig/lilygo-t-display-s3-amoled.png"></td>
       <td width="50%" align="center"><img src="fig/bot-chain.jpg" alt="bot-chain.jpg"></td>
-      <td width="50%" align="center"><img src="fig/bot-chain-hand.jpg" alt="fig/bot-chain-hand.jpg"></td>
     </tr>
   </table>
 </div>
@@ -175,8 +176,9 @@
 
 
 ## Pool
-- Due to the very limited on-chip resources of the ESP32, some high-difficulty mining pools currently reject our connections. [public-pool.io](https://web.public-pool.io/) is a mining pool that accepts low-difficulty miners. We appreciate their efforts.
-
+- Due to the very limited on-chip resources, some high-difficulty mining pools currently reject our connections, the following pools support low diff stratum connection.
+- Default primary pool : stratum+tcp://public-pool.io:21496
+- Default fallback pool: stratum+tcp://pool.tazmining.ch:33333
 ## How to monitor
 
 - In fact, both ***NMController_client*** and ***NMController_web*** have the same feature, ***NMController_client*** for Windows, ***NMController_web*** for Windows and MACOS, We make an example by ***NMController_client*** here.
@@ -209,6 +211,16 @@
 
 
 ## Release Log
+
+### (2025.02.08) - v1.1.01
+- Add:
+  - Fallback pool option.
+- Fixed:
+  - seeed xiao esp32 c3 configuration mode issue.
+- Improved:
+  - ESP32 s3 upto 255KH/s,ESP32 c3 upto 240KH/s.
+- Modify:
+  - SSL option, enable ssl connection in pool URL as "stratum+ssl://example-pool.com:12345"
 
 ### (2025.01.31) - v0.6.02
 - Add:
