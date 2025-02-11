@@ -6,17 +6,17 @@
 </div>
 
 ## NMMiner
-- 250kH/s with ESP32S3.
-- 92kH/s with ESP32D0.
+- 256kH/s with ESP32S3.
 - 240kH/s with ESP32C3.
+- 224kH/s with ESP32D0.
 - Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
 
 ## Requirements
 - Boards with ESP32S3FN8 , ESP32S3R8 , ESP32D0 , ESP32C3 as so far.
 
 ## Features
-- Deeply optimization for ESP32S3, max hashrate: 250 KH/s.
-- Deeply optimization for ESP32D0, max hashrate: 92 KH/s.
+- Deeply optimization for ESP32S3, max hashrate: 256 KH/s.
+- Deeply optimization for ESP32D0, max hashrate: 224 KH/s.
 - Deeply optimization for ESP32C3, max hashrate: 240 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
@@ -36,9 +36,9 @@
 |Lilygo T Display s3 amoled                                                               | ***241.1KH/s***       |     |
 |Lilygo T Dongle s3                                                                       | ***240.3KH/s***       |     |
 |Seeed xiao esp32 c3                                                                      | ***240.6KH/s***       |     |
-|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***94.5KH/s***        | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
-|ESP32-2432S028R                                                                          | ***92.5KH/s***        | Both ILI9341 and ST7789 screen driver|
-|TTGO T Display                                                                           | ***90.5KH/s***        | Both official and clone|
+|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***224.5KH/s***        | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
+|ESP32-2432S028R                                                                          | ***224.3KH/s***        | Both ILI9341 and ST7789 screen driver|
+|TTGO T Display                                                                           | ***224.1KH/s***        | Both official and clone|
 
 
 <!-- <div align="center">
@@ -211,6 +211,17 @@
 
 
 ## Release Log
+
+### (2025.02.11) - v1.1.02
+- Add:
+  - None.
+- Fixed:
+  - Reboot issue.
+  - Freezing issue.
+- Improved:
+  - ESP32 d0 upto 224kH/s.
+- Modify:
+  - Remove ssl connection.
 
 ### (2025.02.08) - v1.1.01
 - Add:
