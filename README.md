@@ -2,58 +2,55 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NMminer1024/NMMiner)
 
 <div align="center">
-  <h1>Join a global game of block!</h1>
+  <h1>Join the global blockchain revolution!</h1>
 </div>
 
 ## NMMiner
-- 256kH/s with ESP32S3.
-- 240kH/s with ESP32C3.
-- 224kH/s with ESP32D0.
 - Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
 
 ## Requirements
 - Boards with ESP32S3FN8 , ESP32S3R8 , ESP32D0 , ESP32C3 as so far.
 
 ## Features
-- Deeply optimization for ESP32S3, max hashrate: 256 KH/s.
-- Deeply optimization for ESP32D0, max hashrate: 224 KH/s.
-- Deeply optimization for ESP32C3, max hashrate: 240 KH/s.
+- Deeply optimization for ESP32D0, max hashrate: 340 KH/s.
+- Deeply optimization for ESP32S3, max hashrate: 291 KH/s.
+- Deeply optimization for ESP32C3, max hashrate: 282 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
 ##  Board support from the latest version:
 | Boards                                                                                  | Performance                | Description          |
 | :-------------------------------------------------------------------------------------  | :----------------------:|:-----------------:      |
-|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***254.9KH/s***       |     |
-|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***254.7KH/s***       |     |
-|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***254.3KH/s***       |     |
-|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***254.2KH/s***       |     |
-|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***252.8KH/s***       |     |
-|Seeed xiao esp32 s3                                                                      | ***252.1KH/s***       |     |
-|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***244.5KH/s***       |     |
-|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***243.7KH/s***       |     |
-|Lilygo T Display s3                                                                      | ***241.5KH/s***       |     |
-|Lilygo T Display s3 amoled                                                               | ***241.1KH/s***       |     |
-|Lilygo T Dongle s3                                                                       | ***240.3KH/s***       |     |
-|Seeed xiao esp32 c3                                                                      | ***240.6KH/s***       |     |
-|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***224.5KH/s***        | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
-|ESP32-2432S028R                                                                          | ***224.3KH/s***        | Both ILI9341 and ST7789 screen driver|
-|TTGO T Display                                                                           | ***224.1KH/s***        | Both official and clone|
-
-
-<!-- <div align="center">
-  <table width="100%">
-    <tr>
-      <td width="50%" align="center"><img src="fig/hashrate.png" alt="hashrate"></td>
-      <td width="50%" align="center"><img src="fig/lora32 v3.jpg" alt="lora32 v3.jpg"></td>
-    </tr>
-  </table>
-</div> -->
+|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***340.5KH/s***       | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
+|ESP32-2432S028R                                                                          | ***340.3KH/s***       | Both ILI9341 and ST7789 screen driver|
+|TTGO T Display                                                                           | ***340.2KH/s***       | Both official and clone|
+|ESP32 DEVKitC 32                                                                         | ***340.1KH/s***       | Both official and clone|
+|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***291.9KH/s***       |     |
+|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***291.7KH/s***       |     |
+|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***291.3KH/s***       |     |
+|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***291.2KH/s***       |     |
+|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***287.8KH/s***       |     |
+|Lilygo T Display s3 amoled                                                               | ***286.1KH/s***       |     |
+|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***284.5KH/s***       |     |
+|Lilygo T Dongle s3                                                                       | ***284.3KH/s***       |     |
+|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***282.9KH/s***       |     |
+|Seeed xiao esp32 s3                                                                      | ***282.7KH/s***       |     |
+|Seeed xiao esp32 c3                                                                      | ***282.6KH/s***       |     |
+|Lilygo T Display s3                                                                      | ***281.5KH/s***       |     |
 
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3.png" alt="lilygo-t-display-s3.png"></td>
+      <td width="50%" align="center"><img src="fig/heltec_wireless_sticker.jpg" alt="heltec_wireless_sticker"></td>
+      <td width="50%" align="center"><img src="fig/heltec_wifi_kit32.jpg" alt="heltec_wifi_kit32"></td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3.jpg" alt="lilygo-t-display-s3.jpg"></td>
       <td width="50%" align="center"><img src="fig/lilygo-t-dongle-s3.jpg" alt="lilygo-t-dongle-s3.jpg"></td>
     </tr>
   </table>
@@ -63,7 +60,7 @@
   <table width="100%">
     <tr>
       <td width="50%" align="center"><img src="fig/cyd.jpg" alt="cyd.jpg"></td>
-      <td width="50%" align="center"><img src="fig/gauge.jpg" alt="fig/gauge.jpg"></td>
+      <td width="50%" align="center"><img src="fig/usb_chain.jpg" alt="fig/usb_chain.jpg"></td>
     </tr>
   </table>
 </div>
@@ -71,8 +68,8 @@
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3-amoled.png" alt="fig/lilygo-t-display-s3-amoled.png"></td>
-      <td width="50%" align="center"><img src="fig/bot-chain.jpg" alt="bot-chain.jpg"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3-amoled.jpg" alt="fig/lilygo-t-display-s3-amoled.jpg"></td>
+      <td width="50%" align="center"><img src="fig/ttgo_display.jpg" alt="ttgo_display.jpg"></td>
     </tr>
   </table>
 </div>
@@ -88,7 +85,7 @@
 | :---------------  | :-----------------:|:-----------------:      |
 |boot               | Long press         |  Miner Configuration  |
 |boot               | Double click       |  switch to nexe screen page(if a screen on board)        |
-|boot               |  click             |  Screen wake up(if a screen on board)        |
+|boot               | Single click       |  Screen wake up(if a screen on board)        |
 
 **Board with two buttons**(binding to boot pin and a gpio pin)
 
@@ -123,9 +120,7 @@
 
 5. You can return to the configuration page at any time and refer to the [button](#buttons) operations.
 
-6. In some areas, the pool is blocked by the local firewall. If you have an SSL encrypted channel, you can enable this option.
-
-7. When you click **Save** it will take a while (10-15 seconds), do not reset the miner manually, just let it restart automatically.
+6. When you click **Save** it will take a while (10-15 seconds), do not reset the miner manually, just let it restart automatically.
 
 ### Force configuration
 
@@ -211,6 +206,17 @@
 
 
 ## Release Log
+
+### (2025.02.17) - v1.1.03
+- Add:
+  - esp32 dev kitc 32 ,upto 340kH/s.
+- Fixed:
+  - Reboot issue.
+  - Freezing issue.
+- Improved:
+  - ESP32d0 upto 340kH/s, ESP32s3 upto 291kH/s, ESP32c3 upto 284kH/s.
+- Modify:
+  - None.
 
 ### (2025.02.11) - v1.1.02
 - Add:
