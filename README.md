@@ -22,9 +22,9 @@
 | Boards                                                                                  | Performance                | Description          |
 | :-------------------------------------------------------------------------------------  | :----------------------:|:-----------------:      |
 |[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***340.5KH/s***       | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
-|ESP32-2432S028R                                                                          | ***340.3KH/s***       | Both ILI9341 and ST7789 screen driver|
+|[ESP32-2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***340.3KH/s***       | Both ILI9341 and ST7789 screen driver|
 |TTGO T Display                                                                           | ***340.2KH/s***       | Both official and clone|
-|ESP32 DEVKitC 32                                                                         | ***340.1KH/s***       | Both official and clone|
+|ESP32 DEVKitC 32                                                                         | ***340.1KH/s***       | |
 |[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***291.9KH/s***       |     |
 |[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***291.7KH/s***       |     |
 |[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***291.3KH/s***       |     |
@@ -73,7 +73,14 @@
     </tr>
   </table>
 </div>
-
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/esp32_dev_kitc_32.jpg" alt="fig/esp32_dev_kitc_32.jpg"></td>
+      <td width="50%" align="center"><img src="fig/xiao_c3.jpg" alt="xiao_c3.jpg"></td>
+    </tr>
+  </table>
+</div>
 <div align="center">
   <img src="fig/pool.png" alt="pool">
 </div>
