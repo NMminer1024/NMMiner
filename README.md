@@ -12,31 +12,31 @@
 - Boards with ESP32S3FN8 , ESP32S3R8 , ESP32D0 , ESP32C3 as so far.
 
 ## Features
-- Deeply optimization for ESP32D0, max hashrate: 340 KH/s.
-- Deeply optimization for ESP32S3, max hashrate: 291 KH/s.
-- Deeply optimization for ESP32C3, max hashrate: 282 KH/s.
+- Deeply optimization for ESP32D0, max hashrate: 375 KH/s.
+- Deeply optimization for ESP32S3, max hashrate: 318 KH/s.
+- Deeply optimization for ESP32C3, max hashrate: 308 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
 ##  Board support from the latest version:
 | Boards                                                                                  | Performance                | Description          |
 | :-------------------------------------------------------------------------------------  | :----------------------:|:-----------------:      |
-|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***340.5KH/s***       | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
-|[ESP32-2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***340.3KH/s***       | Both ILI9341 and ST7789 screen driver|
-|TTGO T Display                                                                           | ***340.2KH/s***       | Both official and clone|
-|ESP32 DEVKitC 32                                                                         | ***340.1KH/s***       | |
-|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***291.9KH/s***       |     |
-|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***291.7KH/s***       |     |
-|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***291.3KH/s***       |     |
-|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***291.2KH/s***       |     |
-|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***287.8KH/s***       |     |
-|Lilygo T Display s3 amoled                                                               | ***286.1KH/s***       |     |
-|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***284.5KH/s***       |     |
-|Lilygo T Dongle s3                                                                       | ***284.3KH/s***       |     |
-|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***282.9KH/s***       |     |
-|Seeed xiao esp32 s3                                                                      | ***282.7KH/s***       |     |
-|Seeed xiao esp32 c3                                                                      | ***282.6KH/s***       |     |
-|Lilygo T Display s3                                                                      | ***281.5KH/s***       |     |
+|[ESP32-2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***375.3KH/s***       | upto 380kH/s when screen sleep|
+|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***375.5KH/s***       | Both ESP32-D0WDQ6 and ESP32-D0WDQ6-V3|
+|TTGO T Display                                                                           | ***375.2KH/s***       | Both official and clone|
+|ESP32 DEVKitC 32                                                                         | ***375.1KH/s***       |     |
+|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***318.9KH/s***       |     |
+|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***317.7KH/s***       |     |
+|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***317.3KH/s***       |     |
+|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***315.2KH/s***       |     |
+|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***313.8KH/s***       |     |
+|Lilygo T Display s3 amoled                                                               | ***310.1KH/s***       |     |
+|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***309.5KH/s***       |     |
+|Lilygo T Dongle s3                                                                       | ***308.3KH/s***       |     |
+|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***304.9KH/s***       |     |
+|Seeed xiao esp32 s3                                                                      | ***318.7KH/s***       |     |
+|Seeed xiao esp32 c3                                                                      | ***308.6KH/s***       |     |
+|Lilygo T Display s3                                                                      | ***307.5KH/s***       |     |
 
 <div align="center">
   <table width="100%">
@@ -213,6 +213,20 @@
 
 
 ## Release Log
+
+### (2025.02.21) - v1.2.01
+- Add:
+  - None.
+- Fixed:
+  - Reboot issue.
+  - Freezing issue.
+- Improved:
+  - ESP32d0 upto 375kH/s
+  - ESP32s3 upto 318kH/s
+  - ESP32c3 upto 308kH/s.
+- Modify:
+  - UDP boardcast from 2s to 5s.
+  - DNS fixed to 8.8.8.8 and 8.8.4.4
 
 ### (2025.02.17) - v1.1.03
 - Add:
