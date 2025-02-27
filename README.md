@@ -220,6 +220,16 @@
 
 ## Release Log
 
+### (2025.02.27) - v1.4.01
+- Add:
+  - None.
+- Fixed:
+  - Freezing issues.
+- Improved:
+  - NMController web server.
+- Modify:
+  - None.
+
 ### (2025.02.26) - v1.3.01
 - Add:
   - Led enable/disable option.
