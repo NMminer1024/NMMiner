@@ -37,6 +37,7 @@
 |Seeed xiao esp32 s3                                                                      | ***318.7KH/s***       | ESP32-S3FN8 |
 |Seeed xiao esp32 c3                                                                      | ***308.6KH/s***       | ESP32-C3 |
 |Lilygo T Display s3                                                                      | ***307.5KH/s***       | ESP32-S3R8 |
+|esp32 s3 geek                                                                            | ***307.1KH/s***       | ESP32-S3   |
 
 <div align="center">
   <table width="100%">
@@ -219,6 +220,16 @@
 
 
 ## Release Log
+
+### (2025.03.03) - v1.4.02
+- Add:
+  - esp32-s3-geek support, upto 308kH/s.
+- Fixed:
+  - Local diff infinite issues.
+- Improved:
+  - NMController client update to v0.3.
+- Modify:
+  - None.
 
 ### (2025.02.27) - v1.4.01
 - Add:
