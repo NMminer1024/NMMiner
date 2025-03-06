@@ -198,16 +198,11 @@
   <img src="fig/nmcontroller-home.jpg" alt="nmcontroller-home">
 </div>
 
-- Redirect to the web monitor for more details. 
+- configuration via NMControler client, Config single miner or gorup miners.(firmware v1.5.xx required)
 
 <div align="center">
   <img src="fig/nmcontroller-details.jpg" alt="nmcontroller-details">
 </div>
-
-<div align="center">
-  <img src="fig/web monitor.jpg" alt="web monitor">
-</div>
-
 
 
 ## Contact
@@ -220,6 +215,16 @@
 
 
 ## Release Log
+
+### (2025.03.06) - v1.5.01
+- Add:
+  - Configure NMMiner via the NMController client to make your life easier.
+- Fixed:
+  - Restart issue.
+- Improved:
+  - NMController client update to v0.4.
+- Modify:
+  - None.
 
 ### (2025.03.03) - v1.4.02
 - Add:
