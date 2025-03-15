@@ -186,6 +186,7 @@
 
 ## Pool
 - Due to the very limited on-chip resources, some high-difficulty mining pools currently reject our connections, the following pools support low diff stratum connection.
+-  pool http://Web.stompi.de: stratum+tcp://pool.stompi.de:3333
 - Default primary pool : stratum+tcp://public-pool.io:21496
 - Default fallback pool: stratum+tcp://pool.tazmining.ch:33333
 ## How to monitor
