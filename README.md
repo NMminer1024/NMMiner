@@ -12,32 +12,57 @@
 - Boards with ESP32S3, ESP32D0 , ESP32C3 as so far.
 
 ## Features
-- Deeply optimization for ESP32D0, max hashrate: 412 KH/s.
+- Deeply optimization for ESP32D0, max hashrate: 470 KH/s.
 - Deeply optimization for ESP32S3, max hashrate: 318 KH/s.
 - Deeply optimization for ESP32C3, max hashrate: 308 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
 ##  Board support from the latest version:
-| Boards                                                                                  | Performance                | Chip    |
-| :-------------------------------------------------------------------------------------  | :----------------------:|:-----------------:      |
-|[ESP32-2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***412.3KH/s***       | ESP32-D0WDQ6|
-|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***412.5KH/s***       | ESP32-D0WDQ6|
-|TTGO T Display                                                                           | ***412.2KH/s***       | ESP32-D0WDQ6|
-|ESP32 DEVKitC 32                                                                         | ***412.1KH/s***       | ESP32-D0WDQ6|
+| Boards                                                                                  | Performance                | Chip      |
+| :-------------------------------------------------------------------------------------  | :----------------------:|:-----------: |
+|ESP32 DEVKitC 32                                                                         | ***468.1KH/s***       | ESP32-D0WDQ6|
+|[ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***465.3KH/s***       | ESP32-D0WDQ6   |
+|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***465.5KH/s***       | ESP32-D0WDQ6|
+|ESP32 2432s024                                                                           | ***463.1KH/s***       | ESP32-D0WDQ6   |
+|TTGO T Display                                                                           | ***461.2KH/s***       | ESP32-D0WDQ6|
+|ESP32 3248s035                                                                           | ***460.1KH/s***       | ESP32-D0WDQ6|
+|WT32 SC01                                                                                | ***451.1KH/s***       | ESP32-D0WDQ6|
+|ESP32 CAM                                                                                | ***450.1KH/s***       | ESP32-D0WDQ6   |
 |[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***318.9KH/s***       | ESP32-D0WDQ6|
 |[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***317.7KH/s***       | ESP32-S3FN8 |
 |[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***317.3KH/s***       | ESP32-S3FN8 |
-|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***315.2KH/s***       | ESP32-S3FN8 |
+|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***317.2KH/s***       | ESP32-S3FN8 |
 |[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***313.8KH/s***       | ESP32-S3FN8 |
 |Lilygo T Display s3 amoled                                                               | ***310.1KH/s***       | ESP32-S3R8 |
+|Lilygo T QT                                                                              | ***308.1KH/s***       | ESP32-S3FN8 |
 |[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***309.5KH/s***       | ESP32-S3FN8 |
+|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***308.4KH/s***       | ESP32-S3R8 |
 |Lilygo T Dongle s3                                                                       | ***308.3KH/s***       | ESP32-S3R8 |
-|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***304.9KH/s***       | ESP32-S3R8 |
 |Seeed xiao esp32 s3                                                                      | ***318.7KH/s***       | ESP32-S3FN8 |
+|ESP32 s3 0.42 oled                                                                       | ***312.1KH/s***       | ESP32-S3   |
 |Seeed xiao esp32 c3                                                                      | ***308.6KH/s***       | ESP32-C3 |
 |Lilygo T Display s3                                                                      | ***307.5KH/s***       | ESP32-S3R8 |
-|esp32 s3 geek                                                                            | ***307.1KH/s***       | ESP32-S3   |
+|ESP32 s3 geek                                                                            | ***305.1KH/s***       | ESP32-S3   |
+|ESP32 c3 0.42 oled                                                                       | ***240.1KH/s***       | ESP32-C3   |
+
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/cyd.jpg" alt="cyd.jpg"></td>
+      <td width="50%" align="center"><img src="fig/cyd-clock.jpg" alt="fig/cyd-clock.jpg"></td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3.jpg" alt="lilygo-t-display-s3.jpg"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3-clock.jpg" alt="lilygo-t-display-s3-clock.jpg"></td>
+    </tr>
+  </table>
+</div>
 
 <div align="center">
   <table width="100%">
@@ -48,20 +73,14 @@
   </table>
 </div>
 
-<div align="center">
-  <table width="100%">
-    <tr>
-      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3.jpg" alt="lilygo-t-display-s3.jpg"></td>
-      <td width="50%" align="center"><img src="fig/lilygo-t-dongle-s3.jpg" alt="lilygo-t-dongle-s3.jpg"></td>
-    </tr>
-  </table>
-</div>
+
+
 
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/cyd.jpg" alt="cyd.jpg"></td>
-      <td width="50%" align="center"><img src="fig/usb_chain.jpg" alt="fig/usb_chain.jpg"></td>
+      <td width="50%" align="center"><img src="fig/usb_chain.jpg" alt="usb_chain.jpg"></td>
+      <td width="50%" align="center"><img src="fig/s3geek.jpg" alt="fig/s3geek.jpg"></td>
     </tr>
   </table>
 </div>
@@ -74,6 +93,27 @@
     </tr>
   </table>
 </div>
+<div align="center">
+
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/c3-042-oled.jpg" alt="fig/c3-042-oled.jpg"></td>
+      <td width="50%" align="center"><img src="fig/s3-042-oled.jpg" alt="s3-042-oled.jpg"></td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/t-qt.jpg" alt="fig/t-qt.jpg"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-t-dongle-s3.jpg" alt="lilygo-t-dongle-s3.jpg"></td>
+    </tr>
+  </table>
+</div>
+
+
 <div align="center">
   <table width="100%">
     <tr>
@@ -186,8 +226,16 @@
 
 ## Pool
 - Due to the very limited on-chip resources, some high-difficulty mining pools currently reject our connections, the following pools support low diff stratum connection.
-- Default primary pool : stratum+tcp://public-pool.io:21496
-- Default fallback pool: stratum+tcp://pool.tazmining.ch:33333
+
+#### BTC
+- stratum+tcp://public-pool.io:21496 , https://web.public-pool.io
+- stratum+tcp://pool.tazmining.ch:33333 , https://tazmining.ch/?#
+
+#### BCH
+- stratum+tcp://pool.bchsolo.com:3332, https://pool.bchsolo.com/#
+
+
+
 ## How to monitor
 
 - In fact, both ***NMController_client*** and ***NMController_web*** have the same feature, ***NMController_client*** for Windows, ***NMController_web*** for Windows and MACOS, We make an example by ***NMController_client*** here.
@@ -205,6 +253,11 @@
 </div>
 
 
+## Known issue(s)
+- In some router, the WPA group key exchange will trigger the ESP32 to disconnect from the router. The group key exchange interval varies in different routers. If the WPA group key exchange interval can be modified, it is recommended to set it to a longer time to avoid miner disconnection.
+- Here we take Openwrt as an example, edit file ***etc/config/wireless***, in the interfaces section under SSID, manually write: ***option wpa_group_rekey '86400'*** , which means WPA group key exchange every day.
+
+
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
 - Anything do not work as your expectation, just let us know.
@@ -215,6 +268,25 @@
 
 
 ## Release Log
+
+### (2025.03.18) - v1.6.01
+- Add:
+  - board 'esp32 2432s024' support.
+  - board 'esp32 3248s035' support.
+  - board 'esp32 c3 0.42 oled' support.
+  - board 'esp32 s3 0.42 oled' support.
+  - board 'esp32 cam' support.
+  - board 'wt32 sc01' support.
+  - board 'lilygo t qt' support.
+- Fixed:
+  - Hashrate issues.
+- Improved:
+  - ESP32 d0 hashrate upto 470kH/s.
+  - NMController client update to v0.4.1, *.ini file support.
+  - NM-USB-Chain default page to meter page.
+  - Add price to clock page.
+- Modify:
+  - Clock page time rolling to static.
 
 ### (2025.03.06) - v1.5.01
 - Add:
