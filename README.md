@@ -29,7 +29,7 @@
 |ESP32 3248s035                                                                           | ***460.1KH/s***       | ESP32-D0WDQ6|
 |WT32 SC01                                                                                | ***451.1KH/s***       | ESP32-D0WDQ6|
 |ESP32 CAM                                                                                | ***450.1KH/s***       | ESP32-D0WDQ6   |
-|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***318.9KH/s***       | ESP32-D0WDQ6|
+|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***318.9KH/s***       | ESP32-S3FN8|
 |[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***317.7KH/s***       | ESP32-S3FN8 |
 |[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***317.3KH/s***       | ESP32-S3FN8 |
 |[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***317.2KH/s***       | ESP32-S3FN8 |
