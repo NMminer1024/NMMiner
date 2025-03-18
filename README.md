@@ -93,7 +93,6 @@
     </tr>
   </table>
 </div>
-<div align="center">
 
 <div align="center">
   <table width="100%">
@@ -122,6 +121,7 @@
     </tr>
   </table>
 </div>
+
 <div align="center">
   <img src="fig/pool.png" alt="pool">
 </div>
