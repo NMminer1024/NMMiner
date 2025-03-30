@@ -269,6 +269,20 @@
 
 ## Release Log
 
+### (2025.03.30) - v1.6.02
+- Add:
+  - Screen touch driver to CYD 2.4, 2.8, 3.5 inch board.
+- Fixed:
+  - CYD ili9341 ui issue.
+  - NTP and swarm issue.
+- Improved:
+  - None.
+- Modify:
+  - Clock page style.
+  - Time zone allow float value input.
+  - CYD has no temperature sensor, display real time instead.
+  - NTP calibration interval 6h.
+
 ### (2025.03.18) - v1.6.01
 - Add:
   - board 'esp32 2432s024' support.
