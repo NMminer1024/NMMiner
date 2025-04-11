@@ -12,7 +12,7 @@
 - Boards with ESP32S3, ESP32D0 , ESP32C3 as so far.
 
 ## Features
-- Deeply optimization for ESP32D0, max hashrate: 470 KH/s.
+- Deeply optimization for ESP32D0, max hashrate: 485 KH/s.
 - Deeply optimization for ESP32S3, max hashrate: 318 KH/s.
 - Deeply optimization for ESP32C3, max hashrate: 308 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
@@ -21,14 +21,14 @@
 ##  Board support from the latest version:
 | Boards                                                                                  | Performance                | Chip      |
 | :-------------------------------------------------------------------------------------  | :----------------------:|:-----------: |
-|ESP32 DEVKitC 32                                                                         | ***468.1KH/s***       | ESP32-D0WDQ6|
-|[ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***465.3KH/s***       | ESP32-D0WDQ6   |
-|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***465.5KH/s***       | ESP32-D0WDQ6|
-|ESP32 2432s024                                                                           | ***463.1KH/s***       | ESP32-D0WDQ6   |
-|TTGO T Display                                                                           | ***461.2KH/s***       | ESP32-D0WDQ6|
-|ESP32 3248s035                                                                           | ***460.1KH/s***       | ESP32-D0WDQ6|
-|WT32 SC01                                                                                | ***451.1KH/s***       | ESP32-D0WDQ6|
-|ESP32 CAM                                                                                | ***450.1KH/s***       | ESP32-D0WDQ6   |
+|ESP32 DEVKitC 32                                                                         | ***485.1KH/s***       | ESP32-D0WDQ6|
+|[ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***483.3KH/s***       | ESP32-D0WDQ6   |
+|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***482.5KH/s***       | ESP32-D0WDQ6|
+|ESP32 2432s024                                                                           | ***479.1KH/s***       | ESP32-D0WDQ6   |
+|TTGO T Display                                                                           | ***478.2KH/s***       | ESP32-D0WDQ6|
+|ESP32 3248s035                                                                           | ***476.1KH/s***       | ESP32-D0WDQ6|
+|WT32 SC01                                                                                | ***472.1KH/s***       | ESP32-D0WDQ6|
+|ESP32 CAM                                                                                | ***460.1KH/s***       | ESP32-D0WDQ6   |
 |[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***318.9KH/s***       | ESP32-S3FN8|
 |[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***317.7KH/s***       | ESP32-S3FN8 |
 |[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***317.3KH/s***       | ESP32-S3FN8 |
@@ -231,11 +231,6 @@
 - stratum+tcp://public-pool.io:21496 , https://web.public-pool.io
 - stratum+tcp://pool.tazmining.ch:33333 , https://tazmining.ch/?#
 
-#### BCH
-- stratum+tcp://pool.bchsolo.com:3332, https://pool.bchsolo.com/#
-
-
-
 ## How to monitor
 
 - In fact, both ***NMController_client*** and ***NMController_web*** have the same feature, ***NMController_client*** for Windows, ***NMController_web*** for Windows and MACOS, We make an example by ***NMController_client*** here.
@@ -267,7 +262,23 @@
 |nmminer1024@gmail.com    |  https://t.me/NMMiner | [NMTech](https://www.nmminer.com/)|
 
 
+
 ## Release Log
+
+### (2025.04.12) - v1.6.03
+- `feature`:
+  - New firmware release reminder on miner loading page and miner main page.
+  - Pool url field on web monitor page.
+  - Pool url display on miner clock page.
+- `fix`:
+  - When the screen is asleep, tapping the screen will wake it up(for CYD 2.4, 2.8, 3.5).
+  - Log issue for pool switch.
+- `remove`:
+  - Temperature of CYD on web monitor page. 
+- `optimize`:
+  - ESP32D0 upto 483kH/s.
+  - Clock display to 12-hour format.
+  - Memory usage.
 
 ### (2025.03.30) - v1.6.02
 - Add:
