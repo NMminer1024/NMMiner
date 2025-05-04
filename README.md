@@ -2,7 +2,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NMminer1024/NMMiner)
 
 <div align="center">
-  <h1>Join the global blockchain revolution!</h1>
+  <h1>Make it better</h1>
 </div>
 
 ## NMMiner
@@ -12,7 +12,7 @@
 - Boards with ESP32S3, ESP32D0 , ESP32C3 as so far.
 
 ## Features
-- Deeply optimization for ESP32D0, max hashrate: 485 KH/s.
+- Deeply optimization for ESP32D0, max hashrate: 993 KH/s.
 - Deeply optimization for ESP32S3, max hashrate: 318 KH/s.
 - Deeply optimization for ESP32C3, max hashrate: 308 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
@@ -21,14 +21,14 @@
 ##  Board support from the latest version:
 | Boards                                                                                  | Performance                | Chip      |
 | :-------------------------------------------------------------------------------------  | :----------------------:|:-----------: |
-|ESP32 DEVKitC 32                                                                         | ***485.1KH/s***       | ESP32-D0WDQ6|
-|[ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***483.3KH/s***       | ESP32-D0WDQ6   |
-|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***482.5KH/s***       | ESP32-D0WDQ6|
-|ESP32 2432s024                                                                           | ***479.1KH/s***       | ESP32-D0WDQ6   |
-|TTGO T Display                                                                           | ***478.2KH/s***       | ESP32-D0WDQ6|
-|ESP32 3248s035                                                                           | ***476.1KH/s***       | ESP32-D0WDQ6|
-|WT32 SC01                                                                                | ***472.1KH/s***       | ESP32-D0WDQ6|
-|ESP32 CAM                                                                                | ***460.1KH/s***       | ESP32-D0WDQ6   |
+|ESP32 DEVKitC 32                                                                         | ***993.9KH/s***       | ESP32-D0|
+|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***993.5KH/s***       | ESP32-D0|
+|[ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***986.3KH/s***       | ESP32-D0|
+|ESP32 2432s024                                                                           | ***986.1KH/s***       | ESP32-D0|
+|TTGO T Display                                                                           | ***986.2KH/s***       | ESP32-D0|
+|ESP32 3248s035                                                                           | ***986.1KH/s***       | ESP32-D0|
+|WT32 SC01                                                                                | ***986.1KH/s***       | ESP32-D0|
+|ESP32 CAM                                                                                | ***900.1KH/s***       | ESP32-D0|
 |[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***318.9KH/s***       | ESP32-S3FN8|
 |[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***317.7KH/s***       | ESP32-S3FN8 |
 |[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***317.3KH/s***       | ESP32-S3FN8 |
@@ -248,11 +248,6 @@
 </div>
 
 
-## Known issue(s)
-- In some router, the WPA group key exchange will trigger the ESP32 to disconnect from the router. The group key exchange interval varies in different routers. If the WPA group key exchange interval can be modified, it is recommended to set it to a longer time to avoid miner disconnection.
-- Here we take Openwrt as an example, edit file ***etc/config/wireless***, in the interfaces section under SSID, manually write: ***option wpa_group_rekey '86400'*** , which means WPA group key exchange every day.
-
-
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
 - Anything do not work as your expectation, just let us know.
@@ -264,6 +259,18 @@
 
 
 ## Release Log
+
+### (2025.04.23) - v1.7.01
+- `feature`:
+  - None.
+- `fix`:
+  - WPA group key exchange cause wifi disconnect issue.(This kind of issue is more common on `MikroTik` and `Fritz!box`.)
+- `remove`:
+  - None.
+- `optimize`:
+  - ESP32-D0WDQ6-V3 reversion 3 upto 993kH/s.
+  - ESP32-D0WDQ6 reversion 1 upto 873kH/s.
+  - The initial share difficulty starts from 0.0005
 
 ### (2025.04.12) - v1.6.03
 - `feature`:
