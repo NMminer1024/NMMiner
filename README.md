@@ -12,39 +12,40 @@
 - Boards with ESP32S3, ESP32D0 , ESP32C3 as so far.
 
 ## Features
-- Deeply optimization for ESP32D0, max hashrate: 993 KH/s.
-- Deeply optimization for ESP32S3, max hashrate: 318 KH/s.
-- Deeply optimization for ESP32C3, max hashrate: 308 KH/s.
+- Deeply optimization for ESP32D0, max hashrate: 1012 KH/s.
+- Deeply optimization for ESP32S3, max hashrate: 390 KH/s.
+- Deeply optimization for ESP32C3, max hashrate: 402 KH/s.
 - NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
 - NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
 
-##  Board support from the latest version:
+## Board support from the latest version:
 | Boards                                                                                  | Performance                | Chip      |
 | :-------------------------------------------------------------------------------------  | :----------------------:|:-----------: |
-|ESP32 DEVKitC 32                                                                         | ***993.9KH/s***       | ESP32-D0|
-|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***993.5KH/s***       | ESP32-D0|
-|[ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***986.3KH/s***       | ESP32-D0|
-|ESP32 2432s024                                                                           | ***986.1KH/s***       | ESP32-D0|
-|TTGO T Display                                                                           | ***986.2KH/s***       | ESP32-D0|
-|ESP32 3248s035                                                                           | ***986.1KH/s***       | ESP32-D0|
-|WT32 SC01                                                                                | ***986.1KH/s***       | ESP32-D0|
-|ESP32 CAM                                                                                | ***900.1KH/s***       | ESP32-D0|
-|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***318.9KH/s***       | ESP32-S3FN8|
-|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***317.7KH/s***       | ESP32-S3FN8 |
-|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***317.3KH/s***       | ESP32-S3FN8 |
-|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***317.2KH/s***       | ESP32-S3FN8 |
-|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***313.8KH/s***       | ESP32-S3FN8 |
-|Lilygo T Display s3 amoled                                                               | ***310.1KH/s***       | ESP32-S3R8 |
-|Lilygo T QT                                                                              | ***308.1KH/s***       | ESP32-S3FN8 |
-|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***309.5KH/s***       | ESP32-S3FN8 |
-|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***308.4KH/s***       | ESP32-S3R8 |
-|Lilygo T Dongle s3                                                                       | ***308.3KH/s***       | ESP32-S3R8 |
-|Seeed xiao esp32 s3                                                                      | ***318.7KH/s***       | ESP32-S3FN8 |
-|ESP32 s3 0.42 oled                                                                       | ***312.1KH/s***       | ESP32-S3   |
-|Seeed xiao esp32 c3                                                                      | ***308.6KH/s***       | ESP32-C3 |
-|Lilygo T Display s3                                                                      | ***307.5KH/s***       | ESP32-S3R8 |
-|ESP32 s3 geek                                                                            | ***305.1KH/s***       | ESP32-S3   |
-|ESP32 c3 0.42 oled                                                                       | ***240.1KH/s***       | ESP32-C3   |
+|NM-TV-154                                                                                | ***1010.9KH/s***       | ESP32-D0|
+|ESP32 DEVKitC 32                                                                         | ***1009.9KH/s***       | ESP32-D0|
+|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***1004.5KH/s***       | ESP32-D0|
+|[ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***1004.3KH/s***       | ESP32-D0|
+|ESP32 2432s024                                                                           | ***1004.1KH/s***       | ESP32-D0|
+|TTGO T Display                                                                           | ***1004.2KH/s***       | ESP32-D0|
+|ESP32 3248s035                                                                           | ***1004.1KH/s***       | ESP32-D0|
+|ESP32 CAM                                                                                | ***1004.1KH/s***       | ESP32-D0|
+|WT32 SC01                                                                                | ***857.1KH/s***        | ESP32-D0|
+|Seeed xiao esp32 c3                                                                      | ***396.9KH/s***        | ESP32-C3|
+|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***400.9KH/s***       | ESP32-S3FN8|
+|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***400.7KH/s***       | ESP32-S3FN8|
+|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***399.3KH/s***       | ESP32-S3FN8|
+|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***398.2KH/s***       | ESP32-S3FN8|
+|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***393.8KH/s***       | ESP32-S3FN8|
+|Seeed xiao esp32 s3                                                                      | ***393.7KH/s***       | ESP32-S3FN8|
+|ESP32 s3 0.42 oled                                                                       | ***392.1KH/s***       | ESP32-S3   |
+|Lilygo T Display s3 amoled                                                               | ***390.1KH/s***       | ESP32-S3R8 |
+|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***388.4KH/s***       | ESP32-S3R8 |
+|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***387.5KH/s***       | ESP32-S3FN8|
+|Lilygo T Display s3                                                                      | ***384.5KH/s***       | ESP32-S3R8 |
+|Lilygo T Dongle s3                                                                       | ***385.3KH/s***       | ESP32-S3R8 |
+|ESP32 s3 geek                                                                            | ***378.1KH/s***       | ESP32-S3   |
+|Lilygo T QT                                                                              | ***361.1KH/s***       | ESP32-S3FN8|
+|ESP32 c3 0.42 oled                                                                       | ***315.1KH/s***       | ESP32-C3   |
 
 <div align="center">
   <table width="100%">
@@ -118,6 +119,15 @@
     <tr>
       <td width="50%" align="center"><img src="fig/esp32_dev_kitc_32.jpg" alt="fig/esp32_dev_kitc_32.jpg"></td>
       <td width="50%" align="center"><img src="fig/xiao_c3.jpg" alt="xiao_c3.jpg"></td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/nm-tv-154.jpg" alt="fig/nm-tv-154.jpg"></td>
+      <td width="50%" align="center"><img src="fig/wt32-sc01.jpg" alt="wt32-sc01.jpg"></td>
     </tr>
   </table>
 </div>
@@ -259,6 +269,24 @@
 
 
 ## Release Log
+
+### (2025.05.28) - v1.7.02
+- `feature`:
+  - Add NM-TV-154 board support, upto 1010kH/s.
+  - Auto timezone.
+  - Dark style of clock page.
+- `fix`:
+  - Some wifi connection issues.
+  - Price display overflow issue.
+- `remove`:
+  - Share status save in nvs(only save best diff and block hit conuter).
+  - Timezone in configuration page.
+- `optimize`:
+  - ESP32-D0WDQ6-V3 reversion 3 upto 1010kH/s.
+  - ESP32-D0WDQ6 reversion 1 upto 857kH/s.
+  - ESP32-S3 upto 390kH/s.
+  - ESP32-C3 upto 396kH/s.
+  - Random delay when connecting to Wi-Fi to avoid being denied access by the router.
 
 ### (2025.04.23) - v1.7.01
 - `feature`:
