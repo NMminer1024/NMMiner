@@ -21,7 +21,7 @@
 ## Board support from the latest version:
 | Boards                                                                                  | Performance                | Chip      |
 | :-------------------------------------------------------------------------------------  | :----------------------:|:-----------: |
-|NM-TV-154                                                                                | ***1010.9KH/s***       | ESP32-D0|
+|[NM-TV-154](https://www.nmminer.com/product/nm-tv-154/)                                  | ***1010.9KH/s***       | ESP32-D0|
 |ESP32 DEVKitC 32                                                                         | ***1009.9KH/s***       | ESP32-D0|
 |[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***1004.5KH/s***       | ESP32-D0|
 |[ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***1004.3KH/s***       | ESP32-D0|
