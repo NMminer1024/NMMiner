@@ -270,6 +270,17 @@
 
 ## Release Log
 
+### (2025.06.16) - v1.7.03
+- `feature`:
+  - None.
+- `fix`:
+  - Wifi connection issues.
+  - Market Price freeze issues.
+- `remove`:
+  - Last diff in miner page.
+- `optimize`:
+  - UI of clock page on T-display s3 dongle.
+
 ### (2025.05.28) - v1.7.02
 - `feature`:
   - Add NM-TV-154 board support, upto 1010kH/s.
