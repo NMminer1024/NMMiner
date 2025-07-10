@@ -159,7 +159,7 @@
 ## Screen
 
 <div align="center">
-  <img src="fig/description.jpg" alt="description">
+  <img src="fig/description-cyd.jpg" alt="description">
 </div>
 
 
@@ -269,6 +269,16 @@
 
 
 ## Release Log
+
+### (2025.07.11) - v1.7.04
+- `feature`:
+  - None.
+- `fix`:
+  - Loading page stuck issue.
+- `remove`:
+  - None.
+- `optimize`:
+  - Clock page.
 
 ### (2025.06.16) - v1.7.03
 - `feature`:
