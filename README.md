@@ -279,6 +279,7 @@
   - None.
 - `optimize`:
   - Clock page.
+  - Memory usage.
 
 ### (2025.06.16) - v1.7.03
 - `feature`:
