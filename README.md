@@ -248,9 +248,12 @@
 ## Pool
 - Due to the very limited on-chip resources, some high-difficulty mining pools currently reject our connections, the following pools support low diff stratum connection.
 
+
 #### BTC
 - stratum+tcp://public-pool.io:21496 , https://web.public-pool.io
 - stratum+tcp://pool.tazmining.ch:33333 , https://tazmining.ch/?#
+- stratum+tcp://pool.stompi.de:3333 , http://web.stompi.de
+
 
 ## How to monitor
 
