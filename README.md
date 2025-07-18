@@ -42,6 +42,8 @@
 |[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***388.4KH/s***       | ESP32-S3R8 |
 |[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***387.5KH/s***       | ESP32-S3FN8|
 |Lilygo T Display s3                                                                      | ***384.5KH/s***       | ESP32-S3R8 |
+|Waveshare ESP32 S3 LCD 1.47                                                              | ***384.5KH/s***       | ESP32-S3R8 |
+|Waveshare ESP32 S3 LCD 1.47B                                                             | ***383.5KH/s***       | ESP32-S3R8 |
 |Lilygo T Dongle s3                                                                       | ***385.3KH/s***       | ESP32-S3R8 |
 |ESP32 s3 geek                                                                            | ***378.1KH/s***       | ESP32-S3   |
 |Lilygo T QT                                                                              | ***361.1KH/s***       | ESP32-S3FN8|
@@ -128,6 +130,15 @@
     <tr>
       <td width="50%" align="center"><img src="fig/nm-tv-154.jpg" alt="fig/nm-tv-154.jpg"></td>
       <td width="50%" align="center"><img src="fig/wt32-sc01.jpg" alt="wt32-sc01.jpg"></td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/esp32s3147-miner.jpg" alt="fig/nm-tv-154.jpg"></td>
+      <td width="50%" align="center"><img src="fig/esp32s3147-clock.jpg" alt="wt32-sc01.jpg"></td>
     </tr>
   </table>
 </div>
@@ -270,6 +281,20 @@
 
 ## Release Log
 
+### (2025.07.18) - v1.7.05
+- `board support`:
+  - `Waveshare-esp32-s3-lcd-147(USB-A)` and `Waveshare-esp32-s3-lcd-147b(USB-C)`.
+- `feature`:
+  - When the primary mining pool active again, miner will switch back to the primary pool within 10s.
+- `fix`:
+  - Hit value issue on NM-TV clock page.
+  - Screen can not wakeup in sleep mode on NM-TV .
+- `remove`:
+  - None.
+- `optimize`:
+  - Miner page UI for share : `session best/all time best` when enable "save status" option.
+  - Miner page UI for share : `session last/session best`  when disable "save status" option.
+   
 ### (2025.07.11) - v1.7.04
 - `feature`:
   - None.
