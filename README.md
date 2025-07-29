@@ -284,11 +284,11 @@ For dual button boards:
 Due to limited on-chip resources, some high-difficulty mining pools may reject connections from ESP32-based miners. The following pools support low-difficulty stratum connections suitable for this hardware:
 
 #### Bitcoin (BTC)
-- `stratum+tcp://public-pool.io:21496` - [Web Interface](https://web.public-pool.io)
-- `stratum+tcp://pool.tazmining.ch:33333` - [Web Interface](https://tazmining.ch/?#)
+- `stratum+tcp://public-pool.io:21496` - [Home page](https://web.public-pool.io)
+- `stratum+tcp://pool.tazmining.ch:33333` - [Home page](https://tazmining.ch/?#)
 
 #### DigiByte (DGB)
-- `stratum+tcp://dgb-stratum.solominer.net:3333` - [Web Interface](https://digibyte.solominer.net/#/)
+- `stratum+tcp://dgb-stratum.solominer.net:3333` - [Home page](https://digibyte.solominer.net/#/)
 
 ---
 
