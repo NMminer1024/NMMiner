@@ -3,7 +3,7 @@
 
 <div align="center">
   <h1>NMMiner</h1>
-  <p><em>Make it better</em></p>
+  <h3><em>Make it better</em></h3>
 </div>
 
 ## Overview
@@ -29,6 +29,8 @@ NMMiner is an optimized BTC mining firmware designed for ESP32-based development
     - Pre-compiled installers (x64 and x86) available in the `tool` folder
   - **NMController Web**: Cross-platform Python implementation ([source code](https://github.com/NMminer1024/NMController_web))
     - Compatible with Windows and macOS
+
+---
 
 ## Supported Hardware
 
@@ -63,6 +65,8 @@ The following table shows the supported development boards and their performance
 | ESP32-S3 Geek                                                                         | **378.1 KH/s**   | ESP32-S3     |
 | LilyGO T-QT                                                                            | **361.1 KH/s**   | ESP32-S3FN8  |
 | ESP32-C3 0.42" OLED                                                                   | **315.1 KH/s**   | ESP32-C3     |
+
+---
 
 ## Hardware Showcase
 
@@ -160,9 +164,11 @@ The following table shows the supported development boards and their performance
   <img src="fig/pool.png" alt="Pool Interface">
 </div>
 
-## Button Controls
+---
 
-### Single Button Boards
+### Button Controls
+
+#### Single Button Boards
 Boards equipped with only a boot button:
 
 | Button | Action        | Function                                           |
@@ -171,7 +177,7 @@ Boards equipped with only a boot button:
 | Boot   | Double click  | Switch to next screen page (if display available) |
 | Boot   | Single click  | Wake up screen (if display available)             |
 
-### Dual Button Boards
+#### Dual Button Boards
 Boards with both boot and user buttons:
 
 | Button | Action        | Function                                           |
@@ -183,12 +189,13 @@ Boards with both boot and user buttons:
 | User   | Double click  | Switch to next screen (if display available)      |
 | User   | Long press    | Enter miner configuration mode                     |
 
-## Display Information
+### Display Information
 
 <div align="center">
   <img src="fig/description-cyd.jpg" alt="Display Description">
 </div>
 
+---
 
 ## Initial Setup
 
@@ -230,6 +237,8 @@ For dual button boards:
   <img src="fig/nmap.png" alt="AP Configuration">
 </div>
 
+---
+
 ## Firmware Installation & Updates
 
 ### Using NMMiner Flash Tool
@@ -270,28 +279,28 @@ For dual button boards:
 
 **Step 4**: Your miner is now ready to use!
 
-
-
-## Mining Pool Configuration
+### Mining Pool Configuration
 
 Due to limited on-chip resources, some high-difficulty mining pools may reject connections from ESP32-based miners. The following pools support low-difficulty stratum connections suitable for this hardware:
 
-### Bitcoin (BTC)
+#### Bitcoin (BTC)
 - `stratum+tcp://public-pool.io:21496` - [Web Interface](https://web.public-pool.io)
 - `stratum+tcp://pool.tazmining.ch:33333` - [Web Interface](https://tazmining.ch/?#)
 
-### DigiByte (DGB)
+#### DigiByte (DGB)
 - `stratum+tcp://dgb-stratum.solominer.net:3333` - [Web Interface](https://digibyte.solominer.net/#/)
+
+---
 
 ## Monitoring & Management
 
-### NMController Applications
+#### NMController Applications
 
 Both **NMController Client** and **NMController Web** provide identical functionality:
 - **NMController Client**: Windows desktop application
 - **NMController Web**: Cross-platform solution for Windows and macOS
 
-### Network Scanning with NMController Client
+#### Network Scanning with NMController Client
 
 The client automatically scans your local network to discover active miners:
 
@@ -299,7 +308,7 @@ The client automatically scans your local network to discover active miners:
   <img src="fig/nmcontroller-home.jpg" alt="NMController Home Interface">
 </div>
 
-### Device Configuration
+#### Device Configuration
 
 Configure individual miners or groups of miners through the NMController interface (requires firmware v1.5.xx or later):
 
@@ -307,13 +316,15 @@ Configure individual miners or groups of miners through the NMController interfa
   <img src="fig/nmcontroller-details.jpg" alt="NMController Configuration Details">
 </div>
 
-### Web-Based Monitoring
+#### Web-Based Monitoring
 
 Access the web monitoring interface by navigating to your miner's IP address in a web browser. This interface provides functionality similar to NMController:
 
 <div align="center">
   <img src="fig/webmonitor.png" alt="Web Monitor Interface">
 </div>
+
+---
 
 ## Support & Contact
 
@@ -325,7 +336,7 @@ We are committed to expanding support for additional Arduino development board m
 | **Telegram**   | [https://t.me/NMMiner](https://t.me/NMMiner)               |
 | **Website**    | [NMTech Official Site](https://www.nmminer.com/)          |
 
-
+---
 
 ## Release Log
 
