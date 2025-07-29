@@ -251,6 +251,9 @@
 #### BTC
 - stratum+tcp://public-pool.io:21496 , https://web.public-pool.io
 - stratum+tcp://pool.tazmining.ch:33333 , https://tazmining.ch/?#
+#### DGB
+- stratum+tcp://dgb-stratum.solominer.net:3333 , https://digibyte.solominer.net/#/
+
 
 ## How to monitor
 
@@ -269,6 +272,12 @@
 </div>
 
 
+- Another method is to log in to the miner's backend via miner IP, where you can access a web monitoring page. This page provides similar functionality to NMMController. 
+
+<div align="center">
+  <img src="fig/webmonitor.png" alt="webmonitor">
+</div>
+
 ## Contact
 - We are committed to supporting more models of Arduino development boards.
 - Anything do not work as your expectation, just let us know.
@@ -280,6 +289,20 @@
 
 
 ## Release Log
+
+### (2025.07.29) - v1.7.06
+- `board support`:
+  - None.
+- `feature`:
+  - A totally new web monitor page for each miner(monitor and config all other miners on this kind of page).
+- `fix`:
+  - Primary pool lost and recover logic.
+- `remove`:
+  - None.
+- `optimize`:
+  - Memory usage.
+  - ssl connection.
+  - Price color on clock page, green for raise and red for drop. 
 
 ### (2025.07.18) - v1.7.05
 - `board support`:
