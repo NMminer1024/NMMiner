@@ -2,58 +2,75 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NMminer1024/NMMiner)
 
 <div align="center">
-  <h1>Make it better</h1>
+  <h1>NMMiner</h1>
+  <p><em>Make it better</em></p>
 </div>
 
-## NMMiner
-- Easy deployment with one click [NMMiner Flash Tool](https://flash.nmminer.com/).
+## Overview
+
+NMMiner is an optimized BTC mining firmware designed for ESP32-based development boards. With one-click deployment through the [NMMiner Flash Tool](https://flash.nmminer.com/), it provides an accessible entry point into cryptocurrency mining.
 
 ## Requirements
-- Boards with ESP32S3, ESP32D0 , ESP32C3 as so far.
 
-## Features
-- Deeply optimization for ESP32D0, max hashrate: 1012 KH/s.
-- Deeply optimization for ESP32S3, max hashrate: 390 KH/s.
-- Deeply optimization for ESP32C3, max hashrate: 402 KH/s.
-- NMController_client, [source code](https://github.com/NMminer1024/NMController_client), we put the *_x64.msi and *_x86.msi in tool folder already, just install, only for Windows.
-- NMController_web, [source code](https://github.com/NMminer1024/NMController_web), it's a Python implement, for Windows and Mac.
+- ESP32 development boards with the following chips:
+  - ESP32-S3
+  - ESP32-D0
+  - ESP32-C3
 
-## Board support from the latest version:
-| Boards                                                                                  | Performance                | Chip      |
-| :-------------------------------------------------------------------------------------  | :----------------------:|:-----------: |
-|[NM-TV-154](https://www.nmminer.com/product/nm-tv-154/)                                  | ***1010.9KH/s***       | ESP32-D0|
-|ESP32 DEVKitC 32                                                                         | ***1009.9KH/s***       | ESP32-D0|
-|[Heltec WiFi Lora32 v2](https://heltec.org/project/wifi-lora-32v2/)                      | ***1004.5KH/s***       | ESP32-D0|
-|[ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)                 | ***1004.3KH/s***       | ESP32-D0|
-|ESP32 2432s024                                                                           | ***1004.1KH/s***       | ESP32-D0|
-|TTGO T Display                                                                           | ***1004.2KH/s***       | ESP32-D0|
-|ESP32 3248s035                                                                           | ***1004.1KH/s***       | ESP32-D0|
-|ESP32 CAM                                                                                | ***1004.1KH/s***       | ESP32-D0|
-|WT32 SC01                                                                                | ***857.1KH/s***        | ESP32-D0|
-|Seeed xiao esp32 c3                                                                      | ***396.9KH/s***        | ESP32-C3|
-|[Heltec Wifi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                        | ***400.9KH/s***       | ESP32-S3FN8|
-|[Heltec WiFi Lora32 v3](https://www.aliexpress.com/item/1005005443005152.html)           | ***400.7KH/s***       | ESP32-S3FN8|
-|[Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)      | ***399.3KH/s***       | ESP32-S3FN8|
-|[Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)                | ***398.2KH/s***       | ESP32-S3FN8|
-|[NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)                 | ***393.8KH/s***       | ESP32-S3FN8|
-|Seeed xiao esp32 s3                                                                      | ***393.7KH/s***       | ESP32-S3FN8|
-|ESP32 s3 0.42 oled                                                                       | ***392.1KH/s***       | ESP32-S3   |
-|Lilygo T Display s3 amoled                                                               | ***390.1KH/s***       | ESP32-S3R8 |
-|[Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)        | ***388.4KH/s***       | ESP32-S3R8 |
-|[NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)                 | ***387.5KH/s***       | ESP32-S3FN8|
-|Lilygo T Display s3                                                                      | ***384.5KH/s***       | ESP32-S3R8 |
-|Waveshare ESP32 S3 LCD 1.47                                                              | ***384.5KH/s***       | ESP32-S3R8 |
-|Waveshare ESP32 S3 LCD 1.47B                                                             | ***383.5KH/s***       | ESP32-S3R8 |
-|Lilygo T Dongle s3                                                                       | ***385.3KH/s***       | ESP32-S3R8 |
-|ESP32 s3 geek                                                                            | ***378.1KH/s***       | ESP32-S3   |
-|Lilygo T QT                                                                              | ***361.1KH/s***       | ESP32-S3FN8|
-|ESP32 c3 0.42 oled                                                                       | ***315.1KH/s***       | ESP32-C3   |
+## Key Features
+
+- **Optimized Performance**
+  - ESP32-D0: Up to 1,012 KH/s
+  - ESP32-S3: Up to 390 KH/s
+  - ESP32-C3: Up to 402 KH/s
+
+- **Management Tools**
+  - **NMController Client**: Windows desktop application ([source code](https://github.com/NMminer1024/NMController_client))
+    - Pre-compiled installers (x64 and x86) available in the `tool` folder
+  - **NMController Web**: Cross-platform Python implementation ([source code](https://github.com/NMminer1024/NMController_web))
+    - Compatible with Windows and macOS
+
+## Supported Hardware
+
+The following table shows the supported development boards and their performance metrics:
+
+| Board                                                                                   | Performance       | Chip         |
+| :------------------------------------------------------------------------------------- | :---------------: | :----------: |
+| [NM-TV-154](https://www.nmminer.com/product/nm-tv-154/)                               | **1010.9 KH/s**  | ESP32-D0     |
+| ESP32 DEVKitC 32                                                                      | **1009.9 KH/s**  | ESP32-D0     |
+| [Heltec WiFi LoRa32 v2](https://heltec.org/project/wifi-lora-32v2/)                  | **1004.5 KH/s**  | ESP32-D0     |
+| [ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)             | **1004.3 KH/s**  | ESP32-D0     |
+| ESP32 2432s024                                                                        | **1004.1 KH/s**  | ESP32-D0     |
+| TTGO T-Display                                                                        | **1004.2 KH/s**  | ESP32-D0     |
+| ESP32 3248s035                                                                        | **1004.1 KH/s**  | ESP32-D0     |
+| ESP32 CAM                                                                             | **1004.1 KH/s**  | ESP32-D0     |
+| WT32-SC01                                                                             | **857.1 KH/s**   | ESP32-D0     |
+| Seeed XIAO ESP32-C3                                                                   | **396.9 KH/s**   | ESP32-C3     |
+| [Heltec WiFi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                    | **400.9 KH/s**   | ESP32-S3FN8  |
+| [Heltec WiFi LoRa32 v3](https://www.aliexpress.com/item/1005005443005152.html)       | **400.7 KH/s**   | ESP32-S3FN8  |
+| [Heltec Wireless Stick Lite v3](https://heltec.org/project/wireless-stick-lite-v2/)  | **399.3 KH/s**   | ESP32-S3FN8  |
+| [Heltec Wireless Stick v3](https://heltec.org/project/wireless-stick-v3/)            | **398.2 KH/s**   | ESP32-S3FN8  |
+| [NM Bot Chain v1](https://www.aliexpress.com/item/1005008096252566.html)             | **393.8 KH/s**   | ESP32-S3FN8  |
+| Seeed XIAO ESP32-S3                                                                   | **393.7 KH/s**   | ESP32-S3FN8  |
+| ESP32-S3 0.42" OLED                                                                   | **392.1 KH/s**   | ESP32-S3     |
+| LilyGO T-Display S3 AMOLED                                                            | **390.1 KH/s**   | ESP32-S3R8   |
+| [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)    | **388.4 KH/s**   | ESP32-S3R8   |
+| [NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)             | **387.5 KH/s**   | ESP32-S3FN8  |
+| LilyGO T-Display S3                                                                   | **384.5 KH/s**   | ESP32-S3R8   |
+| Waveshare ESP32-S3-LCD-1.47                                                           | **384.5 KH/s**   | ESP32-S3R8   |
+| Waveshare ESP32-S3-LCD-1.47B                                                          | **383.5 KH/s**   | ESP32-S3R8   |
+| LilyGO T-Dongle S3                                                                     | **385.3 KH/s**   | ESP32-S3R8   |
+| ESP32-S3 Geek                                                                         | **378.1 KH/s**   | ESP32-S3     |
+| LilyGO T-QT                                                                            | **361.1 KH/s**   | ESP32-S3FN8  |
+| ESP32-C3 0.42" OLED                                                                   | **315.1 KH/s**   | ESP32-C3     |
+
+## Hardware Showcase
 
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/cyd.jpg" alt="cyd.jpg"></td>
-      <td width="50%" align="center"><img src="fig/cyd-clock.jpg" alt="fig/cyd-clock.jpg"></td>
+      <td width="50%" align="center"><img src="fig/cyd.jpg" alt="CYD Board"></td>
+      <td width="50%" align="center"><img src="fig/cyd-clock.jpg" alt="CYD Clock Display"></td>
     </tr>
   </table>
 </div>
@@ -61,8 +78,8 @@
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3.jpg" alt="lilygo-t-display-s3.jpg"></td>
-      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3-clock.jpg" alt="lilygo-t-display-s3-clock.jpg"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3.jpg" alt="LilyGO T-Display S3"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3-clock.jpg" alt="LilyGO T-Display S3 Clock"></td>
     </tr>
   </table>
 </div>
@@ -70,20 +87,8 @@
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/heltec_t190.jpg" alt="heltec_t190"></td>
-      <td width="50%" align="center"><img src="fig/lora32_v2.jpg" alt="lora32_v2"></td>
-    </tr>
-  </table>
-</div>
-
-
-
-
-<div align="center">
-  <table width="100%">
-    <tr>
-      <td width="50%" align="center"><img src="fig/usb_chain.jpg" alt="usb_chain.jpg"></td>
-      <td width="50%" align="center"><img src="fig/s3geek.jpg" alt="fig/s3geek.jpg"></td>
+      <td width="50%" align="center"><img src="fig/heltec_t190.jpg" alt="Heltec T190"></td>
+      <td width="50%" align="center"><img src="fig/lora32_v2.jpg" alt="LoRa32 v2"></td>
     </tr>
   </table>
 </div>
@@ -91,8 +96,8 @@
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3-amoled.jpg" alt="fig/lilygo-t-display-s3-amoled.jpg"></td>
-      <td width="50%" align="center"><img src="fig/ttgo_display.jpg" alt="ttgo_display.jpg"></td>
+      <td width="50%" align="center"><img src="fig/usb_chain.jpg" alt="USB Chain"></td>
+      <td width="50%" align="center"><img src="fig/s3geek.jpg" alt="S3 Geek"></td>
     </tr>
   </table>
 </div>
@@ -100,8 +105,8 @@
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/c3-042-oled.jpg" alt="fig/c3-042-oled.jpg"></td>
-      <td width="50%" align="center"><img src="fig/s3-042-oled.jpg" alt="s3-042-oled.jpg"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3-amoled.jpg" alt="LilyGO T-Display S3 AMOLED"></td>
+      <td width="50%" align="center"><img src="fig/ttgo_display.jpg" alt="TTGO Display"></td>
     </tr>
   </table>
 </div>
@@ -109,18 +114,8 @@
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/t-qt.jpg" alt="fig/t-qt.jpg"></td>
-      <td width="50%" align="center"><img src="fig/lilygo-t-dongle-s3.jpg" alt="lilygo-t-dongle-s3.jpg"></td>
-    </tr>
-  </table>
-</div>
-
-
-<div align="center">
-  <table width="100%">
-    <tr>
-      <td width="50%" align="center"><img src="fig/esp32_dev_kitc_32.jpg" alt="fig/esp32_dev_kitc_32.jpg"></td>
-      <td width="50%" align="center"><img src="fig/xiao_c3.jpg" alt="xiao_c3.jpg"></td>
+      <td width="50%" align="center"><img src="fig/c3-042-oled.jpg" alt="C3 0.42 OLED"></td>
+      <td width="50%" align="center"><img src="fig/s3-042-oled.jpg" alt="S3 0.42 OLED"></td>
     </tr>
   </table>
 </div>
@@ -128,8 +123,8 @@
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/nm-tv-154.jpg" alt="fig/nm-tv-154.jpg"></td>
-      <td width="50%" align="center"><img src="fig/wt32-sc01.jpg" alt="wt32-sc01.jpg"></td>
+      <td width="50%" align="center"><img src="fig/t-qt.jpg" alt="T-QT Board"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-t-dongle-s3.jpg" alt="LilyGO T-Dongle S3"></td>
     </tr>
   </table>
 </div>
@@ -137,154 +132,198 @@
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/esp32s3147-miner.jpg" alt="fig/nm-tv-154.jpg"></td>
-      <td width="50%" align="center"><img src="fig/esp32s3147-clock.jpg" alt="wt32-sc01.jpg"></td>
+      <td width="50%" align="center"><img src="fig/esp32_dev_kitc_32.jpg" alt="ESP32 DevKitC 32"></td>
+      <td width="50%" align="center"><img src="fig/xiao_c3.jpg" alt="XIAO C3"></td>
     </tr>
   </table>
 </div>
 
 <div align="center">
-  <img src="fig/pool.png" alt="pool">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/nm-tv-154.jpg" alt="NM-TV-154"></td>
+      <td width="50%" align="center"><img src="fig/wt32-sc01.jpg" alt="WT32-SC01"></td>
+    </tr>
+  </table>
 </div>
-
-## Buttons
-**Board with only one button**(binding to boot pin)
-
-| Buttons           | Action             | Description             |
-| :---------------  | :-----------------:|:-----------------:      |
-|boot               | Long press         |  Miner Configuration  |
-|boot               | Double click       |  switch to nexe screen page(if a screen on board)        |
-|boot               | Single click       |  Screen wake up(if a screen on board)        |
-
-**Board with two buttons**(binding to boot pin and a gpio pin)
-
-| Buttons           | Action             | Description             |
-| :---------------  | :-----------------:|:-----------------:      |
-|boot               | Long press         |  Clear all status from nvs(if enabled this feature)  |
-|boot               | Single click       |  Screen wake up(if a screen on board)         |
-|boot               | Double click       |  Screen wake up(if a screen on board)         |
-|user               | Single click       |  Screen wake up(if a screen on board)         |
-|user               | Double click       |  Switch to next screen(if a screen on board)  |
-|user               | Long press         |  Miner Configuration    |
-
-## Screen
 
 <div align="center">
-  <img src="fig/description-cyd.jpg" alt="description">
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center"><img src="fig/esp32s3147-miner.jpg" alt="ESP32 S3 1.47 Miner"></td>
+      <td width="50%" align="center"><img src="fig/esp32s3147-clock.jpg" alt="ESP32 S3 1.47 Clock"></td>
+    </tr>
+  </table>
 </div>
-
-
-## Configuration
-### Initiation configuration
-
-1. When the device is powered on, it will connect to the last WiFi connected by default. If it fails to connect to this WiFi after trying for 15s, it will automatically enter the configuration mode.
-
-2. Search for AP named: nmap-2.4g, enter password: 12345678
-
-3.  If connect to AP via mobile phone and everything goes well, you will be redirected to the configuration page; if connect to AP via PC, just log in: 192.168.4.1.
 
 <div align="center">
-  <img src="fig/config-1.png" alt="config-1">
+  <img src="fig/pool.png" alt="Pool Interface">
 </div>
 
-4. You will see the following page. Follow the steps to configure your mining machine. The larger the UI refresh value, the higher the hash rate, and the hash rate will also increase when the screen is turned off.
+## Button Controls
+
+### Single Button Boards
+Boards equipped with only a boot button:
+
+| Button | Action        | Function                                           |
+| :----- | :------------ | :------------------------------------------------- |
+| Boot   | Long press    | Enter miner configuration mode                     |
+| Boot   | Double click  | Switch to next screen page (if display available) |
+| Boot   | Single click  | Wake up screen (if display available)             |
+
+### Dual Button Boards
+Boards with both boot and user buttons:
+
+| Button | Action        | Function                                           |
+| :----- | :------------ | :------------------------------------------------- |
+| Boot   | Long press    | Clear all status from NVS (if feature enabled)    |
+| Boot   | Single click  | Wake up screen (if display available)             |
+| Boot   | Double click  | Wake up screen (if display available)             |
+| User   | Single click  | Wake up screen (if display available)             |
+| User   | Double click  | Switch to next screen (if display available)      |
+| User   | Long press    | Enter miner configuration mode                     |
+
+## Display Information
 
 <div align="center">
-  <img src="fig/config-2.png" alt="config-2">
+  <img src="fig/description-cyd.jpg" alt="Display Description">
 </div>
 
-5. You can return to the configuration page at any time and refer to the [button](#buttons) operations.
 
-6. When you click **Save** it will take a while (10-15 seconds), do not reset the miner manually, just let it restart automatically.
+## Initial Setup
 
-### Force configuration
+### First-Time Configuration
 
-1. Long press ***boot*** button for one button board.
+1. **Automatic WiFi Connection**: Upon power-on, the device attempts to connect to the previously configured WiFi network. If connection fails after 15 seconds, it automatically enters configuration mode.
 
-2. Long press ***user*** button for two buttons board.
+2. **Access Point Setup**: Search for the free access point named `nmap-2.4g` (no password required).
 
-3. Then follow [Initiation configuration](#Initiation-configuration).
+3. **Configuration Interface**: 
+   - **Mobile devices**: You will be automatically redirected to the configuration page
+   - **PC/Desktop**: Navigate to `192.168.4.1` in your web browser
 
 <div align="center">
-  <img src="fig/nmap.png" alt="AP Config">
+  <img src="fig/config-1.png" alt="Configuration Step 1">
 </div>
 
-## Firmware update
- **Step 1**: Open [NMMiner Flash Tool](https://flash.nmminer.com/) in Chrome or Edge browser.
-
- **Step 2**: Choose the board and start the firmware update, **NMMiner Flash Tool** will pull the latest version from github, and configure the flash parameters automatically.
- <div align="center">
-  <img src="fig/NMMiner flash tool.jpg" alt="NMMiner flash tool">
-</div>
-
-***Notice1:*** If you just update the latest firmware, that's all you need to do. if you are the first time flash the miner, [firmware activation](#Firmware-activation) is required. 
-
-***Notice2:*** If you lost your licence, just use the [NMMiner Flash Tool](https://flash.nmminer.com/) flash your miner agin, the tool will send you a new one. 
-
-#### Firmware activation 
-
- **Step 1**: After you flash the firmware, get the licence follow the guide.
- 
- <div align="center">
-  <img src="fig/Licence.jpg" alt="Licence">
-</div>
-
- **Step 2**: Copy the the licence string back to licence code box, then click the button, you will see something exciting if everything goes well.
- 
- <div align="center">
-  <img src="fig/active.jpg" alt="active">
-</div>
-
- **Step 3**:  If this is the first time you are flashing the miner, some basic and necessary configurations need to be set, just as below, certainly, you can config them via [Buttons](#Buttons).
-
- <div align="center">
-  <img src="fig/web_cfg.jpg" alt="web_cfg">
-</div>
-
- **Step 4**: Enjoy it!
-
-
-
-## Pool
-- Due to the very limited on-chip resources, some high-difficulty mining pools currently reject our connections, the following pools support low diff stratum connection.
-
-#### BTC
-- stratum+tcp://public-pool.io:21496 , https://web.public-pool.io
-- stratum+tcp://pool.tazmining.ch:33333 , https://tazmining.ch/?#
-#### DGB
-- stratum+tcp://dgb-stratum.solominer.net:3333 , https://digibyte.solominer.net/#/
-
-
-## How to monitor
-
-- In fact, both ***NMController_client*** and ***NMController_web*** have the same feature, ***NMController_client*** for Windows, ***NMController_web*** for Windows and MACOS, We make an example by ***NMController_client*** here.
-
-- ***NMController_client***, scan the machine in your LAN, just as below.
+4. **Parameter Configuration**: Configure your mining parameters following the on-screen instructions. Note that higher UI refresh values result in increased hash rates, and hash rates also improve when the display is turned off.
 
 <div align="center">
-  <img src="fig/nmcontroller-home.jpg" alt="nmcontroller-home">
+  <img src="fig/config-2.png" alt="Configuration Step 2">
 </div>
 
-- configuration via NMControler client, Config single miner or gorup miners.(firmware v1.5.xx required)
+5. **Accessing Configuration**: You can return to the configuration page at any time using the [button controls](#button-controls).
+
+6. **Saving Settings**: After clicking **Save**, allow 10-15 seconds for the process to complete. Do not manually reset the device; it will restart automatically.
+
+### Manual Configuration Mode
+
+For single button boards:
+1. Long press the **boot** button
+
+For dual button boards:
+1. Long press the **user** button
+
+2. Follow the [First-Time Configuration](#first-time-configuration) steps.
 
 <div align="center">
-  <img src="fig/nmcontroller-details.jpg" alt="nmcontroller-details">
+  <img src="fig/nmap.png" alt="AP Configuration">
 </div>
 
+## Firmware Installation & Updates
 
-- Another method is to log in to the miner's backend via miner IP, where you can access a web monitoring page. This page provides similar functionality to NMMController. 
+### Using NMMiner Flash Tool
+
+**Step 1**: Open the [NMMiner Flash Tool](https://flash.nmminer.com/) in Chrome or Edge browser.
+
+**Step 2**: Select your board model and initiate the firmware update. The tool will automatically:
+- Download the latest firmware version from GitHub
+- Configure flash parameters for your specific board
 
 <div align="center">
-  <img src="fig/webmonitor.png" alt="webmonitor">
+  <img src="fig/NMMiner flash tool.jpg" alt="NMMiner Flash Tool Interface">
 </div>
 
-## Contact
-- We are committed to supporting more models of Arduino development boards.
-- Anything do not work as your expectation, just let us know.
+> **Note 1**: If you're simply updating existing firmware, the above steps are sufficient. For first-time installations, [firmware activation](#firmware-activation) is required.
 
-| Email                   |  Telegram             | Home Page                         |
-| :-----------------:     |  :-----------------:  |  :----------------------------:   |
-|nmminer1024@gmail.com    |  https://t.me/NMMiner | [NMTech](https://www.nmminer.com/)|
+> **Note 2**: If you lose your license, re-flash your device using the [NMMiner Flash Tool](https://flash.nmminer.com/) to receive a new license automatically.
+
+### Firmware Activation
+
+**Step 1**: After flashing the firmware, obtain your license following the on-screen instructions.
+
+<div align="center">
+  <img src="fig/Licence.jpg" alt="License Generation">
+</div>
+
+**Step 2**: Copy the license string into the license code field and click the activation button. Successful activation will display a confirmation message.
+
+<div align="center">
+  <img src="fig/active.jpg" alt="Activation Success">
+</div>
+
+**Step 3**: For first-time installations, configure basic settings as shown below. Alternatively, you can configure these settings later using the [button controls](#button-controls).
+
+<div align="center">
+  <img src="fig/web_cfg.jpg" alt="Web Configuration">
+</div>
+
+**Step 4**: Your miner is now ready to use!
+
+
+
+## Mining Pool Configuration
+
+Due to limited on-chip resources, some high-difficulty mining pools may reject connections from ESP32-based miners. The following pools support low-difficulty stratum connections suitable for this hardware:
+
+### Bitcoin (BTC)
+- `stratum+tcp://public-pool.io:21496` - [Web Interface](https://web.public-pool.io)
+- `stratum+tcp://pool.tazmining.ch:33333` - [Web Interface](https://tazmining.ch/?#)
+
+### DigiByte (DGB)
+- `stratum+tcp://dgb-stratum.solominer.net:3333` - [Web Interface](https://digibyte.solominer.net/#/)
+
+## Monitoring & Management
+
+### NMController Applications
+
+Both **NMController Client** and **NMController Web** provide identical functionality:
+- **NMController Client**: Windows desktop application
+- **NMController Web**: Cross-platform solution for Windows and macOS
+
+### Network Scanning with NMController Client
+
+The client automatically scans your local network to discover active miners:
+
+<div align="center">
+  <img src="fig/nmcontroller-home.jpg" alt="NMController Home Interface">
+</div>
+
+### Device Configuration
+
+Configure individual miners or groups of miners through the NMController interface (requires firmware v1.5.xx or later):
+
+<div align="center">
+  <img src="fig/nmcontroller-details.jpg" alt="NMController Configuration Details">
+</div>
+
+### Web-Based Monitoring
+
+Access the web monitoring interface by navigating to your miner's IP address in a web browser. This interface provides functionality similar to NMController:
+
+<div align="center">
+  <img src="fig/webmonitor.png" alt="Web Monitor Interface">
+</div>
+
+## Support & Contact
+
+We are committed to expanding support for additional Arduino development board models. If you encounter any issues or have suggestions for improvement, please reach out to us.
+
+| Contact Method | Details                                                    |
+| :------------: | :--------------------------------------------------------- |
+| **Email**      | nmminer1024@gmail.com                                      |
+| **Telegram**   | [https://t.me/NMMiner](https://t.me/NMMiner)               |
+| **Website**    | [NMTech Official Site](https://www.nmminer.com/)          |
 
 
 
