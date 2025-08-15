@@ -74,7 +74,7 @@ The following table shows the supported development boards and their performance
   <table width="100%">
     <tr>
       <td width="50%" align="center"><img src="fig/cyd.jpg" alt="CYD Board"></td>
-      <td width="50%" align="center"><img src="fig/cyd-clock.jpg" alt="CYD Clock Display"></td>
+      <td width="50%" align="center"><img src="fig/cyd-price.jpg" alt="cyd-price"></td>
     </tr>
   </table>
 </div>
@@ -339,6 +339,19 @@ We are committed to expanding support for additional Arduino development board m
 ---
 
 ## Release Log
+
+### (2025.08.14) - v1.8.10
+- `board support`:
+  - A new screen driver for `esp32-c3-042-oled`
+- `feature`:
+  - Multi-currency price page on miner screen.
+- `fix`:
+  - Oled device display.
+  - License lost issue on `waveshare-esp32-s3-lcd-147` and `waveshare-esp32-s3-lcd-147b` board.
+- `remove`:
+  - Market price enable option on config page.
+- `optimize`:
+  - Memory usage.
 
 ### (2025.07.29) - v1.7.06
 - `board support`:
