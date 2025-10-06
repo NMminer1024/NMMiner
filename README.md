@@ -58,12 +58,13 @@ The following table shows the supported development boards and their performance
 | LilyGO T-Display S3 AMOLED                                                            | **390.1 KH/s**   | ESP32-S3R8   |
 | [Heltec Vision Master T190](https://www.aliexpress.us/item/1005007449552504.html)    | **388.4 KH/s**   | ESP32-S3R8   |
 | [NM USB Chain v1](https://www.aliexpress.com/item/1005008089478881.html)             | **387.5 KH/s**   | ESP32-S3FN8  |
+| LilyGO T-Dongle S3                                                                    | **385.3 KH/s**   | ESP32-S3R8   |
 | LilyGO T-Display S3                                                                   | **384.5 KH/s**   | ESP32-S3R8   |
-| Waveshare ESP32-S3-LCD-1.47                                                           | **384.5 KH/s**   | ESP32-S3R8   |
-| Waveshare ESP32-S3-LCD-1.47B                                                          | **383.5 KH/s**   | ESP32-S3R8   |
-| LilyGO T-Dongle S3                                                                     | **385.3 KH/s**   | ESP32-S3R8   |
+| Waveshare ESP32 S3 LCD 1.47                                                           | **384.5 KH/s**   | ESP32-S3R8   |
+| Waveshare ESP32 S3 LCD 1.47B                                                          | **383.5 KH/s**   | ESP32-S3R8   |
+| Waveshare ESP32 S3 Touch LCD 35                                                       | **380.3 KH/s**   | ESP32-S3R8   |
 | ESP32-S3 Geek                                                                         | **378.1 KH/s**   | ESP32-S3     |
-| LilyGO T-QT                                                                            | **361.1 KH/s**   | ESP32-S3FN8  |
+| LilyGO T-QT                                                                           | **361.1 KH/s**   | ESP32-S3FN8  |
 | ESP32-C3 0.42" OLED                                                                   | **315.1 KH/s**   | ESP32-C3     |
 
 ---
@@ -339,6 +340,19 @@ We are committed to expanding support for additional Arduino development board m
 ---
 
 ## Release Log
+
+### (2025.10.06) - v1.8.20
+- `board support`:
+  - `waveshare-esp32-s3-touch-lcd-35`
+- `feature`:
+  - None.
+- `fix`:
+  - Some potential restart risks.
+- `remove`:
+  - None.
+- `optimize`:
+  - Coin price page alignment optimization.
+  - Screen lights up gradually when you turn on the miner to avoid screen distortion.
 
 ### (2025.08.14) - v1.8.10
 - `board support`:
