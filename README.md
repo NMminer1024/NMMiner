@@ -345,7 +345,7 @@ We are committed to expanding support for additional Arduino development board m
 - `board support`:
   - `waveshare-esp32-s3-touch-lcd-35`
 - `feature`:
-  - None.
+  - Resumes on the last page after a shutdown or crash.
 - `fix`:
   - Some potential restart risks.
 - `remove`:
