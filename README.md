@@ -341,6 +341,20 @@ We are committed to expanding support for additional Arduino development board m
 
 ## Release Log
 
+### (2025.11.03) - v1.8.21
+- `board support`:
+  - None.
+- `feature`:
+  - Date format adjustable by users in clock page.
+  - 24h and 12h time format adjustableby users in clock page.
+- `fix`:
+  - Some potential restart risks.
+- `remove`:
+  - None.
+- `optimize`:
+  - Stability Optimization.
+  - Some known issues.
+
 ### (2025.10.06) - v1.8.20
 - `board support`:
   - `waveshare-esp32-s3-touch-lcd-35`
