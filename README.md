@@ -341,7 +341,7 @@ We are committed to expanding support for additional Arduino development board m
 
 ## Release Log
 
-### (2025.11.03) - v1.8.21
+### (2025.11.04) - v1.8.22
 - `board support`:
   - None.
 - `feature`:
@@ -349,6 +349,7 @@ We are committed to expanding support for additional Arduino development board m
   - 24h and 12h time format adjustableby users in clock page.
 - `fix`:
   - Some potential restart risks.
+  - Screen dead pixels on the loading page of miner.
 - `remove`:
   - None.
 - `optimize`:
