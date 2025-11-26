@@ -46,6 +46,8 @@ The following table shows the supported development boards and their performance
 | TTGO T-Display                                                                        | **1004.2 KH/s**  | ESP32-D0     |
 | ESP32 3248s035                                                                        | **1004.1 KH/s**  | ESP32-D0     |
 | ESP32 CAM                                                                             | **1004.1 KH/s**  | ESP32-D0     |
+| ELECROW esp32 display 2.4inch                                                         | **1004.1 KH/s**  | ESP32-D0     |
+| ELECROW esp32 display 2.8inch                                                         | **1004.1 KH/s**  | ESP32-D0     |
 | WT32-SC01                                                                             | **857.1 KH/s**   | ESP32-D0     |
 | Seeed XIAO ESP32-C3                                                                   | **396.9 KH/s**   | ESP32-C3     |
 | [Heltec WiFi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                    | **400.9 KH/s**   | ESP32-S3FN8  |
@@ -340,6 +342,19 @@ We are committed to expanding support for additional Arduino development board m
 ---
 
 ## Release Log
+
+### (2025.11.25) - v1.8.23
+- `board support`:
+  - `elecrow_esp32_display_24inch` and `elecrow_esp32_display_24inch`.
+- `feature`:
+  - New clock style(remove second)
+  - Merry Christmas surprise(Trigger on Christmas Day, exit via any screen touch), board support NMTV-154, CYD2.4 , CYD2.8 ,CYD3.5
+- `fix`:
+  - Block hit counter issue.
+- `remove`:
+  - None.
+- `optimize`:
+  - Stability Optimization.
 
 ### (2025.11.04) - v1.8.22
 - `board support`:
