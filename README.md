@@ -345,7 +345,7 @@ We are committed to expanding support for additional Arduino development board m
 
 ### (2025.11.25) - v1.8.23
 - `board support`:
-  - `elecrow_esp32_display_24inch` and `elecrow_esp32_display_24inch`.
+  - `elecrow_esp32_display_24inch` and `elecrow_esp32_display_28inch`.
 - `feature`:
   - New clock style(remove second)
   - Merry Christmas surprise(Trigger on Christmas Day, exit via any screen touch), board support NMTV-154, CYD2.4 , CYD2.8 ,CYD3.5
