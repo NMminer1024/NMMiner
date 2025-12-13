@@ -38,17 +38,19 @@ The following table shows the supported development boards and their performance
 
 | Board                                                                                   | Performance       | Chip         |
 | :------------------------------------------------------------------------------------- | :---------------: | :----------: |
-| [NM-TV-154](https://www.nmminer.com/product/nm-tv-154/)                               | **1010.9 KH/s**  | ESP32-D0     |
-| ESP32 DEVKitC 32                                                                      | **1009.9 KH/s**  | ESP32-D0     |
-| [Heltec WiFi LoRa32 v2](https://heltec.org/project/wifi-lora-32v2/)                  | **1004.5 KH/s**  | ESP32-D0     |
-| [ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)             | **1004.3 KH/s**  | ESP32-D0     |
-| ESP32 2432s024                                                                        | **1004.1 KH/s**  | ESP32-D0     |
-| TTGO T-Display                                                                        | **1004.2 KH/s**  | ESP32-D0     |
-| ESP32 3248s035                                                                        | **1004.1 KH/s**  | ESP32-D0     |
-| ESP32 CAM                                                                             | **1004.1 KH/s**  | ESP32-D0     |
-| ELECROW esp32 display 2.4inch                                                         | **1004.1 KH/s**  | ESP32-D0     |
-| ELECROW esp32 display 2.8inch                                                         | **1004.1 KH/s**  | ESP32-D0     |
-| WT32-SC01                                                                             | **857.1 KH/s**   | ESP32-D0     |
+| [NM-TV-154](https://www.nmminer.com/product/nm-tv-154/)                               | **1035.9 KH/s**  | ESP32-D0     |
+| ESP32 DEVKitC 32                                                                      | **1035.9 KH/s**  | ESP32-D0     |
+| [Heltec WiFi LoRa32 v2](https://heltec.org/project/wifi-lora-32v2/)                  | **1035.5 KH/s**  | ESP32-D0     |
+| [ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)             | **1025.3 KH/s**  | ESP32-D0     |
+| ESP32 2432s024                                                                        | **1025.1 KH/s**  | ESP32-D0     |
+| TTGO T-Display                                                                        | **1025.2 KH/s**  | ESP32-D0     |
+| ESP32 3248s035                                                                        | **1025.1 KH/s**  | ESP32-D0     |
+| ESP32 CAM                                                                             | **1025.1 KH/s**  | ESP32-D0     |
+| ELECROW esp32 display 2.4inch                                                         | **1025.1 KH/s**  | ESP32-D0     |
+| ELECROW esp32 display 2.8inch                                                         | **1025.1 KH/s**  | ESP32-D0     |
+| ESP32 32E LCD Display 3.2inch                                                         | **1025.1 KH/s**  | ESP32-D0     |
+| ESP32 32E LCD Display 4.0inch                                                         | **1025.1 KH/s**  | ESP32-D0     |
+| WT32-SC01                                                                             | **930.1 KH/s**   | ESP32-D0     |
 | Seeed XIAO ESP32-C3                                                                   | **396.9 KH/s**   | ESP32-C3     |
 | [Heltec WiFi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                    | **400.9 KH/s**   | ESP32-S3FN8  |
 | [Heltec WiFi LoRa32 v3](https://www.aliexpress.com/item/1005005443005152.html)       | **400.7 KH/s**   | ESP32-S3FN8  |
@@ -342,6 +344,18 @@ We are committed to expanding support for additional Arduino development board m
 ---
 
 ## Release Log
+
+### (2025.12.13) - v1.8.24
+- `board support`:
+  - `esp32-32e-lcd-display-3.2inch` and `esp32-32e-lcd-display-4.0inch`.
+- `feature`:
+  - None.
+- `fix`:
+  - Stuck at 80% when miner bootup.
+- `remove`:
+  - None.
+- `optimize`:
+  - ESP32D0 upto 1035kH/s.
 
 ### (2025.11.25) - v1.8.23
 - `board support`:
