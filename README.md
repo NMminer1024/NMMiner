@@ -345,6 +345,18 @@ We are committed to expanding support for additional Arduino development board m
 
 ## Release Log
 
+### (2025.12.17) - v1.8.25
+- `board support`:
+  - None.
+- `feature`:
+  - None.
+- `fix`:
+  - Fallback pool switch logic.
+- `remove`:
+  - None.
+- `optimize`:
+  - Miner will exit uart config mode when the first share submit. 
+
 ### (2025.12.13) - v1.8.24
 - `board support`:
   - `esp32-32e-lcd-display-3.2inch` and `esp32-32e-lcd-display-4.0inch`.
