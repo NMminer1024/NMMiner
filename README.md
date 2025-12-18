@@ -352,6 +352,7 @@ We are committed to expanding support for additional Arduino development board m
   - None.
 - `fix`:
   - Fallback pool switch logic.
+  - Miner stuck at 80%.
 - `remove`:
   - None.
 - `optimize`:
