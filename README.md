@@ -20,8 +20,8 @@ NMMiner is an optimized BTC mining firmware designed for ESP32-based development
 ## Key Features
 
 - **Optimized Performance**
-  - ESP32-D0: Up to 1,012 KH/s
-  - ESP32-S3: Up to 390 KH/s
+  - ESP32-D0: Up to 1,035 KH/s
+  - ESP32-S3: Up to 398 KH/s
   - ESP32-C3: Up to 402 KH/s
 
 - **Management Tools**
@@ -344,6 +344,19 @@ We are committed to expanding support for additional Arduino development board m
 ---
 
 ## Release Log
+
+### (2025.12.21) - v1.8.26
+- `board support`:
+  - None.
+- `feature`:
+  - None.
+- `fix`:
+  - Web monitor last seen issue.
+  - Uart config mode issue on chip esp32s3.  
+- `remove`:
+  - None.
+- `optimize`:
+  - None.
 
 ### (2025.12.17) - v1.8.25
 - `board support`:
