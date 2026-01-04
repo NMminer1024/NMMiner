@@ -345,6 +345,18 @@ We are committed to expanding support for additional Arduino development board m
 
 ## Release Log
 
+### (2026.01.04) - v1.8.27
+- `board support`:
+  - None.
+- `feature`:
+  - None.
+- `fix`:
+  - Touch driver for elecrow 2.4 and 2.8 inch board.
+- `remove`:
+  - None.
+- `optimize`:
+  - Primary and Fallback pool changed.
+
 ### (2025.12.21) - v1.8.26
 - `board support`:
   - None.
