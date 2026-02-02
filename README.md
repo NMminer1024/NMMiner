@@ -289,8 +289,8 @@ For dual button boards:
 Due to limited on-chip resources, some high-difficulty mining pools may reject connections from ESP32-based miners. The following pools support low-difficulty stratum connections suitable for this hardware:
 
 #### Bitcoin (BTC)
-- `stratum+tcp://public-pool.io:21496` - [Home page](https://web.public-pool.io)
-- `stratum+tcp://pool.tazmining.ch:33333` - [Home page](https://tazmining.ch/?#)
+- `stratum+tcp://solobtc.nmminer.com:3333` - [Home page](https://solobtc.nmminer.com/#/)
+- `stratum+tcp://au.solobtc.nmminer.com:3333` - [Home page](https://au.solobtc.nmminer.com/#/)
 
 #### DigiByte (DGB)
 - `stratum+tcp://dgb-stratum.solominer.net:3333` - [Home page](https://digibyte.solominer.net/#/)
@@ -344,6 +344,19 @@ We are committed to expanding support for additional Arduino development board m
 ---
 
 ## Release Log
+
+### (2026.02.02) - v1.8.28
+- `board support`:
+  - None.
+- `feature`:
+  - None.
+- `fix`:
+  - Touch driver of CYD.
+  - UI issue of lilygo t-qt.
+- `remove`:
+  - None.
+- `optimize`:
+  - Primary and fallback pool change to 'solobtc.nmminer.com' and 'au.solobtc.nmminer.com' which forked from public pool.
 
 ### (2026.01.04) - v1.8.27
 - `board support`:
