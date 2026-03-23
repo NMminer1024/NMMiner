@@ -16,13 +16,14 @@ NMMiner is an optimized BTC mining firmware designed for ESP32-based development
   - ESP32-S3
   - ESP32-D0
   - ESP32-C3
-
+  - ESP32-C5
 ## Key Features
 
 - **Optimized Performance**
   - ESP32-D0: Up to 1,035 KH/s
   - ESP32-S3: Up to 398 KH/s
   - ESP32-C3: Up to 402 KH/s
+  - ESP32-C5: Up to 150 KH/s
 
 - **Management Tools**
   - **NMController Client**: Windows desktop application ([source code](https://github.com/NMminer1024/NMController_client))
@@ -70,6 +71,8 @@ The following table shows the supported development boards and their performance
 | ESP32-S3 Geek                                                                         | **378.1 KH/s**   | ESP32-S3     |
 | LilyGO T-QT                                                                           | **361.1 KH/s**   | ESP32-S3FN8  |
 | ESP32-C3 0.42" OLED                                                                   | **315.1 KH/s**   | ESP32-C3     |
+| ESP32-C5 devkitc 1                                                                    | **150.2 KH/s**   | ESP32-C5     |
+| NM-CYD-C5                                                                             | **150.2 KH/s**   | ESP32-C5     |
 
 ---
 
@@ -344,6 +347,19 @@ We are committed to expanding support for additional Arduino development board m
 ---
 
 ## Release Log
+
+### (2026.03.23) - v1.8.29
+- `board support`:
+  - `esp32-c5-devkitc-1` and `nm-cyd-c5` hashrate 150kH/s.
+- `feature`:
+  - Hostname defined by users.
+- `fix`:
+  - Primary pool check interval range from random 1~30 minutes.
+  - Multiple ntp server trying when previous fails. 
+- `remove`:
+  - None.
+- `optimize`:
+  - Network relate optimism.
 
 ### (2026.02.02) - v1.8.28
 - `board support`:
