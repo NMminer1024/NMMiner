@@ -354,7 +354,7 @@ We are committed to expanding support for additional Arduino development board m
 - `feature`:
   - Hostname defined by users.
 - `fix`:
-  - Primary pool check interval range from random 1~30 minutes.
+  - Primary pool check interval random range from 1 to 30 minutes.
   - Multiple ntp server trying when previous fails. 
 - `remove`:
   - None.
