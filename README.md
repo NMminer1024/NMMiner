@@ -360,6 +360,7 @@ We are committed to expanding support for additional Arduino development board m
   - None.
 - `optimize`:
   - Network relate optimism.
+  - Optimize the mining pool connection logic to minimize the risk of causing a concurrency disaster for the mining pool.
 
 ### (2026.02.02) - v1.8.28
 - `board support`:
