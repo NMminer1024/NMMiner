@@ -334,6 +334,23 @@ Access the web monitoring interface by navigating to your miner's IP address in 
 
 ---
 
+## HTTP API
+
+NMMiner firmware exposes a REST API on **port 80** that can be used to query device status, read and update settings, and control the device programmatically — no authentication required.
+
+| Category | Endpoints |
+| :------- | :-------- |
+| Discovery & Status | `GET /probe` · `GET /alive` · `GET /api/system/info` |
+| Settings | `G/P /api/setting/network` · `mining` · `time` · `preference` · `market` · `weather` |
+| Market Data | `GET /api/market/pairs` |
+| Weather | `POST /api/weather/refresh` |
+| System Control | `POST /api/swarm/find` · `POST /api/system/restart` |
+| Screensaver | `GET /api/update/screensaver/preflight` · `POST /api/update/screensaver` |
+
+**→ [Full API Reference](docs/api-reference.md)**
+
+---
+
 ## Support & Contact
 
 We are committed to expanding support for additional Arduino development board models. If you encounter any issues or have suggestions for improvement, please reach out to us.
@@ -347,6 +364,28 @@ We are committed to expanding support for additional Arduino development board m
 ---
 
 ## Release Log
+
+### (2026.04.17) - v2.0.01
+- `board support`:
+  - `esp32-2432s024` (CYD 2.4 inch)
+  - `esp32-2432s028r` (CYD 2.8 inch)
+  - `esp32-3248s035` (CYD 3.5 inch)
+  - `nm-tv-154` (1.54 inch) 
+- `feature`:
+  - Screen saver with custom image upload and carousel playback.
+  - Weather page: current conditions, AQI, 3-day forecast, sunrise/sunset.
+  - Bitcoin price wall mode and candlestick (K-line) chart.
+  - Swarm: LAN device discovery and aggregated hashrate display.
+  - Tap screen to switch page; long-press 10s to enter config mode.
+  - Screen rotation, timezone, brightness apply immediately without reboot.
+  - Extended timezone range: -13.5 ~ +13.5.
+- `fix`:
+  - Screen not lighting up when brightness set to minimum on boot.
+  - Various web frontend display issues.
+- `optimize`:
+  - Significantly reduced free heap usage — device runs more stably under load.
+  - Web monitor UI redesigned and improved.
+  - NVS write frequency reduced to lower flash wear.
 
 ### (2026.03.23) - v1.8.29
 - `board support`:
