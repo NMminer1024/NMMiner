@@ -347,6 +347,8 @@ NMMiner firmware exposes a REST API on **port 80** that can be used to query dev
 | System Control | `POST /api/swarm/find` · `POST /api/system/restart` |
 | Screensaver | `GET /api/update/screensaver/preflight` · `POST /api/update/screensaver` |
 
+Each device also serves an **interactive API documentation page** at `http://<device-ip>/api-doc` — accessible directly from any browser on the same network.
+
 **→ [Full API Reference](docs/api-reference.md)**
 
 ---
