@@ -81,8 +81,8 @@ The following table shows the supported development boards and their performance
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/cyd.jpg" alt="CYD Board"></td>
-      <td width="50%" align="center"><img src="fig/cyd-price.jpg" alt="cyd-price"></td>
+      <td width="50%" align="center"><img src="fig/cyd-kline.jpg" alt="CYD Board"></td>
+      <td width="50%" align="center"><img src="fig/cyd-weather.jpg" alt="cyd-price"></td>
     </tr>
   </table>
 </div>
@@ -90,8 +90,8 @@ The following table shows the supported development boards and their performance
 <div align="center">
   <table width="100%">
     <tr>
-      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3.jpg" alt="LilyGO T-Display S3"></td>
-      <td width="50%" align="center"><img src="fig/lilygo-t-display-s3-clock.jpg" alt="LilyGO T-Display S3 Clock"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-weather.jpg" alt="LilyGO T-Display S3"></td>
+      <td width="50%" align="center"><img src="fig/lilygo-kline.jpg" alt="LilyGO T-Display S3 Clock"></td>
     </tr>
   </table>
 </div>
@@ -302,37 +302,18 @@ Due to limited on-chip resources, some high-difficulty mining pools may reject c
 
 ## Monitoring & Management
 
-#### NMController Applications
-
-Both **NMController Client** and **NMController Web** provide identical functionality:
-- **NMController Client**: Windows desktop application
-- **NMController Web**: Cross-platform solution for Windows and macOS
-
-#### Network Scanning with NMController Client
-
-The client automatically scans your local network to discover active miners:
-
-<div align="center">
-  <img src="fig/nmcontroller-home.jpg" alt="NMController Home Interface">
-</div>
-
-#### Device Configuration
-
-Configure individual miners or groups of miners through the NMController interface (requires firmware v1.5.xx or later):
-
-<div align="center">
-  <img src="fig/nmcontroller-details.jpg" alt="NMController Configuration Details">
-</div>
-
 #### Web-Based Monitoring
 
-Access the web monitoring interface by navigating to your miner's IP address in a web browser. This interface provides functionality similar to NMController:
+Access the web monitoring interface by navigating to your miner's IP address in a web browser.:
 
 <div align="center">
-  <img src="fig/webmonitor.png" alt="Web Monitor Interface">
+  <img src="fig/new-web.png" alt="Web Monitor Setting page">
 </div>
 
----
+<div align="center">
+  <img src="fig/web-dashboard.png" alt="Web Monitor Dashboard">
+</div>
+
 
 ## HTTP API
 
@@ -366,6 +347,46 @@ We are committed to expanding support for additional Arduino development board m
 ---
 
 ## Release Log
+
+
+### (2026.05.08) - v2.0.02
+- `board support`:
+  - `heltec-vision-master-t190` (ESP32-S3, 1.9" 320×170)
+  - `ttgo-t-display` (ESP32-D0, 1.14" 240×135)
+  - `lilygo-t-dongle-s3` (ESP32-S3, 0.96" 160×80)
+  - `waveshare-esp32-s3-lcd-147` (ESP32-S3, 1.47" 172×320, USB-A)
+  - `waveshare-esp32-s3-lcd-147b` (ESP32-S3, 1.47" 172×320, USB-C)
+  - `esp32-s3-geek` (ESP32-S3)
+  - `seeed-xiao-esp32-s3` (ESP32-S3)
+  - `seeed-xiao-esp32-c3` (ESP32-C3)
+  - `esp32-dev-kitc-32` (ESP32-D0)
+  - `esp32cam` (ESP32-D0)
+  - `nm-bot-chain-v1` (ESP32-S3)
+  - `esp32-32e-lcd-display-32inch` (ESP32-D0)
+  - `esp32-32e-lcd-display-40inch` (ESP32-D0)
+  - `wt32-sc01` (ESP32-D0, 3.5" 480×320, capacitive touch)
+- `feature`:
+  - K-line (candlestick chart) granularity user-configurable.
+  - Screen saver: black screen mode added.
+  - Weather page: temperature unit selectable (°C / °F).
+  - Web frontend dynamically loads display-related settings based on board capability.
+  - Browser cache strategy added to reduce web server crash under frequent access.
+- `fix`:
+  - Swarm device list not shown in web monitor.
+  - K-line carousel playback bug.
+  - Price wall coin price parsing bug; improved display for unusually long price values.
+  - CYD 3.5" config page element misalignment.
+  - WiFi reconnect logic issue.
+  - UI page base class / resolution-derived class hierarchy conflict.
+  - NM-TV-154 touch coordinate mapping.
+  - ST7789 screen stays black on boot due to wrong SPI mode (MODE0 → MODE3).
+- `optimize`:
+  - Price wall UI and web monitor market card redesigned.
+  - RAM usage reduced; device runs more stably under load.
+  - LVGL memory configuration tuned.
+  - CYD 2.8" weather page layout improved.
+  - ESP32-S3 Geek and TTGO T-Display weather page optimized.
+  - NM-Bot-Chain button interaction logic and LED default state improved.
 
 ### (2026.04.17) - v2.0.01
 - `board support`:

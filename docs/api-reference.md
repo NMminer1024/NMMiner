@@ -124,7 +124,7 @@ Full real-time snapshot: device identity, mining statistics, active stratum pool
     "minFreeHeap":     131072
   },
   "stratum": {
-    "url":  "public-pool.io:21496",
+    "url":  "solobtc.nmminer.com:3333",
     "user": "18dK8EfyepKuS74fs27iuDJWoGUT4rPto1.worker"
   },
   "temps": {
@@ -189,10 +189,10 @@ Read or update stratum pool configuration. New pool connection takes effect afte
 **GET Response 200**
 ```json
 {
-  "PrimaryPool":       "stratum+tcp://public-pool.io:21496",
+  "PrimaryPool":       "stratum+tcp://solobtc.nmminer.com:3333",
   "PrimaryAddress":    "18dK8EfyepKuS74fs27iuDJWoGUT4rPto1.worker",
   "PrimaryPassword":   "x",
-  "SecondaryPool":     "stratum+tcp://pool.tazmining.ch:33333",
+  "SecondaryPool":     "stratum+tcp://au.solobtc.nmminer.com:3333",
   "SecondaryAddress":  "18dK8EfyepKuS74fs27iuDJWoGUT4rPto1.worker",
   "SecondaryPassword": "x"
 }
@@ -201,10 +201,10 @@ Read or update stratum pool configuration. New pool connection takes effect afte
 **POST Request Body** *(all keys optional)*
 ```json
 {
-  "PrimaryPool":       "stratum+tcp://pool.example.com:3333",
+  "PrimaryPool":       "stratum+tcp://solobtc.nmminer.com:3333",
   "PrimaryAddress":    "yourWallet.worker",
   "PrimaryPassword":   "x",
-  "SecondaryPool":     "stratum+tcp://backup.example.com:3333",
+  "SecondaryPool":     "stratum+tcp://au.solobtc.nmminer.com:3333",
   "SecondaryAddress":  "yourWallet.worker",
   "SecondaryPassword": "x"
 }
@@ -221,7 +221,7 @@ Read or update time and date settings. `Timezone`, `TimeFormat`, and `DateFormat
 **GET Response 200**
 ```json
 {
-  "Timezone":   "Asia/Shanghai",
+  "Timezone":   "8",
   "TimeFormat": 24,
   "DateFormat": "YYYY-MM-DD"
 }
