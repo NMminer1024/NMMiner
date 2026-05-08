@@ -229,14 +229,14 @@ Read or update time and date settings. `Timezone`, `TimeFormat`, and `DateFormat
 
 | Field | Values |
 | :---- | :----- |
-| `Timezone` | IANA timezone string |
+| `Timezone` | UTC offset as numeric string (e.g. `"8"` = UTC+8, `"-5"` = UTC-5) |
 | `TimeFormat` | `12` or `24` |
 | `DateFormat` | `"YYYY-MM-DD"` \| `"MM/DD/YYYY"` \| `"DD/MM/YYYY"` |
 
 **POST Request Body** *(all keys optional)*
 ```json
 {
-  "Timezone":   "America/New_York",
+  "Timezone":   "-5",
   "TimeFormat": 12,
   "DateFormat": "MM/DD/YYYY"
 }
@@ -248,15 +248,16 @@ Read or update time and date settings. `Timezone`, `TimeFormat`, and `DateFormat
 
 ### G/P `/api/setting/preference`
 
-Read or update display and LED preferences. `Brightness`, `RotateScreen`, and `ScreenSaver` take effect immediately. `LedEnable` requires a reboot.
+Read or update display and LED preferences. `Brightness`, `RotateScreen`, `ScreenSaver`, and `ScreenSaverMode` take effect immediately. `LedEnable` requires a reboot.
 
 **GET Response 200**
 ```json
 {
-  "Brightness":   80,
-  "RotateScreen": 270,
-  "LedEnable":    1,
-  "ScreenSaver":  "never"
+  "Brightness":      80,
+  "RotateScreen":    270,
+  "LedEnable":       1,
+  "ScreenSaver":     "never",
+  "ScreenSaverMode": "image"
 }
 ```
 
@@ -266,14 +267,16 @@ Read or update display and LED preferences. `Brightness`, `RotateScreen`, and `S
 | `RotateScreen` | `0` \| `90` \| `180` \| `270` |
 | `LedEnable` | `0` = off, `1` = on |
 | `ScreenSaver` | `"never"` \| `"30s"` \| `"1m"` \| `"5m"` \| `"15m"` \| `"30m"` |
+| `ScreenSaverMode` | `"image"` \| `"black"` |
 
 **POST Request Body** *(all keys optional)*
 ```json
 {
-  "Brightness":   60,
-  "RotateScreen": 90,
-  "LedEnable":    0,
-  "ScreenSaver":  "5m"
+  "Brightness":      60,
+  "RotateScreen":    90,
+  "LedEnable":       0,
+  "ScreenSaver":     "5m",
+  "ScreenSaverMode": "black"
 }
 ```
 
@@ -288,10 +291,11 @@ Read or update market display settings. After saving, the market task triggers a
 **GET Response 200**
 ```json
 {
-  "MainCoin":      "BTC",
-  "WatchCoins":    "ETH,BNB,SOL",
-  "KlineRotate":   "30s",
-  "PricePageMode": "kline"
+  "MainCoin":        "BTC",
+  "WatchCoins":      "ETH,BNB,SOL",
+  "KlineRotate":     "20s",
+  "KlineInterval":   "1h",
+  "PricePageMode":   "kline"
 }
 ```
 
@@ -299,8 +303,9 @@ Read or update market display settings. After saving, the market task triggers a
 | :---- | :----- |
 | `MainCoin` | Primary coin shown on price page |
 | `WatchCoins` | Comma-separated watchlist (max 20 symbols) |
-| `KlineRotate` | `"never"` \| `"10s"` \| `"30s"` \| `"60s"` |
-| `PricePageMode` | `"kline"` \| `"ticker"` |
+| `KlineRotate` | `"never"` \| `"10s"` \| `"20s"` \| `"60s"` \| `"5m"` \| `"30m"` |
+| `KlineInterval` | `"1m"` \| `"5m"` \| `"15m"` \| `"30m"` \| `"1h"` \| `"4h"` \| `"1d"` \| `"1w"` |
+| `PricePageMode` | `"kline"` \| `"pricewall"` |
 
 **POST Request Body** *(all keys optional)*
 ```json
@@ -308,7 +313,8 @@ Read or update market display settings. After saving, the market task triggers a
   "MainCoin":      "ETH",
   "WatchCoins":    "BTC,BNB,SOL,XRP",
   "KlineRotate":   "60s",
-  "PricePageMode": "ticker"
+  "KlineInterval": "15m",
+  "PricePageMode": "pricewall"
 }
 ```
 
@@ -323,18 +329,30 @@ Read or update weather location. After saving, the weather task triggers an imme
 **GET Response 200**
 ```json
 {
-  "WeatherCity": "Beijing, Beijing, China",
-  "WeatherLat":  "39.9075",
-  "WeatherLon":  "116.3972"
+  "WeatherCity":      "Beijing, Beijing, China",
+  "WeatherLat":       "39.9075",
+  "WeatherLon":       "116.3972",
+  "WeatherTempUnit":  "celsius",
+  "WeatherSpeedUnit": "kmh",
+  "WeatherAltMode":   "pressure"
 }
 ```
+
+| Field | Values |
+| :---- | :----- |
+| `WeatherTempUnit` | `"celsius"` \| `"fahrenheit"` |
+| `WeatherSpeedUnit` | `"kmh"` \| `"mph"` \| `"ms"` \| `"kn"` |
+| `WeatherAltMode` | `"pressure"` \| `"altitude"` |
 
 **POST Request Body** *(all keys optional)*
 ```json
 {
-  "WeatherCity": "Tokyo, Tokyo, Japan",
-  "WeatherLat":  "35.6762",
-  "WeatherLon":  "139.6503"
+  "WeatherCity":      "Tokyo, Tokyo, Japan",
+  "WeatherLat":       "35.6762",
+  "WeatherLon":       "139.6503",
+  "WeatherTempUnit":  "fahrenheit",
+  "WeatherSpeedUnit": "mph",
+  "WeatherAltMode":   "altitude"
 }
 ```
 
