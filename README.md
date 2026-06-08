@@ -349,6 +349,21 @@ We are committed to expanding support for additional Arduino development board m
 ## Release Log
 
 
+### (2026.06.08) - v2.0.03
+- `board support`:
+  - `lilygo-t-display-s3-amoled` (ESP32-S3R8, 1.91" 536×240 AMOLED, ~389KH/s)
+- `feature`:
+  - Ladder page: global top-10 mining difficulty leaderboard, privacy-first wallet display (first4…last4).
+  - Swarm scan progress bar shown in web frontend.
+- `fix`:
+  - AMOLED boot black screen and random crash on startup.
+  - Ladder page navigation loop bug when dismissing consent overlay.
+  - T190 external power enable issue.
+  - Web server crash caused by frequent page refreshes.
+- `optimize`:
+  - Swarm traffic and memory usage significantly reduced.
+  - Swarm gossip uses zero-heap streaming parser; supports up to 255 devices.
+
 ### (2026.05.08) - v2.0.02
 - `board support`:
   - `heltec-vision-master-t190` (ESP32-S3, 1.9" 320×170)
