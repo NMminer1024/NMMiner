@@ -348,6 +348,39 @@ We are committed to expanding support for additional Arduino development board m
 
 ## Release Log
 
+### (2026.07.24) - v2.0.04
+- `board support`:
+  - `elecrow-esp32-display-24inch` (ESP32-D0, 2.4" TFT)
+  - `elecrow-esp32-display-28inch` (ESP32-D0, 2.8" TFT)
+  - `esp32-c3-042-oled` / `esp32-c3-042-oled-newscreen` (ESP32-C3, 0.42" 128×64 OLED)
+  - `esp32-s3-042-oled` (ESP32-S3, 0.42" 128×64 OLED)
+  - `heltec-wifi-kit32-v3` (ESP32-S3)
+  - `heltec-wifi-lora32-v2` (ESP32-D0)
+  - `heltec-wifi-lora32-v3` (ESP32-S3)
+  - `heltec-wireless-stick-v3` / `heltec-wireless-stick-lite-v3` (ESP32-S3)
+  - `lilygo-t-qt` (ESP32-S3, 128×128 TFT)
+  - `nmtech-display-28` (ESP32-S3, 2.8" TFT)
+  - `waveshare-esp32-s3-touch-lcd-35` (ESP32-S3, 3.5" 480×320, capacitive touch)
+- `feature`:
+  - Web frontend: "Clear BH" button to reset block hit counter with one click.
+  - API: `POST /api/system/clear-block-hit` endpoint added; interactive API doc updated.
+  - 0.42" OLED (128×64) UI overhaul: weather page, price K-line chart, and clock page added.
+  - Block hit display auto-switches to larger font for 2-digit counts across all 7 TFT layouts.
+  - Price K-line chart: axis label toggle switch added.
+  - Price page: coin-switch header and label layout refined.
+- `fix`:
+  - ESP32-S3 0.42" OLED I2C init instability (added pin fallback with read-based probe).
+  - NMTech 2.8" display panel inversion corrected.
+  - Waveshare 3.5" touch driver and LittleFS mount failure.
+  - Capacitive touch rotation handling.
+  - Seeed XIAO ESP32-C3 linker error.
+  - ESP32 32E LCD 4.0" touch Y-axis mirror mapping.
+- `optimize`:
+  - LVGL buffer allocation now uses runtime PSRAM detection for smarter sizing.
+  - Waveshare 3.5" screen page transitions smoother.
+  - TFT/LVGL builds no longer compile unused U8g2 libraries and fonts, reducing firmware size.
+  - Wireless Stick Lite: debug logs output on long-press in headless mode.
+  - LittleFS mount now tries multiple partition labels (www / spiffs) with fallback.
 
 ### (2026.06.08) - v2.0.03
 - `board support`:
