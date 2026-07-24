@@ -1,9 +1,12 @@
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/NMminer1024/NMMiner/total)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NMminer1024/NMMiner)
-
 <div align="center">
-  <h1>NMMiner</h1>
-  <h3><em>Make it better</em></h3>
+
+# NMMiner
+### *Make it better*
+
+[![GitHub Downloads](https://img.shields.io/github/downloads/NMminer1024/NMMiner/total)](https://github.com/NMminer1024/NMMiner)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NMminer1024/NMMiner)](https://github.com/NMminer1024/NMMiner)
+[![Wiki](https://img.shields.io/badge/Wiki-nmminer.com-4CAF50)](https://wiki.nmminer.com/)
+
 </div>
 
 ## Overview
