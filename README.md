@@ -344,7 +344,7 @@ We are committed to expanding support for additional Arduino development board m
 | Contact Method | Details                                                    |
 | :------------: | :--------------------------------------------------------- |
 | **Email**      | nmminer1024@gmail.com                                      |
-| **Telegram**   | [https://t.me/NMMiner](https://t.me/NMMiner)               |
+| **Telegram**   | [https://t.me/NMMiner1024](https://t.me/NMMiner1024)               |
 | **Website**    | [NMTech Official Site](https://www.nmminer.com/)          |
 
 ---
