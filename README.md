@@ -295,8 +295,8 @@ For dual button boards:
 Due to limited on-chip resources, some high-difficulty mining pools may reject connections from ESP32-based miners. The following pools support low-difficulty stratum connections suitable for this hardware:
 
 #### Bitcoin (BTC)
-- `stratum+tcp://solobtc.nmminer.com:3333` - [Home page](https://solobtc.nmminer.com/#/)
-- `stratum+tcp://au.solobtc.nmminer.com:3333` - [Home page](https://au.solobtc.nmminer.com/#/)
+- `stratum+tcp://solobtc.nmminer.com:3333` - [Home page](https://solobtc.nmminer.com/#/) Minimum difficulty 0.0001
+- `stratum+tcp://au.solobtc.nmminer.com:3333` - [Home page](https://au.solobtc.nmminer.com/#/) Minimum difficulty 0.01
 - `stratum+tcp://stratum.sololuck.io:3335` - [Home page](https://sololuck.io/) Nano tier, minimum difficulty 1
 - `stratum+tcp://stratum.btcpowlab-pool.com:3333` - [Home page](https://btcpowlab-pool.com/) Hybrid Solo with Vardiff down to difficulty 1
 - `stratum+tcp://solo.drminer.xyz:3333` - [Home page](https://solo.drminer.xyz/) DRPool SOLO, minimum difficulty 0.001
