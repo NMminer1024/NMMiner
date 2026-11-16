@@ -299,6 +299,7 @@ Due to limited on-chip resources, some high-difficulty mining pools may reject c
 - `stratum+tcp://au.solobtc.nmminer.com:3333` - [Home page](https://au.solobtc.nmminer.com/#/)
 - `stratum+tcp://stratum.sololuck.io:3335` - [Home page](https://sololuck.io/)
 - `stratum+tcp://stratum.btcpowlab-pool.com:3333` - [Home page](https://btcpowlab-pool.com/) Hybrid Solo with Vardiff down to difficulty 1
+- `stratum+tcp://pool.stompi.de:3333` - [Home page](http://web.stompi.de)
 
 #### DigiByte (DGB)
 - `stratum+tcp://dgb-stratum.solominer.net:3333` - [Home page](https://digibyte.solominer.net/#/)
