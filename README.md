@@ -304,6 +304,7 @@ Due to limited on-chip resources, some high-difficulty mining pools may reject c
 #### DigiByte (DGB)
 - `stratum+tcp://dgb-stratum.solominer.net:3333` - [Home page](https://digibyte.solominer.net/#/)
 - `stratum+tcp://digibyte.sololuck.io:3341` - [Home page](https://sololuck.io/dgb) Nano tier, minimum difficulty 1
+- `stratum+tcp://solo.drminer.xyz:3335` - [Home page](https://solo.drminer.xyz/) DRPool SOLO, minimum difficulty 0.001
 
 ---
 
