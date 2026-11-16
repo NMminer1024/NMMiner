@@ -292,19 +292,27 @@ For dual button boards:
 
 ### Mining Pool Configuration
 
-Due to limited on-chip resources, some high-difficulty mining pools may reject connections from ESP32-based miners. The following pools support low-difficulty stratum connections suitable for this hardware:
+Due to limited on-chip resources, some high-difficulty mining pools may reject connections from ESP32-based miners. The following pools support low-difficulty stratum connections suitable for this hardware.
+
+Username is your wallet address (optionally `address.worker`), password is anything (usually `x`). All difficulties below were verified by connecting to the stratum port and reading the pool's `mining.set_difficulty` / `mining.suggest_difficulty` negotiation.
 
 #### Bitcoin (BTC)
-- `stratum+tcp://solobtc.nmminer.com:3333` - [Home page](https://solobtc.nmminer.com/#/) No difficulty floor (vardiff accepts < 0.0001)
-- `stratum+tcp://au.solobtc.nmminer.com:3333` - [Home page](https://au.solobtc.nmminer.com/#/) Minimum difficulty 0.01
-- `stratum+tcp://stratum.sololuck.io:3335` - [Home page](https://sololuck.io/) Nano tier, minimum difficulty 1
-- `stratum+tcp://stratum.btcpowlab-pool.com:3333` - [Home page](https://btcpowlab-pool.com/) Hybrid Solo with Vardiff down to difficulty 1
-- `stratum+tcp://solo.drminer.xyz:3333` - [Home page](https://solo.drminer.xyz/) DRPool SOLO, minimum difficulty 0.001
+
+| Pool | Stratum URL | Min difficulty | Notes |
+| :--- | :---------- | :------------: | :---- |
+| [NMMiner Solo](https://solobtc.nmminer.com/#/) (primary) | `stratum+tcp://solobtc.nmminer.com:3333` | **No limit** | Default start diff 16384; vardiff goes below 0.0001 on request |
+| [NMMiner Solo](https://au.solobtc.nmminer.com/#/) (AU) | `stratum+tcp://au.solobtc.nmminer.com:3333` | **0.01** | Same pool software; lower requests are clamped to 0.01 |
+| [SoloLuck](https://sololuck.io/) | `stratum+tcp://stratum.sololuck.io:3335` | **1** | Nano tier for CPUs / NerdMiner. `:3333` Lite = 1024, `:4334` Pro = 1048576 |
+| [BTC PoW Lab](https://btcpowlab-pool.com/) | `stratum+tcp://stratum.btcpowlab-pool.com:3333` | **1** | Hybrid solo, vardiff starts at 1024 and can drop to 1 |
+| [DRPool](https://solo.drminer.xyz/) | `stratum+tcp://solo.drminer.xyz:3333` | **0.001** | Lowest floor here; TLS port `4333` also available |
 
 #### DigiByte (DGB)
-- `stratum+tcp://dgb-stratum.solominer.net:3333` - [Home page](https://digibyte.solominer.net/#/)
-- `stratum+tcp://digibyte.sololuck.io:3341` - [Home page](https://sololuck.io/dgb) Nano tier, minimum difficulty 1
-- `stratum+tcp://solo.drminer.xyz:3335` - [Home page](https://solo.drminer.xyz/) DRPool SOLO, minimum difficulty 0.001
+
+| Pool | Stratum URL | Min difficulty | Notes |
+| :--- | :---------- | :------------: | :---- |
+| [SoloMiner](https://digibyte.solominer.net/#/) | `stratum+tcp://dgb-stratum.solominer.net:3333` | **No limit** | Accepts difficulty well below 0.001 |
+| [SoloLuck](https://sololuck.io/dgb) | `stratum+tcp://digibyte.sololuck.io:3341` | **1** | Nano tier. `:3340` General = 1024, `:4340` Big iron = 131072 |
+| [DRPool](https://solo.drminer.xyz/) | `stratum+tcp://solo.drminer.xyz:3335` | **0.001** | TLS port `4335` also available |
 
 ---
 
