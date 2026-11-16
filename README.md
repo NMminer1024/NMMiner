@@ -297,9 +297,11 @@ Due to limited on-chip resources, some high-difficulty mining pools may reject c
 #### Bitcoin (BTC)
 - `stratum+tcp://solobtc.nmminer.com:3333` - [Home page](https://solobtc.nmminer.com/#/)
 - `stratum+tcp://au.solobtc.nmminer.com:3333` - [Home page](https://au.solobtc.nmminer.com/#/)
+- `stratum+tcp://stratum.sololuck.io:3335` - [Home page](https://sololuck.io/)
 
 #### DigiByte (DGB)
 - `stratum+tcp://dgb-stratum.solominer.net:3333` - [Home page](https://digibyte.solominer.net/#/)
+- `stratum+tcp://digibyte.sololuck.io:3340` - [Home page](https://sololuck.io/dgb)
 
 ---
 
