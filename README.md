@@ -316,6 +316,22 @@ Username is your wallet address (optionally `address.worker`), password is anyth
 
 ---
 
+## Global Ranked Ladder
+
+NMMiner hosts a global leaderboard at **[ladder.nmminer.com](https://ladder.nmminer.com/)**. Every miner is ranked by the best difficulty ever reached by its wallet address, updated in real time — it's competitive mining, just for fun.
+
+- Search any wallet address to see your current rank
+- The Hall of Fame highlights the top three all-time best difficulties
+- Live stats for total wallets tracked and devices reporting
+
+<div align="center">
+  <a href="https://ladder.nmminer.com/">
+    <img src="fig/ladder.png" alt="NMMiner Global Ranked Ladder">
+  </a>
+</div>
+
+---
+
 ## Monitoring & Management
 
 #### Web-Based Monitoring
