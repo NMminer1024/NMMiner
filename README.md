@@ -351,6 +351,22 @@ We are committed to expanding support for additional Arduino development board m
 
 ## Release Log
 
+### (2026.11.17) - v2.0.05
+- `feature`:
+  - `esp32-s3-042-oled`: RGB status LED added (color reflects connectivity and hashrate).
+  - CYD 2.4" / 2.8" / 3.5": photosensor auto-brightness restored, with an on/off option in web settings.
+- `fix`:
+  - Pool password was ignored during pool availability check, so a miner on the fallback pool could not switch back to the primary one.
+  - Hashrate stayed at 0 after a Wi-Fi reconnect until the device was restarted.
+  - Web UI could not be opened while mining, and hung on loading if opened.
+  - Waveshare 147 / 147b LED did not light up; blue-green breathing effect restored.
+  - T-Dongle-S3 LED showed green only; alternating blue-green breathing effect restored.
+  - Initial difficulty is now set per chip model instead of a fixed minimum.
+  - Ladder rank report no longer retries at high frequency after a failure, reducing useless traffic.
+- `optimize`:
+  - Web server memory usage reduced on all boards.
+  - Price page font shrinks automatically, fixing the overlap between the change percentage and the hashrate.
+
 ### (2026.07.24) - v2.0.04
 - `board support`:
   - `elecrow-esp32-display-24inch` (ESP32-D0, 2.4" TFT)
