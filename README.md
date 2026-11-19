@@ -23,7 +23,7 @@ NMMiner is an optimized BTC mining firmware designed for ESP32-based development
 ## Key Features
 
 - **Optimized Performance**
-  - ESP32-D0: Up to 1,035 KH/s
+  - ESP32-D0: Up to 1,020 KH/s (rev3 / v3.0), ~930 KH/s (rev1 / v1.0)
   - ESP32-S3: Up to 398 KH/s
   - ESP32-C3: Up to 402 KH/s
   - ESP32-C5: Up to 150 KH/s
@@ -42,19 +42,19 @@ The following table shows the supported development boards and their performance
 
 | Board                                                                                   | Performance       | Chip         |
 | :------------------------------------------------------------------------------------- | :---------------: | :----------: |
-| [NM-TV-154](https://www.nmminer.com/product/nm-tv-154/)                               | **1035.9 KH/s**  | ESP32-D0     |
-| ESP32 DEVKitC 32                                                                      | **1035.9 KH/s**  | ESP32-D0     |
-| [Heltec WiFi LoRa32 v2](https://heltec.org/project/wifi-lora-32v2/)                  | **1035.5 KH/s**  | ESP32-D0     |
-| [ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)             | **1025.3 KH/s**  | ESP32-D0     |
-| ESP32 2432s024                                                                        | **1025.1 KH/s**  | ESP32-D0     |
-| TTGO T-Display                                                                        | **1025.2 KH/s**  | ESP32-D0     |
-| ESP32 3248s035                                                                        | **1025.1 KH/s**  | ESP32-D0     |
-| ESP32 CAM                                                                             | **1025.1 KH/s**  | ESP32-D0     |
-| ELECROW esp32 display 2.4inch                                                         | **1025.1 KH/s**  | ESP32-D0     |
-| ELECROW esp32 display 2.8inch                                                         | **1025.1 KH/s**  | ESP32-D0     |
-| ESP32 32E LCD Display 3.2inch                                                         | **1025.1 KH/s**  | ESP32-D0     |
-| ESP32 32E LCD Display 4.0inch                                                         | **1025.1 KH/s**  | ESP32-D0     |
-| WT32-SC01                                                                             | **930.1 KH/s**   | ESP32-D0     |
+| [NM-TV-154](https://www.nmminer.com/product/nm-tv-154/)                               | **1020.0 KH/s**  | ESP32-D0     |
+| ESP32 DEVKitC 32                                                                      | **1020.0 KH/s**  | ESP32-D0     |
+| [Heltec WiFi LoRa32 v2](https://heltec.org/project/wifi-lora-32v2/)                  | **1019.6 KH/s**  | ESP32-D0     |
+| [ESP32 2432S028R](https://www.aliexpress.com/item/1005008484663300.html)             | **1009.6 KH/s**  | ESP32-D0     |
+| ESP32 2432s024                                                                        | **1009.4 KH/s**  | ESP32-D0     |
+| TTGO T-Display                                                                        | **1009.5 KH/s**  | ESP32-D0     |
+| ESP32 3248s035                                                                        | **1009.4 KH/s**  | ESP32-D0     |
+| ESP32 CAM                                                                             | **1009.4 KH/s**  | ESP32-D0     |
+| ELECROW esp32 display 2.4inch                                                         | **1009.4 KH/s**  | ESP32-D0     |
+| ELECROW esp32 display 2.8inch                                                         | **1009.4 KH/s**  | ESP32-D0     |
+| ESP32 32E LCD Display 3.2inch                                                         | **1009.4 KH/s**  | ESP32-D0     |
+| ESP32 32E LCD Display 4.0inch                                                         | **1009.4 KH/s**  | ESP32-D0     |
+| WT32-SC01                                                                             | **930.8 KH/s**   | ESP32-D0     |
 | Seeed XIAO ESP32-C3                                                                   | **396.9 KH/s**   | ESP32-C3     |
 | [Heltec WiFi Kit32 v3](https://heltec.org/project/wifi-kit32-v3/)                    | **400.9 KH/s**   | ESP32-S3FN8  |
 | [Heltec WiFi LoRa32 v3](https://www.aliexpress.com/item/1005005443005152.html)       | **400.7 KH/s**   | ESP32-S3FN8  |
@@ -76,6 +76,8 @@ The following table shows the supported development boards and their performance
 | ESP32-C3 0.42" OLED                                                                   | **315.1 KH/s**   | ESP32-C3     |
 | ESP32-C5 devkitc 1                                                                    | **150.2 KH/s**   | ESP32-C5     |
 | NM-CYD-C5                                                                             | **150.2 KH/s**   | ESP32-C5     |
+
+> Note: ESP32-D0 figures above are for rev3 (v3.0) silicon. rev1 (v1.0) silicon hashes at about **930 KH/s**. From v2.0.05 the local hashrate matches the pool-reported hashrate.
 
 ---
 
@@ -292,14 +294,43 @@ For dual button boards:
 
 ### Mining Pool Configuration
 
-Due to limited on-chip resources, some high-difficulty mining pools may reject connections from ESP32-based miners. The following pools support low-difficulty stratum connections suitable for this hardware:
+Due to limited on-chip resources, some high-difficulty mining pools may reject connections from ESP32-based miners. The following pools support low-difficulty stratum connections suitable for this hardware.
+
+Username is your wallet address (optionally `address.worker`), password is anything (usually `x`). All difficulties below were verified by connecting to the stratum port and reading the pool's `mining.set_difficulty` / `mining.suggest_difficulty` negotiation.
 
 #### Bitcoin (BTC)
-- `stratum+tcp://solobtc.nmminer.com:3333` - [Home page](https://solobtc.nmminer.com/#/)
-- `stratum+tcp://au.solobtc.nmminer.com:3333` - [Home page](https://au.solobtc.nmminer.com/#/)
+
+| Pool | Stratum URL | Min difficulty | Notes |
+| :--- | :---------- | :------------: | :---- |
+| [NMMiner Solo](https://solobtc.nmminer.com/#/) (primary) | `stratum+tcp://solobtc.nmminer.com:3333` | **No limit** | Default start diff 16384; vardiff goes below 0.0001 on request |
+| [NMMiner Solo](https://au.solobtc.nmminer.com/#/) (AU) | `stratum+tcp://au.solobtc.nmminer.com:3333` | **0.01** | Same pool software; lower requests are clamped to 0.01 |
+| [SoloLuck](https://sololuck.io/) | `stratum+tcp://stratum.sololuck.io:3335` | **1** | Nano tier for CPUs / NerdMiner. `:3333` Lite = 1024, `:4334` Pro = 1048576 |
+| [BTC PoW Lab](https://btcpowlab-pool.com/) | `stratum+tcp://stratum.btcpowlab-pool.com:3333` | **1** | Hybrid solo, vardiff starts at 1024 and can drop to 1 |
+| [DRPool](https://solo.drminer.xyz/) | `stratum+tcp://solo.drminer.xyz:3333` | **0.001** | Lowest floor here; TLS port `4333` also available |
 
 #### DigiByte (DGB)
-- `stratum+tcp://dgb-stratum.solominer.net:3333` - [Home page](https://digibyte.solominer.net/#/)
+
+| Pool | Stratum URL | Min difficulty | Notes |
+| :--- | :---------- | :------------: | :---- |
+| [SoloMiner](https://digibyte.solominer.net/#/) | `stratum+tcp://dgb-stratum.solominer.net:3333` | **No limit** | Accepts difficulty well below 0.001 |
+| [SoloLuck](https://sololuck.io/dgb) | `stratum+tcp://digibyte.sololuck.io:3341` | **1** | Nano tier. `:3340` General = 1024, `:4340` Big iron = 131072 |
+| [DRPool](https://solo.drminer.xyz/) | `stratum+tcp://solo.drminer.xyz:3335` | **0.001** | TLS port `4335` also available |
+
+---
+
+## Global Ranked Ladder
+
+NMMiner hosts a global leaderboard at **[ladder.nmminer.com](https://ladder.nmminer.com/)**. Every miner is ranked by the best difficulty ever reached by its wallet address, updated in real time — it's competitive mining, just for fun.
+
+- Search any wallet address to see your current rank
+- The Hall of Fame highlights the top three all-time best difficulties
+- Live stats for total wallets tracked and devices reporting
+
+<div align="center">
+  <a href="https://ladder.nmminer.com/">
+    <img src="fig/ladder.png" alt="NMMiner Global Ranked Ladder">
+  </a>
+</div>
 
 ---
 
@@ -344,12 +375,29 @@ We are committed to expanding support for additional Arduino development board m
 | Contact Method | Details                                                    |
 | :------------: | :--------------------------------------------------------- |
 | **Email**      | nmminer1024@gmail.com                                      |
-| **Telegram**   | [https://t.me/NMMiner](https://t.me/NMMiner)               |
+| **Telegram**   | [https://t.me/NMMiner1024](https://t.me/NMMiner1024)               |
 | **Website**    | [NMTech Official Site](https://www.nmminer.com/)          |
 
 ---
 
 ## Release Log
+
+### (2026.11.17) - v2.0.05
+- `feature`:
+  - `esp32-s3-042-oled`: RGB status LED added (color reflects connectivity and hashrate).
+  - CYD 2.4" / 2.8" / 3.5": photosensor auto-brightness restored, with an on/off option in web settings.
+- `fix`:
+  - Pool password was ignored during pool availability check, so a miner on the fallback pool could not switch back to the primary one.
+  - Local hashrate no longer diverges from the pool-reported hashrate; abnormal hashrate on rev1 chips is fixed.
+  - Hashrate stayed at 0 after a Wi-Fi reconnect until the device was restarted.
+  - Web UI could not be opened while mining, and hung on loading if opened.
+  - Waveshare 147 / 147b LED did not light up; blue-green breathing effect restored.
+  - T-Dongle-S3 LED showed green only; alternating blue-green breathing effect restored.
+  - Initial difficulty is now set per chip model instead of a fixed minimum.
+  - Ladder rank report no longer retries at high frequency after a failure, reducing useless traffic.
+- `optimize`:
+  - Web server memory usage reduced on all boards.
+  - Price page font shrinks automatically, fixing the overlap between the change percentage and the hashrate.
 
 ### (2026.07.24) - v2.0.04
 - `board support`:
