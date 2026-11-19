@@ -382,7 +382,7 @@ We are committed to expanding support for additional Arduino development board m
 
 ## Release Log
 
-### (2026.11.17) - v2.0.05
+### (2026.11.19) - v2.0.05
 - `feature`:
   - `esp32-s3-042-oled`: RGB status LED added (color reflects connectivity and hashrate).
   - CYD 2.4" / 2.8" / 3.5": photosensor auto-brightness restored, with an on/off option in web settings.
