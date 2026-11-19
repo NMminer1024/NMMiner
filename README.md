@@ -23,7 +23,7 @@ NMMiner is an optimized BTC mining firmware designed for ESP32-based development
 ## Key Features
 
 - **Optimized Performance**
-  - ESP32-D0: Up to 1,020 KH/s (rev3 / v3.0), ~950 KH/s (rev1 / v1.0)
+  - ESP32-D0: Up to 1,020 KH/s (rev3 / v3.0), 930~960 KH/s (rev1 / v1.0)
   - ESP32-S3: Up to 398 KH/s
   - ESP32-C3: Up to 402 KH/s
   - ESP32-C5: Up to 150 KH/s
@@ -77,7 +77,7 @@ The following table shows the supported development boards and their performance
 | ESP32-C5 devkitc 1                                                                    | **150.2 KH/s**   | ESP32-C5     |
 | NM-CYD-C5                                                                             | **150.2 KH/s**   | ESP32-C5     |
 
-> Note: ESP32-D0 figures above are for rev3 (v3.0) silicon. rev1 (v1.0) silicon hashes at about **950 KH/s**. From v2.0.05 the local hashrate matches the pool-reported hashrate; the lower rev1 figure is a reporting change, not a performance regression.
+> Note: ESP32-D0 figures above are for rev3 (v3.0) silicon. rev1 (v1.0) silicon hashes at **930~960 KH/s**. From v2.0.05 the local hashrate matches the pool-reported hashrate; the lower rev1 figure is a reporting change, not a performance regression.
 
 ---
 
@@ -388,7 +388,7 @@ We are committed to expanding support for additional Arduino development board m
   - CYD 2.4" / 2.8" / 3.5": photosensor auto-brightness restored, with an on/off option in web settings.
 - `fix`:
   - Pool password was ignored during pool availability check, so a miner on the fallback pool could not switch back to the primary one.
-  - Local hashrate now matches the pool-reported hashrate: ESP32-D0 rev3 shows 1020 KH/s and rev1 shows about 950 KH/s. This is a reporting fix, not a performance regression.
+  - Local hashrate now matches the pool-reported hashrate: ESP32-D0 rev3 shows 1020 KH/s and rev1 shows 930~960 KH/s. This is a reporting fix, not a performance regression.
   - Hashrate stayed at 0 after a Wi-Fi reconnect until the device was restarted.
   - Web UI could not be opened while mining, and hung on loading if opened.
   - Waveshare 147 / 147b LED did not light up; blue-green breathing effect restored.
